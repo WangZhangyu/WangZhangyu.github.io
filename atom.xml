@@ -3,11 +3,11 @@
   <title>Hexo</title>
   
   
-  <link href="http://example.com/atom.xml" rel="self"/>
+  <link href="https://wangzhangyu.github.io/atom.xml" rel="self"/>
   
-  <link href="http://example.com/"/>
+  <link href="https://wangzhangyu.github.io/"/>
   <updated>2023-07-19T09:36:16.217Z</updated>
-  <id>http://example.com/</id>
+  <id>https://wangzhangyu.github.io/</id>
   
   <author>
     <name>Wang Zhangyu</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>博客主题</title>
-    <link href="http://example.com/2023/07/19/ha/index/"/>
-    <id>http://example.com/2023/07/19/ha/index/</id>
+    <link href="https://wangzhangyu.github.io/2023/07/19/ha/index/"/>
+    <id>https://wangzhangyu.github.io/2023/07/19/ha/index/</id>
     <published>2023-07-19T05:19:19.000Z</published>
     <updated>2023-07-19T09:36:16.217Z</updated>
     
@@ -33,17 +33,17 @@
     
     
     
-    <category term="博客搭建" scheme="http://example.com/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+    <category term="博客搭建" scheme="https://wangzhangyu.github.io/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
     
     
-    <category term="blog" scheme="http://example.com/tags/blog/"/>
+    <category term="blog" scheme="https://wangzhangyu.github.io/tags/blog/"/>
     
   </entry>
   
   <entry>
     <title>Nodejs</title>
-    <link href="http://example.com/2023/07/19/123/index/"/>
-    <id>http://example.com/2023/07/19/123/index/</id>
+    <link href="https://wangzhangyu.github.io/2023/07/19/123/index/"/>
+    <id>https://wangzhangyu.github.io/2023/07/19/123/index/</id>
     <published>2023-07-18T17:41:30.743Z</published>
     <updated>2023-07-19T09:38:46.108Z</updated>
     
@@ -57,17 +57,17 @@
     
     
     
-    <category term="博客搭建" scheme="http://example.com/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+    <category term="博客搭建" scheme="https://wangzhangyu.github.io/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
     
     
-    <category term="blog" scheme="http://example.com/tags/blog/"/>
+    <category term="blog" scheme="https://wangzhangyu.github.io/tags/blog/"/>
     
   </entry>
   
   <entry>
     <title>Linux服务器运维</title>
-    <link href="http://example.com/2023/07/19/t1/index/"/>
-    <id>http://example.com/2023/07/19/t1/index/</id>
+    <link href="https://wangzhangyu.github.io/2023/07/19/t1/index/"/>
+    <id>https://wangzhangyu.github.io/2023/07/19/t1/index/</id>
     <published>2023-07-18T17:09:50.000Z</published>
     <updated>2023-07-27T17:09:52.000Z</updated>
     
@@ -82,15 +82,15 @@
     
     
     
-    <category term="Linux" scheme="http://example.com/categories/Linux/"/>
+    <category term="Linux" scheme="https://wangzhangyu.github.io/categories/Linux/"/>
     
     
   </entry>
   
   <entry>
     <title>Python Folium 绘制交互式地图</title>
-    <link href="http://example.com/2023/07/18/test/index/"/>
-    <id>http://example.com/2023/07/18/test/index/</id>
+    <link href="https://wangzhangyu.github.io/2023/07/18/test/index/"/>
+    <id>https://wangzhangyu.github.io/2023/07/18/test/index/</id>
     <published>2023-07-18T10:09:22.000Z</published>
     <updated>2023-07-18T10:09:26.000Z</updated>
     
@@ -106,15 +106,15 @@
     
     
     
-    <category term="python" scheme="http://example.com/categories/python/"/>
+    <category term="python" scheme="https://wangzhangyu.github.io/categories/python/"/>
     
     
   </entry>
   
   <entry>
     <title>linux网络配置</title>
-    <link href="http://example.com/2023/07/18/%E6%90%AD%E5%BB%BAHexo%E6%9C%8D%E5%8A%A1%E5%99%A8/index/"/>
-    <id>http://example.com/2023/07/18/%E6%90%AD%E5%BB%BAHexo%E6%9C%8D%E5%8A%A1%E5%99%A8/index/</id>
+    <link href="https://wangzhangyu.github.io/2023/07/18/%E6%90%AD%E5%BB%BAHexo%E6%9C%8D%E5%8A%A1%E5%99%A8/index/"/>
+    <id>https://wangzhangyu.github.io/2023/07/18/%E6%90%AD%E5%BB%BAHexo%E6%9C%8D%E5%8A%A1%E5%99%A8/index/</id>
     <published>2023-07-18T10:05:41.000Z</published>
     <updated>2023-07-18T10:05:47.000Z</updated>
     
@@ -130,17 +130,17 @@
     
     
     
-    <category term="Linux" scheme="http://example.com/categories/Linux/"/>
+    <category term="Linux" scheme="https://wangzhangyu.github.io/categories/Linux/"/>
     
     
-    <category term="blog" scheme="http://example.com/tags/blog/"/>
+    <category term="blog" scheme="https://wangzhangyu.github.io/tags/blog/"/>
     
   </entry>
   
   <entry>
     <title>Hello World</title>
-    <link href="http://example.com/2023/07/18/hello-world/"/>
-    <id>http://example.com/2023/07/18/hello-world/</id>
+    <link href="https://wangzhangyu.github.io/2023/07/18/hello-world/"/>
+    <id>https://wangzhangyu.github.io/2023/07/18/hello-world/</id>
     <published>2023-07-18T09:44:32.957Z</published>
     <updated>2023-07-19T09:43:47.216Z</updated>
     
@@ -154,7 +154,7 @@
     
     
     
-    <category term="hexo" scheme="http://example.com/categories/hexo/"/>
+    <category term="hexo" scheme="https://wangzhangyu.github.io/categories/hexo/"/>
     
     
   </entry>
