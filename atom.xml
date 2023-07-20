@@ -6,7 +6,7 @@
   <link href="https://wangzhangyu.github.io/atom.xml" rel="self"/>
   
   <link href="https://wangzhangyu.github.io/"/>
-  <updated>2023-07-20T09:36:50.371Z</updated>
+  <updated>2023-07-20T11:51:13.104Z</updated>
   <id>https://wangzhangyu.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>gitalk 第三方评论</title>
+    <link href="https://wangzhangyu.github.io/2023/07/20/gitalk/"/>
+    <id>https://wangzhangyu.github.io/2023/07/20/gitalk/</id>
+    <published>2023-07-20T11:42:20.000Z</published>
+    <updated>2023-07-20T11:51:13.104Z</updated>
+    
+    <content type="html"><![CDATA[<ul><li>问题： 未找到相关的 Issues 进行评论，请联系@作者初始化创建</li><li>问题： 403错误</li><li>问题： network错误</li></ul><p>原因是：主题模版中的cors-anywhere反向代理已不支持直接使用，Gitalk的默认proxy为</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Default: https://cors-anywhere.herokuapp.com/https://github.com/login/oauth/access_token.</span><br></pre></td></tr></table></figure><p><a href="https://dash.cloudflare.com/">cloudflare</a></p><p>参考文章： <a href="https://blog.csdn.net/nocodeis/article/details/117826704">https://blog.csdn.net/nocodeis/article/details/117826704</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;ul&gt;
+&lt;li&gt;问题： 未找到相关的 Issues 进行评论，请联系@作者初始化创建&lt;/li&gt;
+&lt;li&gt;问题： 403错误&lt;/li&gt;
+&lt;li&gt;问题： network错误&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;原因是：主题模版中的cors-anywhere反向代理已不支持直接使用，Gita</summary>
+      
+    
+    
+    
+    <category term="博客搭建" scheme="https://wangzhangyu.github.io/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>comment</title>
