@@ -6,7 +6,7 @@
   <link href="https://wangzhangyu.github.io/atom.xml" rel="self"/>
   
   <link href="https://wangzhangyu.github.io/"/>
-  <updated>2023-07-20T04:48:59.205Z</updated>
+  <updated>2023-07-20T06:26:56.307Z</updated>
   <id>https://wangzhangyu.github.io/</id>
   
   <author>
@@ -17,41 +17,18 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>new</title>
-    <link href="https://wangzhangyu.github.io/2023/07/20/test/"/>
-    <id>https://wangzhangyu.github.io/2023/07/20/test/</id>
-    <published>2023-07-20T04:48:08.637Z</published>
-    <updated>2023-07-20T04:48:59.205Z</updated>
-    
-    <content type="html"><![CDATA[<p>haha</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;haha&lt;/p&gt;
-</summary>
-      
-    
-    
-    
-    <category term="new" scheme="https://wangzhangyu.github.io/categories/new/"/>
-    
-    
-  </entry>
-  
-  <entry>
     <title>博客主题</title>
     <link href="https://wangzhangyu.github.io/2023/07/19/ha/index/"/>
     <id>https://wangzhangyu.github.io/2023/07/19/ha/index/</id>
-    <published>2023-07-19T05:19:19.000Z</published>
-    <updated>2023-07-19T09:36:16.217Z</updated>
+    <published>2023-07-19T05:19:19.691Z</published>
+    <updated>2023-07-20T06:26:56.307Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="博客主题-hexo-theme-pure"><a href="#博客主题-hexo-theme-pure" class="headerlink" title="博客主题 hexo-theme-pure"></a>博客主题 hexo-theme-pure</h1><p>下载链接 <a href="https://github.com/cofess/hexo-theme-pure">https://github.com/cofess/hexo-theme-pure</a></p>]]></content>
+    <content type="html"><![CDATA[<h1><span id="博客主题-hexo-theme-pure">博客主题 hexo-theme-pure</span></h1><p>下载链接 <a href="https://github.com/cofess/hexo-theme-pure">https://github.com/cofess/hexo-theme-pure</a></p><h1><span id="hexo个人博客部署到github">Hexo个人博客部署到Github</span></h1><p><a href="https://mizeri.github.io/2021/04/18/Hexo-blog-deploy/">参考</a></p><p>git, hexo and Node.js</p><p>写作搭档</p><blockquote><p>hexo+hexon+typora</p></blockquote><p><a href="https://github.com/gethexon/hexon/">hexon</a>管理博客的开源代码</p>]]></content>
     
     
       
       
-    <summary type="html">&lt;h1 id=&quot;博客主题-hexo-theme-pure&quot;&gt;&lt;a href=&quot;#博客主题-hexo-theme-pure&quot; class=&quot;headerlink&quot; title=&quot;博客主题 hexo-theme-pure&quot;&gt;&lt;/a&gt;博客主题 hexo-theme-pure&lt;/h1&gt;&lt;</summary>
+    <summary type="html">&lt;h1&gt;&lt;span id=&quot;博客主题-hexo-theme-pure&quot;&gt;博客主题 hexo-theme-pure&lt;/span&gt;&lt;/h1&gt;&lt;p&gt;下载链接 &lt;a href=&quot;https://github.com/cofess/hexo-theme-pure&quot;&gt;https://gith</summary>
       
     
     
