@@ -24,7 +24,7 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-07-19T08:46:35.000Z">
-<meta property="article:modified_time" content="2023-07-19T08:48:33.406Z">
+<meta property="article:modified_time" content="2023-07-20T08:37:13.720Z">
 <meta property="article:author" content="Wang Zhangyu">
 <meta name="twitter:card" content="summary">
   <!-- Canonical links -->
@@ -40,11 +40,13 @@
   
   
   
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1.4.0/dist/gitalk.min.css">
+  
 <meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
 </head>
 
 
-<body class="main-center" itemscope itemtype="http://schema.org/WebPage">
+<body class="main-center no-sidebar" itemscope itemtype="http://schema.org/WebPage">
   <header class="header" itemscope itemtype="http://schema.org/WPHeader">
   <div class="slimContent">
     <div class="navbar-header">
@@ -150,7 +152,7 @@
             
             <i class="icon icon-friendship"></i>
             
-            <span class="menu-title">友链</span>
+            <span class="menu-title">链接</span>
           </a>
         </li>
         
@@ -334,6 +336,63 @@
   <div class="article-body">
     <div class="row">
       
+        
+          <div class="col-sm-6 col-md-4">
+            <div class="panel panel-default hover-shadow hover-grow">
+              <figure class="media media-middle">
+                <div class="media-left pr-no">
+                  <a href="https://blog.seisman.info/" target="_blank" class="img-burn thumb-md media-middle">
+                    <img src="/images/seisman.png" class="w-full" alt="">
+                  </a>
+                </div>
+                <div class="media-body p-0x">
+                  <h4 class="media-heading"><a href="https://blog.seisman.info/" target="_blank"><span class="text-dark">Seisman</span></a></h4>
+                  <div class="text-muted">
+                    seisman博客
+                  </div>
+                </div>
+              </figure>
+            </div>
+          </div>
+          
+        
+          <div class="col-sm-6 col-md-4">
+            <div class="panel panel-default hover-shadow hover-grow">
+              <figure class="media media-middle">
+                <div class="media-left pr-no">
+                  <a href="http://chuangzaoshi.com/" target="_blank" class="img-burn thumb-md media-middle">
+                    <img src="/images/favatar/chuangzaoshi-logo.png" class="w-full" alt="">
+                  </a>
+                </div>
+                <div class="media-body p-0x">
+                  <h4 class="media-heading"><a href="http://chuangzaoshi.com/" target="_blank"><span class="text-dark">创造狮</span></a></h4>
+                  <div class="text-muted">
+                    为创意工作者而设计
+                  </div>
+                </div>
+              </figure>
+            </div>
+          </div>
+          
+        
+          <div class="col-sm-6 col-md-4">
+            <div class="panel panel-default hover-shadow hover-grow">
+              <figure class="media media-middle">
+                <div class="media-left pr-no">
+                  <a href="http://idesign.qq.com/" target="_blank" class="img-burn thumb-md media-middle">
+                    <img src="/images/favatar/idesign-logo.png" class="w-full" alt="">
+                  </a>
+                </div>
+                <div class="media-body p-0x">
+                  <h4 class="media-heading"><a href="http://idesign.qq.com/" target="_blank"><span class="text-dark">腾讯设计导航</span></a></h4>
+                  <div class="text-muted">
+                    网罗全网高逼格的设计站点
+                  </div>
+                </div>
+              </figure>
+            </div>
+          </div>
+          
     </div>
   </div>
 </article>
@@ -341,7 +400,7 @@
   
   <section id="comments">
   	
-      <div id="vcomments"></div>
+           
     
   </section>
 
@@ -405,29 +464,24 @@ window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
 
    
     
-  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/valine"></script>
+  <!-- <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css"> -->
+  <script src="//cdn.jsdelivr.net/npm/gitalk@1.6.2/dist/gitalk.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/blueimp-md5@2.10.0/js/md5.min.js"></script>
   <script type="text/javascript">
-  var GUEST = ['nick', 'mail', 'link'];
-  var meta = 'nick,mail,link';
-  meta = meta.split(',').filter(function(item) {
-    return GUEST.indexOf(item) > -1;
-  });
-  new Valine({
-    el: '#vcomments',
-    verify: false,
-    notify: false,
-    appId: '',
-    appKey: '',
-    placeholder: 'Just go go',
-    avatar: 'mm',
-    meta: meta,
-    pageSize: '10' || 10,
-    visitor: false
-  });
+  var gitalk = new Gitalk({
+    clientID: 'ff6a60639809a4922c70',
+    clientSecret: '8afb65d3065048e3d31c9365cd1f42b48861f275',
+    repo: 'gitalk',
+    owner: 'WangZhangyu',
+    admin: ['WangZhangyu'],
+    id: md5(location.pathname),
+    distractionFreeMode: true,
+    language: 'zh-CN',
+    enableHotKey: 'true'
+  })
+  gitalk.render('comments')
   </script>
-
-     
+      
 
 
 
