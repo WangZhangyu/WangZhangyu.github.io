@@ -1,7 +1,8 @@
 https://wangzhangyu.github.io/2023/07/19/t1/index/
+https://wangzhangyu.github.io/2023/07/20/test/
+https://wangzhangyu.github.io/2023/07/19/123/index/
 https://wangzhangyu.github.io/tags/index.html
 https://wangzhangyu.github.io/2023/07/18/hello-world/
-https://wangzhangyu.github.io/2023/07/19/123/index/
 https://wangzhangyu.github.io/2023/07/19/ha/index/
 https://wangzhangyu.github.io/categories/index.html
 https://wangzhangyu.github.io/books/index.html
@@ -12,7 +13,9 @@ https://wangzhangyu.github.io/2023/07/18/test/index/
 https://wangzhangyu.github.io/2023/07/18/%E6%90%AD%E5%BB%BAHexo%E6%9C%8D%E5%8A%A1%E5%99%A8/index/
 https://wangzhangyu.github.io/
 https://wangzhangyu.github.io/tags/blog/
+https://wangzhangyu.github.io/tags/markdown/
 https://wangzhangyu.github.io/categories/Linux/
 https://wangzhangyu.github.io/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/
 https://wangzhangyu.github.io/categories/python/
 https://wangzhangyu.github.io/categories/hexo/
+https://wangzhangyu.github.io/categories/new/
