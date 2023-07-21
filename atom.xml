@@ -6,7 +6,7 @@
   <link href="https://wangzhangyu.github.io/atom.xml" rel="self"/>
   
   <link href="https://wangzhangyu.github.io/"/>
-  <updated>2023-07-21T06:14:33.097Z</updated>
+  <updated>2023-07-21T06:32:09.395Z</updated>
   <id>https://wangzhangyu.github.io/</id>
   
   <author>
@@ -17,35 +17,21 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>newtest</title>
-    <link href="https://wangzhangyu.github.io/2023/07/21/newtest/"/>
-    <id>https://wangzhangyu.github.io/2023/07/21/newtest/</id>
-    <published>2023-07-21T06:14:33.000Z</published>
-    <updated>2023-07-21T06:14:33.097Z</updated>
-    
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
     <title>gitalk 第三方评论</title>
     <link href="https://wangzhangyu.github.io/2023/07/20/gitalk/"/>
     <id>https://wangzhangyu.github.io/2023/07/20/gitalk/</id>
     <published>2023-07-20T11:42:20.000Z</published>
-    <updated>2023-07-21T06:26:36.150Z</updated>
+    <updated>2023-07-21T06:32:09.395Z</updated>
     
-    <content type="html"><![CDATA[<h2><span id="使用gitalk的常见问题">使用Gitalk的常见问题</span></h2><ul><li>问题： 未找到相关的 Issues 进行评论，请联系@作者初始化创建<ul><li>打开文章页面登录作者github账号</li></ul></li><li>问题： 403错误<ul><li>代理失效</li></ul></li><li>问题： network错误<ul><li>代理失效</li></ul></li></ul><p>原因是：主题模版中的cors-anywhere反向代理已不支持直接使用，Gitalk的默认proxy为</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Default: https://cors-anywhere.herokuapp.com/https://github.com/login/oauth/access_token.</span><br></pre></td></tr></table></figure><p><a href="https://dash.cloudflare.com/">cloudflare</a></p><p>参考文章： <a href="https://blog.csdn.net/nocodeis/article/details/117826704">https://blog.csdn.net/nocodeis/article/details/117826704</a></p><h2><span id="借用某位博客的代理">借用某位博客的代理</span></h2><p>使用<a href="https://blog.csdn.net/nocodeis/article/details/117826704">文章中的方法</a>构建的代理仍然报错<code>network error</code>, 应该还是代理没有设置好。</p><p>没有办法只能借用别的代理设置了，方法不是很可取，但可以临时用用。参考下边的方式</p><p><img src="/2023/07/20/gitalk/iShot_2023-07-21_13.55.30.png"></p><ul><li>找到一个集成了Gitalk的博客</li><li>打开浏览器的开发者模式</li><li>选择network项，在filter中输入access</li><li>此时在博客的评论区中登录自己的Github账号<ul><li>在Request URL栏中，选择带有<code>https://github.com/login/oauth/access_token</code>的地址，这串拼接出来的地址就是代理地址，可以直接加入到proxy中</li></ul></li></ul><p>现在评论功能就正常了。</p>]]></content>
+    <content type="html"><![CDATA[<h2><span id="使用gitalk的常见问题">使用Gitalk的常见问题</span></h2><ul><li><p>问题： 未找到相关的 Issues 进行评论，请联系@作者初始化创建</p><blockquote><p>打开文章页面登录作者github账号</p></blockquote></li><li><p>问题： 403错误</p><blockquote><p>代理失效</p></blockquote></li><li><p>问题： network错误</p><blockquote><p>代理失效</p></blockquote></li></ul><p>原因是：主题模版中的cors-anywhere反向代理已不支持直接使用，Gitalk的默认proxy为</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Default: https://cors-anywhere.herokuapp.com/https://github.com/login/oauth/access_token.</span><br></pre></td></tr></table></figure><p><a href="https://dash.cloudflare.com/">cloudflare</a></p><p>参考文章： <a href="https://blog.csdn.net/nocodeis/article/details/117826704">https://blog.csdn.net/nocodeis/article/details/117826704</a></p><h2><span id="借用某位博客的代理">借用某位博客的代理</span></h2><p>使用<a href="https://blog.csdn.net/nocodeis/article/details/117826704">文章中的方法</a>构建的代理仍然报错<code>network error</code>, 应该还是代理没有设置好。</p><p>没有办法只能借用别的代理设置了，方法不是很可取，但可以临时用用。参考下边的方式</p><p><img src="/2023/07/20/gitalk/iShot_2023-07-21_13.55.30.png"></p><ul><li>找到一个集成了Gitalk的博客</li><li>打开浏览器的开发者模式</li><li>选择network项，在filter中输入access</li><li>此时在博客的评论区中登录自己的Github账号<ul><li>在Request URL栏中，选择带有<code>https://github.com/login/oauth/access_token</code>的地址，这串拼接出来的地址就是代理地址，可以直接加入到proxy中</li></ul></li></ul><p>现在评论功能就正常了。</p>]]></content>
     
     
       
       
     <summary type="html">&lt;h2&gt;&lt;span id=&quot;使用gitalk的常见问题&quot;&gt;使用Gitalk的常见问题&lt;/span&gt;&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;问题： 未找到相关的 Issues 进行评论，请联系@作者初始化创建&lt;ul&gt;
-&lt;li&gt;打开文章页面登录作者github账号&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li</summary>
+&lt;li&gt;&lt;p&gt;问题： 未找到相关的 Issues 进行评论，请联系@作者初始化创建&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;打开文章页面登录作者github账号&lt;</summary>
       
     
     
