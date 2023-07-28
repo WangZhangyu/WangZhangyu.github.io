@@ -45,13 +45,13 @@
   </entry>
   
   <entry>
-    <title>云服务搭建个人网站</title>
-    <link href="https://wangzhangyu.github.io/2023/07/25/%E4%BA%91%E6%9C%8D%E5%8A%A1%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99/"/>
-    <id>https://wangzhangyu.github.io/2023/07/25/%E4%BA%91%E6%9C%8D%E5%8A%A1%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99/</id>
+    <title>云服务器搭建个人网站</title>
+    <link href="https://wangzhangyu.github.io/2023/07/25/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99/"/>
+    <id>https://wangzhangyu.github.io/2023/07/25/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99/</id>
     <published>2023-07-25T08:29:10.000Z</published>
-    <updated>2023-07-28T11:08:14.247Z</updated>
+    <updated>2023-07-28T11:36:30.249Z</updated>
     
-    <content type="html"><![CDATA[<blockquote><p>个人服务器建网站流程<br>一时兴起搭建个人网页，记录一下整个流程…</p></blockquote><ol><li>购买云服务器：</li></ol><ul><li>腾讯云 CPU: 2核 内存: 2GB</li><li>价格：首年有优惠<br><img src="/2023/07/25/%E4%BA%91%E6%9C%8D%E5%8A%A1%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99/iShot_2023-07-25_16.38.02.png"></li></ul><ol start="2"><li>安装wordpress</li></ol><ul><li>系统：Linux Ubuntu 20.04 LTS</li><li>网站架构：Apache2 + Php + MySQL + WordPress (6.0.2)</li><li>腾讯云服务器提供极速建站，可选–“应用镜像”-&gt;“Wordpress”,非常方便<br>但我还是选择从零开始安装，可以参考<a href="https://zhuanlan.zhihu.com/p/270230445">https://zhuanlan.zhihu.com/p/270230445</a></li></ul><ol start="3"><li>购买域名</li></ol><ul><li>腾讯云域名申请</li></ul><ol start="4"><li><p>域名备案</p></li><li><p>域名解析</p></li><li><p>绑定域名和云服务器公网IP</p></li></ol><blockquote><p>使用了快一年，续费云主机挺贵的，一年要500多。</p></blockquote><p><img src="/2023/07/25/%E4%BA%91%E6%9C%8D%E5%8A%A1%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99/iShot_2023-07-28_18.31.20.png"></p><hr><p>Ubuntu下载链接<br><a href="http://releases.ubuntu.com/">http://releases.ubuntu.com/</a></p><p>旧版下载链接<br><a href="http://old-releases.ubuntu.com/releases/">http://old-releases.ubuntu.com/releases/</a></p>]]></content>
+    <content type="html"><![CDATA[<blockquote><p>个人服务器建网站流程<br>一时兴起搭建个人网页，记录一下整个流程…</p></blockquote><ol><li>购买云服务器：</li></ol><ul><li>腾讯云 CPU: 2核 内存: 2GB</li><li>价格：首年有优惠<br><img src="/2023/07/25/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99/iShot_2023-07-25_16.38.02.png"></li></ul><ol start="2"><li>安装wordpress</li></ol><ul><li>系统：Linux Ubuntu 20.04 LTS</li><li>网站架构：Apache2 + Php + MySQL + WordPress (6.0.2)</li><li>腾讯云服务器提供极速建站，可选–“应用镜像”-&gt;“Wordpress”,非常方便<br>但我还是选择从零开始安装，可以参考<a href="https://zhuanlan.zhihu.com/p/270230445">https://zhuanlan.zhihu.com/p/270230445</a></li></ul><ol start="3"><li>购买域名</li></ol><ul><li>腾讯云域名申请</li></ul><ol start="4"><li><p>域名备案</p></li><li><p>域名解析</p></li><li><p>绑定域名和云服务器公网IP</p></li></ol><blockquote><p>使用了快一年，续费云主机挺贵的，一年要500多。</p></blockquote><p><img src="/2023/07/25/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99/iShot_2023-07-28_18.31.20.png"></p><hr><p>Ubuntu下载链接<br><a href="http://releases.ubuntu.com/">http://releases.ubuntu.com/</a></p><p>旧版下载链接<br><a href="http://old-releases.ubuntu.com/releases/">http://old-releases.ubuntu.com/releases/</a></p>]]></content>
     
     
       
@@ -81,9 +81,9 @@
     <link href="https://wangzhangyu.github.io/2023/07/20/gitalk/"/>
     <id>https://wangzhangyu.github.io/2023/07/20/gitalk/</id>
     <published>2023-07-20T11:42:20.000Z</published>
-    <updated>2023-07-28T10:49:18.733Z</updated>
+    <updated>2023-07-28T11:29:42.168Z</updated>
     
-    <content type="html"><![CDATA[<h2><span id="使用gitalk的常见问题">使用Gitalk的常见问题</span></h2><ul><li><p>问题： 未找到相关的 Issues 进行评论，请联系@作者初始化创建</p><blockquote><p>打开文章页面登录作者github账号</p></blockquote></li><li><p>问题： 403错误或network错误</p><blockquote><p>代理失效</p></blockquote></li></ul><p>原因是：主题模版中的cors-anywhere反向代理已不支持直接使用，Gitalk的默认proxy为</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Default: https://cors-anywhere.herokuapp.com/https://github.com/login/oauth/access_token.</span><br></pre></td></tr></table></figure><p><a href="https://dash.cloudflare.com/">cloudflare</a></p><p>参考文章： <a href="https://blog.csdn.net/nocodeis/article/details/117826704">https://blog.csdn.net/nocodeis/article/details/117826704</a></p><h2><span id="借用某位博客的代理">借用某位博客的代理</span></h2><p>使用<a href="https://blog.csdn.net/nocodeis/article/details/117826704">文章中的方法</a>构建的代理仍然报错<code>network error</code>, 应该还是代理没有设置好。</p><p>没有办法只能借用别的代理设置了，方法不是很可取，但可以临时用用。参考下边的方式</p><p><img src="/2023/07/20/gitalk/iShot_2023-07-21_13.55.30.png"></p><ul><li>找到一个集成了Gitalk的博客</li><li>打开浏览器的开发者模式</li><li>选择network项，在filter中输入access</li><li>此时在博客的评论区中登录自己的Github账号<ul><li>在Request URL栏中，选择带有<code>https://github.com/login/oauth/access_token</code>的地址，这串拼接出来的地址就是代理地址，可以直接加入到proxy中</li></ul></li></ul><p>现在评论功能就正常了。</p>]]></content>
+    <content type="html"><![CDATA[<h2><span id="使用gitalk的常见问题">使用Gitalk的常见问题</span></h2><ul><li><p>问题： 未找到相关的 Issues 进行评论，请联系@作者初始化创建</p><blockquote><p>打开文章页面登录作者github账号</p></blockquote></li><li><p>问题： 403错误或network错误</p><blockquote><p>代理失效</p></blockquote></li></ul><p>原因是：主题模版中的cors-anywhere反向代理已不支持直接使用，Gitalk的默认proxy为</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Default: https://cors-anywhere.herokuapp.com/https://github.com/login/oauth/access_token.</span><br></pre></td></tr></table></figure><p><a href="https://dash.cloudflare.com/">cloudflare</a></p><p>参考文章： <a href="https://blog.csdn.net/nocodeis/article/details/117826704">https://blog.csdn.net/nocodeis/article/details/117826704</a></p><h2><span id="借用某位博客的代理">借用某位博客的代理</span></h2><p>使用<a href="https://blog.csdn.net/nocodeis/article/details/117826704">文章中的方法</a>构建的代理仍然报错<code>network error</code>, 应该还是代理没有设置好。</p><p>没有办法只能借用别的代理设置了，方法不是很可取，但可以临时用用。参考下边的方式</p><p><img src="/2023/07/20/gitalk/iShot_2023-07-21_13.55.30.png"></p><ul><li>找到一个集成了Gitalk的博客</li><li>打开浏览器的开发者模式</li><li>选择network项，在filter中输入access</li><li>此时在博客的评论区中登录自己的Github账号<ul><li>在Request URL栏中，选择带有<code>https://github.com/login/oauth/access_token</code>的地址，这串拼接出来的地址就是代理地址，可以直接加入到proxy中</li></ul></li></ul><p>现在评论功能就正常了。</p><p>ref：<br><a href="https://github.com/ppoffice/hexo-theme-icarus/issues/478">https://github.com/ppoffice/hexo-theme-icarus/issues/478</a><br><a href="https://juejin.cn/post/6956892118363144229">https://juejin.cn/post/6956892118363144229</a></p>]]></content>
     
     
       
@@ -102,23 +102,28 @@
   </entry>
   
   <entry>
-    <title>comment</title>
+    <title>Hexo添加插件</title>
     <link href="https://wangzhangyu.github.io/2023/07/20/comment/"/>
     <id>https://wangzhangyu.github.io/2023/07/20/comment/</id>
     <published>2023-07-20T09:36:23.000Z</published>
-    <updated>2023-07-21T06:52:59.018Z</updated>
+    <updated>2023-07-28T11:35:48.225Z</updated>
     
-    <content type="html"><![CDATA[<p><a href="https://github.com/ppoffice/hexo-theme-icarus/issues/478">https://github.com/ppoffice/hexo-theme-icarus/issues/478</a></p><p><a href="https://juejin.cn/post/6956892118363144229">https://juejin.cn/post/6956892118363144229</a></p><p>相册功能：<br><a href="https://blog.csdn.net/weixin_43347550/article/details/120191200">https://blog.csdn.net/weixin_43347550/article/details/120191200</a></p>]]></content>
+    <content type="html"><![CDATA[<ul><li><input checked disabled type="checkbox"> 添加评论<ul><li><a href="https://wangzhangyu.github.io/2023/07/20/gitalk/">https://wangzhangyu.github.io/2023/07/20/gitalk/</a></li></ul></li><li><input disabled type="checkbox"> 添加相册<ul><li><a href="https://blog.csdn.net/weixin_43347550/article/details/120191200">https://blog.csdn.net/weixin_43347550/article/details/120191200</a></li></ul></li></ul>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://github.com/ppoffice/hexo-theme-icarus/issues/478&quot;&gt;https://github.com/ppoffice/hexo-theme-icarus/issues/478&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a</summary>
+    <summary type="html">&lt;ul&gt;
+&lt;li&gt;&lt;input checked disabled type=&quot;checkbox&quot;&gt; 添加评论&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://wangzhangyu.github.io/2023/07/20/gitalk/&quot;&gt;https://wangzhangy</summary>
       
     
     
     
+    <category term="博客搭建" scheme="https://wangzhangyu.github.io/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+    
+    
+    <category term="blog" scheme="https://wangzhangyu.github.io/tags/blog/"/>
     
   </entry>
   
