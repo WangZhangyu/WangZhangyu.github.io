@@ -1,3 +1,5 @@
+https://wangzhangyu.github.io/2023/07/28/macbook-plug/
+https://wangzhangyu.github.io/2023/07/25/t2/
 https://wangzhangyu.github.io/2023/07/19/t1/index/
 https://wangzhangyu.github.io/2023/07/20/comment/
 https://wangzhangyu.github.io/2023/07/20/gitalk/
@@ -15,7 +17,9 @@ https://wangzhangyu.github.io/2023/07/18/%E6%90%AD%E5%BB%BAHexo%E6%9C%8D%E5%8A%A
 https://wangzhangyu.github.io/
 https://wangzhangyu.github.io/tags/blog/
 https://wangzhangyu.github.io/tags/markdown/
+https://wangzhangyu.github.io/tags/macbook/
 https://wangzhangyu.github.io/categories/Linux/
 https://wangzhangyu.github.io/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/
 https://wangzhangyu.github.io/categories/python/
 https://wangzhangyu.github.io/categories/hexo/
+https://wangzhangyu.github.io/categories/macbook/
