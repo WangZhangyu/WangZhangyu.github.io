@@ -6,7 +6,7 @@
   <link href="https://wangzhangyu.github.io/atom.xml" rel="self"/>
   
   <link href="https://wangzhangyu.github.io/"/>
-  <updated>2023-07-28T10:44:37.958Z</updated>
+  <updated>2023-07-30T08:01:45.101Z</updated>
   <id>https://wangzhangyu.github.io/</id>
   
   <author>
@@ -17,13 +17,60 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Hexon</title>
+    <link href="https://wangzhangyu.github.io/2023/07/30/test/"/>
+    <id>https://wangzhangyu.github.io/2023/07/30/test/</id>
+    <published>2023-07-30T07:51:03.505Z</published>
+    <updated>2023-07-30T08:01:45.101Z</updated>
+    
+    <content type="html"><![CDATA[<p>Hexon is a GUI for hexo with git, run commands and manage content for you.</p><p>下载链接：<a href="https://github.com/gethexon/hexon">https://github.com/gethexon/hexon</a></p><ul><li>界面清爽</li><li>可移植</li><li>部署迅速<br><img src="/2023/07/30/test/iShot_2023-07-30_15.57.26.png"></li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;Hexon is a GUI for hexo with git, run commands and manage content for you.&lt;/p&gt;
+&lt;p&gt;下载链接：&lt;a href=&quot;https://github.com/gethexon/hexon&quot;&gt;https:</summary>
+      
+    
+    
+    
+    <category term="博客搭建" scheme="https://wangzhangyu.github.io/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+    
+    
+    <category term="blog" scheme="https://wangzhangyu.github.io/tags/blog/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>scp传输文件如何设置nohup后台运行？</title>
+    <link href="https://wangzhangyu.github.io/2023/07/29/scp/"/>
+    <id>https://wangzhangyu.github.io/2023/07/29/scp/</id>
+    <published>2023-07-29T05:51:36.000Z</published>
+    <updated>2023-07-29T06:10:07.312Z</updated>
+    
+    <content type="html"><![CDATA[<h1><span id="已经配置了ssh免密登录">已经配置了ssh免密登录</span></h1><p>ssh免密登录，scp也是免密的<br>用scp传输文件时可以直接在命令前加<code>nohup</code>，命令后加<code>&amp;</code><br><code>nohup scp -r *** host:ip &amp;</code></p><h1><span id="未配置免密登录">未配置免密登录</span></h1><blockquote><p>Linux后台任务管理 ：jobs、fg、bg、kill、ps、nohup、disown、&amp;<br> CTRL + C ：终止程序运行<br> CTRL + Z ：程序暂停运行</p></blockquote><ol><li><p>正常运行命令： </p><ul><li>可以是scp，也可以是其他任何需要执行的命令</li><li><code>scp -r *** host:ip</code></li><li>此时程序的执行状态是在台前</li></ul></li><li><p>暂停任务</p><ul><li>键盘输入CTRL + Z，暂停任务</li></ul></li><li><p>查看jobs</p><ul><li>jobs</li></ul></li><li><p>bg将其放入后台</p><ul><li><code>bg %1</code></li></ul></li><li><p>disown -h </p><ul><li>忽略任务的HUP信号</li><li><code>disown -h %1</code></li></ul></li><li><p>检查</p><ul><li>关闭session，新建会话</li><li>ps -ef|grep scp</li></ul></li></ol><p>参考<a href="https://www.cnblogs.com/jyzhao/p/6253728.html">link1</a>,<a href="https://zhuanlan.zhihu.com/p/446891442">link2</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1&gt;&lt;span id=&quot;已经配置了ssh免密登录&quot;&gt;已经配置了ssh免密登录&lt;/span&gt;&lt;/h1&gt;&lt;p&gt;ssh免密登录，scp也是免密的&lt;br&gt;用scp传输文件时可以直接在命令前加&lt;code&gt;nohup&lt;/code&gt;，命令后加&lt;code&gt;&amp;amp;&lt;/code&gt;&lt;br&gt;&lt;c</summary>
+      
+    
+    
+    
+    <category term="Linux" scheme="https://wangzhangyu.github.io/categories/Linux/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>macbook的一些配置和实用插件</title>
     <link href="https://wangzhangyu.github.io/2023/07/28/macbook-plug/"/>
     <id>https://wangzhangyu.github.io/2023/07/28/macbook-plug/</id>
     <published>2023-07-28T10:00:50.000Z</published>
-    <updated>2023-07-28T10:44:37.958Z</updated>
+    <updated>2023-07-29T05:26:17.066Z</updated>
     
-    <content type="html"><![CDATA[<!-- toc --><ul><li><a href="#%E9%BC%A0%E6%A0%87%E6%8F%92%E4%BB%B6">鼠标插件</a></li><li><a href="#%E6%96%87%E7%8C%AE%E7%AE%A1%E7%90%86">文献管理</a></li><li><a href="#%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86">文件管理</a></li><li><a href="#%E8%BD%AF%E4%BB%B6%E5%8D%B8%E8%BD%BD">软件卸载</a></li><li><a href="#%E5%88%86%E5%B1%8F%E8%BD%AF%E4%BB%B6">分屏软件</a></li><li><a href="#%E5%A5%BD%E7%94%A8%E7%9A%84%E7%BB%88%E7%AB%AF%E8%BD%AF%E4%BB%B6">好用的终端软件</a></li><li><a href="#ssh-%E5%85%8D%E5%AF%86%E7%99%BB%E5%BD%95%E9%85%8D%E7%BD%AE">ssh 免密登录配置</a></li></ul><!-- tocstop --><h1><span id="鼠标插件">鼠标插件</span></h1><p>mac鼠标与windows的鼠标滑动指令相反，可用一些插件来帮助实现windows模式</p><ul><li><code>mos</code></li><li><code>mac mouse fix</code></li></ul><h1><span id="文献管理">文献管理</span></h1><p>Zotero+webdav</p><ul><li><code>Zotero</code> </li><li><code>Teracloud</code> （日本，墙内）</li></ul><h1><span id="文件管理">文件管理</span></h1><p>mac没有新建文件的命令，可以使用第三方插件来完成</p><ul><li><code>超级右键lite</code> 永久免费版本: 可以右键新建word文档</li></ul><h1><span id="软件卸载">软件卸载</span></h1><p>听说这一款挺有效果，但是测试仍然有残留。</p><p>比如之前装了罗技的鼠标管理软件<code>Logitech Options</code>，但是可能软件的适配有问题，导致CPU占用过大。我用<code>Appcleaner</code>卸载这个软件，但是发现配置文件仍然存在。</p><ul><li><code>Appcleaner</code>：彻底清除app及其残留文件</li></ul><h1><span id="分屏软件">分屏软件</span></h1><ul><li><code>Rectangle</code>：拖拽窗口自动分屏</li><li><code>grammarly</code>: 语法改错</li><li><code>blackhole</code>: 录制屏幕的时候可以录制电脑自己输出的声音</li></ul><h1><span id="好用的终端软件">好用的终端软件</span></h1><ul><li><code>iterm</code></li></ul><h1><span id="ssh-免密登录配置">ssh 免密登录配置</span></h1><p>参考<a href="https://blog.csdn.net/lxyoucan/article/details/112527301">link</a></p><ul><li>ssh-keygen -t rsa</li><li>chmod 600 ~&#x2F;.ssh&#x2F;id_rsa.pub</li><li>ssh-copy-id <a href="mailto:&#117;&#115;&#101;&#114;&#64;&#x69;&#x70;&#x2e;&#x63;&#x6f;&#x6d;">&#117;&#115;&#101;&#114;&#64;&#x69;&#x70;&#x2e;&#x63;&#x6f;&#x6d;</a></li><li>touch ~&#x2F;.ssh&#x2F;config<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#自定义主机名称，写上好记的就行了。</span></span><br><span class="line">Host goodjob</span><br><span class="line"><span class="comment">#SSH连接的地址，IP或者是域名</span></span><br><span class="line">HostName ip.cn</span><br><span class="line"><span class="comment">#SSH远程登录的名称</span></span><br><span class="line">User user</span><br><span class="line"><span class="comment">#SSH的端口默认是22</span></span><br><span class="line">Port 22</span><br><span class="line"><span class="comment">#指向私钥的位置,这里写你自己的地址。</span></span><br><span class="line">IdentityFile ~/.ssh/id_rsa</span><br></pre></td></tr></table></figure></li></ul>]]></content>
+    <content type="html"><![CDATA[<!-- toc --><ul><li><a href="#%E9%BC%A0%E6%A0%87%E6%8F%92%E4%BB%B6">鼠标插件</a></li><li><a href="#%E6%96%87%E7%8C%AE%E7%AE%A1%E7%90%86">文献管理</a></li><li><a href="#%E6%96%B0%E5%BB%BA%E6%96%87%E4%BB%B6">新建文件</a></li><li><a href="#%E8%A7%A3%E5%8E%8B%E6%96%87%E4%BB%B6">解压文件</a></li><li><a href="#%E8%BD%AF%E4%BB%B6%E5%8D%B8%E8%BD%BD">软件卸载</a></li><li><a href="#%E5%88%86%E5%B1%8F%E8%BD%AF%E4%BB%B6">分屏软件</a></li><li><a href="#%E5%A5%BD%E7%94%A8%E7%9A%84%E7%BB%88%E7%AB%AF%E8%BD%AF%E4%BB%B6">好用的终端软件</a></li><li><a href="#ssh-%E5%85%8D%E5%AF%86%E7%99%BB%E5%BD%95%E9%85%8D%E7%BD%AE">ssh 免密登录配置</a></li><li><a href="#%E5%A4%9A%E8%AE%BE%E5%A4%87%E5%90%8C%E6%AD%A5">多设备同步</a></li><li><a href="#%E5%86%99markdown">写markdown</a></li><li><a href="#%E7%A0%81%E4%BB%A3%E7%A0%81">码代码</a></li><li><a href="#%E8%A7%A6%E5%8F%91%E8%A7%92%E8%AE%BE%E7%BD%AE">触发角设置</a></li><li><a href="#%E5%85%B6%E4%BB%96">其他</a></li></ul><!-- tocstop --><h1><span id="鼠标插件">鼠标插件</span></h1><p>mac鼠标与windows的鼠标滑动指令相反，可用一些插件来帮助实现windows模式</p><ul><li><code>mos</code></li><li><code>mac mouse fix</code></li></ul><h1><span id="文献管理">文献管理</span></h1><p>Zotero+webdav</p><ul><li><code>Zotero</code> </li><li><code>Teracloud</code> （日本，墙内）</li></ul><h1><span id="新建文件">新建文件</span></h1><p>mac没有新建文件的命令，可以使用第三方插件来完成</p><ul><li><code>超级右键lite</code> 永久免费版本: 可以右键新建word文档</li></ul><h1><span id="解压文件">解压文件</span></h1><p>Mac上好用的解压软件</p><ul><li><code>The Unarchiver</code></li></ul><h1><span id="软件卸载">软件卸载</span></h1><p>听说这一款挺有效果，但是测试仍然有残留。</p><p>比如之前装了罗技的鼠标管理软件<code>Logitech Options</code>，但是可能软件的适配有问题，导致CPU占用过大。我用<code>Appcleaner</code>卸载这个软件，但是发现配置文件仍然存在。</p><ul><li><code>Appcleaner</code>：彻底清除app及其残留文件</li></ul><h1><span id="分屏软件">分屏软件</span></h1><ul><li><code>Rectangle</code>：拖拽窗口自动分屏</li></ul><h1><span id="好用的终端软件">好用的终端软件</span></h1><ul><li><code>iterm</code></li></ul><h1><span id="ssh-免密登录配置">ssh 免密登录配置</span></h1><p>参考<a href="https://blog.csdn.net/lxyoucan/article/details/112527301">link</a></p><ul><li>ssh-keygen -t rsa</li><li>chmod 600 ~&#x2F;.ssh&#x2F;id_rsa.pub</li><li>ssh-copy-id <a href="mailto:&#x75;&#115;&#101;&#x72;&#64;&#x69;&#x70;&#46;&#99;&#111;&#109;">&#x75;&#115;&#101;&#x72;&#64;&#x69;&#x70;&#46;&#99;&#111;&#109;</a></li><li>touch ~&#x2F;.ssh&#x2F;config<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#自定义主机名称，写上好记的就行了。</span></span><br><span class="line">Host goodjob</span><br><span class="line"><span class="comment">#SSH连接的地址，IP或者是域名</span></span><br><span class="line">HostName ip.cn</span><br><span class="line"><span class="comment">#SSH远程登录的名称</span></span><br><span class="line">User user</span><br><span class="line"><span class="comment">#SSH的端口默认是22</span></span><br><span class="line">Port 22</span><br><span class="line"><span class="comment">#指向私钥的位置,这里写你自己的地址。</span></span><br><span class="line">IdentityFile ~/.ssh/id_rsa</span><br></pre></td></tr></table></figure></li></ul><h1><span id="多设备同步">多设备同步</span></h1><ul><li><code>坚果云</code></li></ul><h1><span id="写markdown">写markdown</span></h1><ul><li><code>Typora</code></li></ul><h1><span id="码代码">码代码</span></h1><ul><li><code>VS code</code></li><li><code>Sublime Text</code></li></ul><h1><span id="触发角设置">触发角设置</span></h1><p>只设置右下角为触发角，当鼠标滑到右下角，触发返回桌面。</p><h1><span id="其他">其他</span></h1><ul><li><code>grammarly</code>: 语法改错</li><li><code>blackhole</code>: 录制屏幕的时候可以录制电脑自己输出的声音</li></ul>]]></content>
     
     
       
