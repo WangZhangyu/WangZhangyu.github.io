@@ -18,22 +18,22 @@
   
   
   <title>linux网络配置 | Hexo</title>
-  <meta name="description" content="1. Interfaces配置 2. Ubuntu 桌面GUI界面配置 3.Netplan 4.带界面的命令行 nmtui tips 参考    @TOC 可以通过命令行，GUI界面等配置工具 1. Interfaces配置 &#x2F;etc&#x2F;network&#x2F;interfaces 文件里配置 123456auto enp10s0iface enp10s0 inet st">
+  <meta name="description" content="1. Interfaces配置 2. Ubuntu 桌面GUI界面配置 3. Netplan 4. 带界面的命令行 nmtui tips 参考     可以通过命令行，GUI界面等配置工具  1. Interfaces配置 &#x2F;etc&#x2F;network&#x2F;interfaces 文件里配置 123456auto enp10s0iface enp10s0 inet sta">
 <meta property="og:type" content="article">
 <meta property="og:title" content="linux网络配置">
 <meta property="og:url" content="https://wangzhangyu.github.io/2023/07/18/linux%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="1. Interfaces配置 2. Ubuntu 桌面GUI界面配置 3.Netplan 4.带界面的命令行 nmtui tips 参考    @TOC 可以通过命令行，GUI界面等配置工具 1. Interfaces配置 &#x2F;etc&#x2F;network&#x2F;interfaces 文件里配置 123456auto enp10s0iface enp10s0 inet st">
+<meta property="og:description" content="1. Interfaces配置 2. Ubuntu 桌面GUI界面配置 3. Netplan 4. 带界面的命令行 nmtui tips 参考     可以通过命令行，GUI界面等配置工具  1. Interfaces配置 &#x2F;etc&#x2F;network&#x2F;interfaces 文件里配置 123456auto enp10s0iface enp10s0 inet sta">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/ee7184993b454e5bbcecd41929196c90.png">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/bbb8af2e876248fa8484c7dc6ea17959.png">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/f00d9da991d447179390eddc90289efe.png">
+<meta property="og:image" content="https://wangzhangyu.github.io/2023/07/18/linux%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE/1.png">
+<meta property="og:image" content="https://wangzhangyu.github.io/2023/07/18/linux%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE/2.png">
+<meta property="og:image" content="https://wangzhangyu.github.io/2023/07/18/linux%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE/3.png">
 <meta property="article:published_time" content="2023-07-18T10:05:41.000Z">
 <meta property="article:modified_time" content="2023-07-18T10:05:47.000Z">
 <meta property="article:author" content="Wang Zhangyu">
 <meta property="article:tag" content="blog">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://img-blog.csdnimg.cn/ee7184993b454e5bbcecd41929196c90.png">
+<meta name="twitter:image" content="https://wangzhangyu.github.io/2023/07/18/linux%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE/1.png">
   <!-- Canonical links -->
   <link rel="canonical" href="https://wangzhangyu.github.io/2023/07/18/linux%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE/index.html">
   
@@ -379,7 +379,7 @@
         <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2023/07/18/linux%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE/#comments" class="article-comment-link">评论</a></span>
         
 	
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 530(字)</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 536(字)</span>
 	
 	
 		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 2(分)</span>
@@ -394,15 +394,16 @@
 <ul>
 <li><a href="#1-interfaces%E9%85%8D%E7%BD%AE">1. Interfaces配置</a></li>
 <li><a href="#2-ubuntu-%E6%A1%8C%E9%9D%A2gui%E7%95%8C%E9%9D%A2%E9%85%8D%E7%BD%AE">2. Ubuntu 桌面GUI界面配置</a></li>
-<li><a href="#3netplan">3.Netplan</a></li>
-<li><a href="#4%E5%B8%A6%E7%95%8C%E9%9D%A2%E7%9A%84%E5%91%BD%E4%BB%A4%E8%A1%8C-nmtui">4.带界面的命令行 nmtui</a></li>
+<li><a href="#3-netplan">3. Netplan</a></li>
+<li><a href="#4-%E5%B8%A6%E7%95%8C%E9%9D%A2%E7%9A%84%E5%91%BD%E4%BB%A4%E8%A1%8C-nmtui">4. 带界面的命令行 nmtui</a></li>
 <li><a href="#tips">tips</a></li>
 <li><a href="#%E5%8F%82%E8%80%83">参考</a></li>
 </ul>
 <!-- tocstop -->
 
-<p>@<a href="linux%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE">TOC</a></p>
+<blockquote>
 <p>可以通过命令行，GUI界面等配置工具</p>
+</blockquote>
 <h1><span id="1-interfaces配置">1. Interfaces配置</span></h1><p> &#x2F;etc&#x2F;network&#x2F;interfaces 文件里配置</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">auto enp10s0</span><br><span class="line">iface enp10s0 inet static</span><br><span class="line">address 192.168.1.162</span><br><span class="line">netmask 255.255.255.0</span><br><span class="line">gateway 192.168.1.100</span><br><span class="line">dns-nameservers 1.0.0.1,1.1.1.1</span><br></pre></td></tr></table></figure>
 <p>保存并关闭文件。使用命令重启网络</p>
@@ -411,7 +412,7 @@
 <li>不带systemd的老版本<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo /etc/init.d/networking restart</span><br></pre></td></tr></table></figure></li>
 </ul>
 <h1><span id="2-ubuntu-桌面gui界面配置">2. Ubuntu 桌面GUI界面配置</span></h1><p>系统-网络配置-点击</p>
-<h1><span id="3netplan">3.Netplan</span></h1><p>Netplan 是一个在某些 Linux 发行版上配置网络连接的命令行工具。Netplan 使用 YAML 描述文件来配置网络接口，然后，通过这些描述为任何给定的呈现工具生成必要的配置选项。<br>Linux 上使用 Netplan 配置静态 IP 地址和 DHCP 地址<br>&#x2F;etc&#x2F;netplan 文件夹下存放 Netplan 的新配置文件<br>&#x2F;etc&#x2F;netplan&#x2F;01-netcfg.yaml</p>
+<h1><span id="3-netplan">3. Netplan</span></h1><p>Netplan 是一个在某些 Linux 发行版上配置网络连接的命令行工具。Netplan 使用 YAML 描述文件来配置网络接口，然后，通过这些描述为任何给定的呈现工具生成必要的配置选项。<br>Linux 上使用 Netplan 配置静态 IP 地址和 DHCP 地址<br>&#x2F;etc&#x2F;netplan 文件夹下存放 Netplan 的新配置文件<br>&#x2F;etc&#x2F;netplan&#x2F;01-netcfg.yaml</p>
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">network:</span></span><br><span class="line"> </span><br><span class="line">   <span class="attr">Version:</span> <span class="number">2</span></span><br><span class="line"> </span><br><span class="line">   <span class="attr">Renderer:</span> <span class="string">networkd</span></span><br><span class="line"> </span><br><span class="line">   <span class="attr">ethernets:</span></span><br><span class="line"> </span><br><span class="line">      <span class="attr">DEVICE_NAME:</span></span><br><span class="line"> </span><br><span class="line">         <span class="attr">Dhcp4:</span> <span class="literal">yes</span><span class="string">/no</span></span><br><span class="line"> </span><br><span class="line">         <span class="attr">Addresses:</span> [<span class="string">IP/NETMASK</span>]</span><br><span class="line"> </span><br><span class="line">         <span class="attr">Gateway:</span> <span class="string">GATEWAY</span></span><br><span class="line"> </span><br><span class="line">         <span class="attr">Nameservers:</span></span><br><span class="line"> </span><br><span class="line">            <span class="attr">Addresses:</span> [<span class="string">NAMESERVER</span>, <span class="string">NAMESERVER</span>]</span><br></pre></td></tr></table></figure>
 <p>其中：</p>
 <p> DEVICE_NAME 是需要配置设备的实际名称。<br> yes&#x2F; no 代表是否启用 dhcp4（动态获取）<br> dhcp6  是否打开 IPv6 的 dhcp。<br> IP 是设备的 IP 地址。<br> NETMASK 是 IP 地址的掩码。<br> GATEWAY 是网关的地址。<br> NAMESERVER 是由逗号分开的 DNS 服务器列表<br> 样例：<br> <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">network:</span></span><br><span class="line"></span><br><span class="line">  <span class="attr">version:</span> <span class="number">2</span></span><br><span class="line"></span><br><span class="line">  <span class="attr">renderer:</span> <span class="string">networkd</span></span><br><span class="line"></span><br><span class="line">  <span class="attr">ethernets:</span></span><br><span class="line"></span><br><span class="line">     <span class="attr">ens33:</span></span><br><span class="line"></span><br><span class="line">     <span class="attr">dhcp4:</span> <span class="literal">no</span></span><br><span class="line"></span><br><span class="line">     <span class="attr">addresses:</span> [<span class="number">192.168</span><span class="number">.1</span><span class="number">.230</span><span class="string">/24</span>]</span><br><span class="line"></span><br><span class="line">     <span class="attr">gateway4:</span> <span class="number">192.168</span><span class="number">.1</span><span class="number">.254</span></span><br><span class="line"></span><br><span class="line">     <span class="attr">nameservers:</span></span><br><span class="line"></span><br><span class="line">        <span class="attr">addresses:</span> [<span class="number">8.8</span><span class="number">.4</span><span class="number">.4</span>,<span class="number">8.8</span><span class="number">.8</span><span class="number">.8</span>]</span><br></pre></td></tr></table></figure><br>掩码已经不用再配置为 255.255.255.0 这种形式。取而代之的是，掩码已被添加进了 IP 地址中。</p>
@@ -421,7 +422,9 @@
 <li>在 Netplan 上使用 DHCP<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">network:</span></span><br><span class="line"> </span><br><span class="line">   <span class="attr">version:</span> <span class="number">2</span></span><br><span class="line"> </span><br><span class="line">   <span class="attr">renderer:</span> <span class="string">networkd</span></span><br><span class="line"> </span><br><span class="line">   <span class="attr">ethernets:</span></span><br><span class="line"> </span><br><span class="line">      <span class="attr">ens5:</span></span><br><span class="line"> </span><br><span class="line">      <span class="attr">Addresses:</span> []</span><br><span class="line"> </span><br><span class="line">      <span class="attr">dhcp4:</span> <span class="literal">true</span></span><br><span class="line"> </span><br><span class="line">      <span class="attr">optional:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
 此时可以使用 ifconfig 命令得到动态分配的地址，然后重新配置静态地址。</li>
 </ul>
-<h1><span id="4带界面的命令行-nmtui">4.带界面的命令行 nmtui</span></h1><p><img src="https://img-blog.csdnimg.cn/ee7184993b454e5bbcecd41929196c90.png" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/bbb8af2e876248fa8484c7dc6ea17959.png" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/f00d9da991d447179390eddc90289efe.png" alt="在这里插入图片描述"></p>
+<h1><span id="4-带界面的命令行-nmtui">4. 带界面的命令行 nmtui</span></h1><ul>
+<li>在命令行输入nmtui<br><img src="/2023/07/18/linux%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE/1.png" alt="在这里插入图片描述"><br><img src="/2023/07/18/linux%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE/2.png" alt="在这里插入图片描述"><br><img src="/2023/07/18/linux%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE/3.png" alt="在这里插入图片描述"></li>
+</ul>
 <h1><span id="tips">tips</span></h1><ul>
 <li>查看网卡对应的物理端口<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ethtool -p enp10s0f0</span><br></pre></td></tr></table></figure>
 指定对应的物理端口右侧绿灯闪烁，其他网卡灯熄灭</li>
@@ -486,7 +489,7 @@
   <ul class="pager pull-left">
     
     <li class="prev">
-      <a href="/2023/07/18/Python%20Folium%20%E7%BB%98%E5%88%B6%E4%BA%A4%E4%BA%92%E5%BC%8F%E5%9C%B0%E5%9B%BE/" title="Python Folium 绘制交互式地图"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
+      <a href="/2023/07/18/Python%20Folium/" title="Python Folium 绘制交互式地图"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
     </li>
     
     
