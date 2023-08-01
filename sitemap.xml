@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://wangzhangyu.github.io/2023/08/01/tensorboard/</loc>
+    
+    <lastmod>2023-08-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://wangzhangyu.github.io/2023/08/01/download-web/</loc>
     
     <lastmod>2023-08-01</lastmod>
