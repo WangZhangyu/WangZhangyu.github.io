@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://wangzhangyu.github.io/2023/07/28/macbook-plug/</loc>
+    
+    <lastmod>2023-11-09</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://wangzhangyu.github.io/2023/08/01/download-web/</loc>
     
     <lastmod>2023-08-03</lastmod>
@@ -48,15 +57,6 @@
   
   <url>
     <loc>https://wangzhangyu.github.io/2023/07/29/scp/</loc>
-    
-    <lastmod>2023-07-29</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://wangzhangyu.github.io/2023/07/28/macbook-plug/</loc>
     
     <lastmod>2023-07-29</lastmod>
     
@@ -184,7 +184,7 @@
 
   <url>
     <loc>https://wangzhangyu.github.io/</loc>
-    <lastmod>2023-08-11</lastmod>
+    <lastmod>2023-11-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -192,21 +192,14 @@
   
   <url>
     <loc>https://wangzhangyu.github.io/tags/blog/</loc>
-    <lastmod>2023-08-11</lastmod>
+    <lastmod>2023-11-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://wangzhangyu.github.io/tags/markdown/</loc>
-    <lastmod>2023-08-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://wangzhangyu.github.io/tags/macbook/</loc>
-    <lastmod>2023-08-11</lastmod>
+    <lastmod>2023-11-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -215,28 +208,28 @@
   
   <url>
     <loc>https://wangzhangyu.github.io/categories/Linux/</loc>
-    <lastmod>2023-08-11</lastmod>
+    <lastmod>2023-11-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://wangzhangyu.github.io/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</loc>
-    <lastmod>2023-08-11</lastmod>
+    <lastmod>2023-11-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://wangzhangyu.github.io/categories/python/</loc>
-    <lastmod>2023-08-11</lastmod>
+    <lastmod>2023-11-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://wangzhangyu.github.io/categories/macbook/</loc>
-    <lastmod>2023-08-11</lastmod>
+    <lastmod>2023-11-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
