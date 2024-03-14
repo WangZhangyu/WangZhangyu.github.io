@@ -6,7 +6,7 @@
   <link href="https://wangzhangyu.github.io/atom.xml" rel="self"/>
   
   <link href="https://wangzhangyu.github.io/"/>
-  <updated>2024-03-14T05:02:59.933Z</updated>
+  <updated>2024-03-14T09:06:14.549Z</updated>
   <id>https://wangzhangyu.github.io/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="https://wangzhangyu.github.io/2024/03/14/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
     <id>https://wangzhangyu.github.io/2024/03/14/%E6%9C%8D%E5%8A%A1%E5%99%A8/</id>
     <published>2024-03-14T04:58:31.000Z</published>
-    <updated>2024-03-14T05:02:59.933Z</updated>
+    <updated>2024-03-14T09:06:14.549Z</updated>
     
-    <content type="html"><![CDATA[<p>服务器被入侵的几种端倪</p><ol><li><p>登录日志被篡改或删除<br>使用lastb，last查看日志，发现日志是空的</p></li><li><p>lsattr，chattr命令失效，一般是被黑客篡改，移动并重命名。<br>解决方法，下载原始的.c文件，重新编译执行</p></li><li><p>top，nvidia-smi查看，CPU或者GPU被不明程序长时间占用</p></li></ol>]]></content>
+    <content type="html"><![CDATA[<p>服务器被入侵的几种端倪</p><ol><li><p>登录日志被篡改或删除<br>使用lastb，last查看日志，发现日志是空的</p></li><li><p>lsattr，chattr命令失效，一般是被黑客篡改，移动并重命名。<br>root下的免密配置无法删除<br>解决方法，下载原始的.c文件，重新编译执行</p></li></ol><p>下载chattr.c文件，<a href="https://github.com/posborne/linux-programming-interface-exercises/blob/master/15-file-attributes/chattr.c">https://github.com/posborne/linux-programming-interface-exercises/blob/master/15-file-attributes/chattr.c</a><br>编译chattr.c    <code>cc chattr.c</code> 生成a.out文件<br>重命名文件<br>参考： <a href="https://blog.csdn.net/JunyouYH/article/details/117064066">https://blog.csdn.net/JunyouYH/article/details/117064066</a></p><ol start="3"><li>top，nvidia-smi查看，CPU或者GPU被不明程序长时间占用<br>基本上是被挖矿了，可以查看定时任务看看有没有异常，crontab -l</li></ol>]]></content>
     
     
       
@@ -32,7 +32,7 @@
 &lt;ol&gt;
 &lt;li&gt;&lt;p&gt;登录日志被篡改或删除&lt;br&gt;使用lastb，last查看日志，发现日志是空的&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p&gt;lsattr，chattr命令失效，一般是被黑客篡改，移动并重命名。&lt;br&gt;解决方法，下载原始的.c文件，</summary>
+&lt;li&gt;&lt;p&gt;lsattr，chattr命令失效，一般是被黑客篡改，移动并重命名。&lt;br&gt;root下的免密配置无法删除&lt;</summary>
       
     
     
