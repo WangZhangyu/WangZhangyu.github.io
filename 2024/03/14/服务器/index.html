@@ -17,16 +17,20 @@
   <meta http-equiv="window-target" content="_top" />
   
   
-  <title>归档 | Hexo</title>
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="https://wangzhangyu.github.io/archives/index.html">
+  <title>服务器被入侵 | Hexo</title>
+  <meta name="description" content="服务器被入侵的几种端倪  登录日志被篡改或删除使用lastb，last查看日志，发现日志是空的  lsattr，chattr命令失效，一般是被黑客篡改，移动并重命名。解决方法，下载原始的.c文件，重新编译执行  top，nvidia-smi查看，CPU或者GPU被不明程序长时间占用">
+<meta property="og:type" content="article">
+<meta property="og:title" content="服务器被入侵">
+<meta property="og:url" content="https://wangzhangyu.github.io/2024/03/14/%E6%9C%8D%E5%8A%A1%E5%99%A8/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="服务器被入侵的几种端倪  登录日志被篡改或删除使用lastb，last查看日志，发现日志是空的  lsattr，chattr命令失效，一般是被黑客篡改，移动并重命名。解决方法，下载原始的.c文件，重新编译执行  top，nvidia-smi查看，CPU或者GPU被不明程序长时间占用">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2024-03-14T04:58:31.000Z">
+<meta property="article:modified_time" content="2024-03-14T05:02:59.933Z">
 <meta property="article:author" content="Wang Zhangyu">
 <meta name="twitter:card" content="summary">
   <!-- Canonical links -->
-  <link rel="canonical" href="https://wangzhangyu.github.io/archives/index.html">
+  <link rel="canonical" href="https://wangzhangyu.github.io/2024/03/14/%E6%9C%8D%E5%8A%A1%E5%99%A8/index.html">
   
   
     <link rel="icon" href="/favicon.png" type="image/x-icon">
@@ -325,206 +329,135 @@
   
   
 <main class="main" role="main">
-  	<article class="content article article-archives article-type-list" itemscope="">
-	    <header class="article-header">
-	      <h1 itemprop="title">归档</h1>
-	      <p class="text-muted">共 15 篇文章</p>
-	    </header>
-	    <div class="article-body">
-	      
-  
-  
+  <div class="content">
+  <article id="post-服务器" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
     
-    
+    <div class="article-header">
       
+        
+  
+    <h1 class="article-title" itemprop="name">
+      服务器被入侵
+    </h1>
+  
+
       
-      <section class="panel panel-default b-no">
-        <div class="panel-heading" role="tab">
-          <h3 class="panel-title">
-            <a data-toggle="collapse" href="#collapse2024" aria-expanded="true">
-              <i class="icon icon-calendar-plus text-active"></i><i class="icon icon-calendar-minus text"></i>
-              2024
-            </a>
-            <!-- <a href="/archives/2024" class="archive-year">2024</a> -->
-          </h3>
-        </div>
-        <div id="collapse2024" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading2024">
-        <div class="panel-body">
-          <div class="collection">
-    
-    
-<a href="/2024/03/14/%E6%9C%8D%E5%8A%A1%E5%99%A8/" class="collection-item"   itemprop="url">
-  <time datetime="2024-03-14T04:58:31.000Z" itemprop="datePublished">2024-03-14</time>
-  <span>&nbsp;&nbsp;&nbsp;</span> 服务器被入侵
-</a>
+      <div class="article-meta">
+        <span class="article-date">
+    <i class="icon icon-calendar-check"></i>
+	<a href="/2024/03/14/%E6%9C%8D%E5%8A%A1%E5%99%A8/" class="article-date">
+	  <time datetime="2024-03-14T04:58:31.000Z" itemprop="datePublished">2024-03-14</time>
+	</a>
+</span>
+        
+        
+
+        
+	<span class="article-read hidden-xs">
+	    <i class="icon icon-eye-fill" aria-hidden="true"></i>
+	    <span id="busuanzi_container_page_pv">
+			<span id="busuanzi_value_page_pv">0</span>
+		</span>
+	</span>
 
 
-  
-    
-    
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2024/03/14/%E6%9C%8D%E5%8A%A1%E5%99%A8/#comments" class="article-comment-link">评论</a></span>
+        
+	
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 92(字)</span>
+	
+	
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 1(分)</span>
+	
+
+      </div>
+    </div>
+    <div class="article-entry marked-body" itemprop="articleBody">
       
-        </div></div></div></section>
+        <p>服务器被入侵的几种端倪</p>
+<ol>
+<li><p>登录日志被篡改或删除<br>使用lastb，last查看日志，发现日志是空的</p>
+</li>
+<li><p>lsattr，chattr命令失效，一般是被黑客篡改，移动并重命名。<br>解决方法，下载原始的.c文件，重新编译执行</p>
+</li>
+<li><p>top，nvidia-smi查看，CPU或者GPU被不明程序长时间占用</p>
+</li>
+</ol>
+
       
-      
-      <section class="panel panel-default b-no">
-        <div class="panel-heading" role="tab">
-          <h3 class="panel-title">
-            <a data-toggle="collapse" href="#collapse2023" aria-expanded="true">
-              <i class="icon icon-calendar-plus text-active"></i><i class="icon icon-calendar-minus text"></i>
-              2023
-            </a>
-            <!-- <a href="/archives/2023" class="archive-year">2023</a> -->
-          </h3>
-        </div>
-        <div id="collapse2023" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading2023">
-        <div class="panel-body">
-          <div class="collection">
+    </div>
+    <div class="article-footer">
+      <blockquote class="mt-2x">
+  <ul class="post-copyright list-unstyled">
     
+    <li class="post-copyright-link hidden-xs">
+      <strong>本文链接：</strong>
+      <a href="https://wangzhangyu.github.io/2024/03/14/%E6%9C%8D%E5%8A%A1%E5%99%A8/" title="服务器被入侵" target="_blank" rel="external">https://wangzhangyu.github.io/2024/03/14/服务器/</a>
+    </li>
     
-<a href="/2023/08/01/tensorboard/" class="collection-item"   itemprop="url">
-  <time datetime="2023-08-01T08:08:12.000Z" itemprop="datePublished">2023-08-01</time>
-  <span>&nbsp;&nbsp;&nbsp;</span> Tensorboard
-</a>
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong> 本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN协议</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+</blockquote>
+
+
+<div class="panel panel-default panel-badger">
+  <div class="panel-body">
+    <figure class="media">
+      <div class="media-left">
+        <a href="" target="_blank" class="img-burn thumb-sm visible-lg">
+          <img src="/images/avatar.jpg" class="img-rounded w-full" alt="">
+        </a>
+      </div>
+      <div class="media-body">
+        <h3 class="media-heading"><a href="" target="_blank"><span class="text-dark">wangzy</span><small class="ml-1x">Geophysics &amp; AI</small></a></h3>
+        <div>~~~</div>
+      </div>
+    </figure>
+  </div>
+</div>
+
+
+    </div>
+  </article>
+  
+    
+  <section id="comments">
+  	
+           
+    
+  </section>
 
 
   
-    
-    
-    
-<a href="/2023/08/01/download-web/" class="collection-item"   itemprop="url">
-  <time datetime="2023-08-01T08:03:15.000Z" itemprop="datePublished">2023-08-01</time>
-  <span>&nbsp;&nbsp;&nbsp;</span> 数据下载
-</a>
+</div>
 
-
+  <nav class="bar bar-footer clearfix" data-stick-bottom>
+  <div class="bar-inner">
   
+  <ul class="pager pull-left">
     
     
-    
-<a href="/2023/07/30/test/" class="collection-item"   itemprop="url">
-  <time datetime="2023-07-30T07:51:03.505Z" itemprop="datePublished">2023-07-30</time>
-  <span>&nbsp;&nbsp;&nbsp;</span> Hexon -- 管理hexo的GUI工具
-</a>
-
-
-  
+    <li class="next">
+      <a href="/2023/08/01/tensorboard/" title="Tensorboard"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+    </li>
     
     
-    
-<a href="/2023/07/29/scp/" class="collection-item"   itemprop="url">
-  <time datetime="2023-07-29T05:51:36.000Z" itemprop="datePublished">2023-07-29</time>
-  <span>&nbsp;&nbsp;&nbsp;</span> scp传输文件如何设置nohup后台运行？
-</a>
-
-
-  
-    
-    
-    
-<a href="/2023/07/28/macbook-plug/" class="collection-item"   itemprop="url">
-  <time datetime="2023-07-28T10:00:50.360Z" itemprop="datePublished">2023-07-28</time>
-  <span>&nbsp;&nbsp;&nbsp;</span> macbook的一些配置和实用插件
-</a>
-
-
-  
-    
-    
-    
-<a href="/2023/07/25/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99/" class="collection-item"   itemprop="url">
-  <time datetime="2023-07-25T08:29:10.000Z" itemprop="datePublished">2023-07-25</time>
-  <span>&nbsp;&nbsp;&nbsp;</span> 云服务器搭建个人网站
-</a>
-
-
-  
-    
-    
-    
-<a href="/2023/07/20/gitalk/" class="collection-item"   itemprop="url">
-  <time datetime="2023-07-20T11:42:20.000Z" itemprop="datePublished">2023-07-20</time>
-  <span>&nbsp;&nbsp;&nbsp;</span> gitalk 第三方评论
-</a>
-
-
-  
-    
-    
-    
-<a href="/2023/07/20/comment/" class="collection-item"   itemprop="url">
-  <time datetime="2023-07-20T09:36:23.000Z" itemprop="datePublished">2023-07-20</time>
-  <span>&nbsp;&nbsp;&nbsp;</span> Hexo添加插件
-</a>
-
-
-  
-    
-    
-    
-<a href="/2023/07/19/hexo%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A2%98/" class="collection-item"   itemprop="url">
-  <time datetime="2023-07-19T05:19:19.691Z" itemprop="datePublished">2023-07-19</time>
-  <span>&nbsp;&nbsp;&nbsp;</span> Hexo博客主题
-</a>
-
-
-  
-    
-    
-    
-<a href="/2023/07/19/Markdown%E8%AF%AD%E6%B3%95/" class="collection-item"   itemprop="url">
-  <time datetime="2023-07-18T17:41:30.743Z" itemprop="datePublished">2023-07-19</time>
-  <span>&nbsp;&nbsp;&nbsp;</span> Markdown语法
-</a>
-
-
-  
-    
-    
-    
-<a href="/2023/07/19/Linux%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%BF%90%E7%BB%B4/" class="collection-item"   itemprop="url">
-  <time datetime="2023-07-18T17:09:50.000Z" itemprop="datePublished">2023-07-19</time>
-  <span>&nbsp;&nbsp;&nbsp;</span> Linux服务器运维
-</a>
-
-
-  
-    
-    
-    
-<a href="/2023/07/18/Python%20Folium/" class="collection-item"   itemprop="url">
-  <time datetime="2023-07-18T10:09:22.000Z" itemprop="datePublished">2023-07-18</time>
-  <span>&nbsp;&nbsp;&nbsp;</span> Python Folium 绘制交互式地图
-</a>
-
-
-  
-    
-    
-    
-<a href="/2023/07/18/linux%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE/" class="collection-item"   itemprop="url">
-  <time datetime="2023-07-18T10:05:41.000Z" itemprop="datePublished">2023-07-18</time>
-  <span>&nbsp;&nbsp;&nbsp;</span> linux网络配置
-</a>
-
-
-  
-    
-    
-    
-<a href="/2023/07/18/hello-world/" class="collection-item"   itemprop="url">
-  <time datetime="2023-07-18T09:44:32.957Z" itemprop="datePublished">2023-07-18</time>
-  <span>&nbsp;&nbsp;&nbsp;</span> Hello World
-</a>
-
-
+  </ul>
   
   
-    </div></div></div></section>
+  
+  <div class="bar-right">
+    
+    <div class="share-component" data-sites="weibo,qq,wechat,facebook,twitter" data-mobile-sites="weibo,qq,qzone"></div>
+    
+  </div>
+  </div>
+</nav>
   
 
-	    </div>
-  	</article>
-  	 	
+
 </main>
 
   <footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
@@ -578,6 +511,40 @@ window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
 
 
 
+
+   
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+   
+    
+  <!-- <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css"> -->
+  <script src="//cdn.jsdelivr.net/npm/gitalk@1.6.2/dist/gitalk.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/blueimp-md5@2.10.0/js/md5.min.js"></script>
+  <script type="text/javascript">
+  var gitalk = new Gitalk({
+    clientID: 'ff6a60639809a4922c70',
+    clientSecret: '8afb65d3065048e3d31c9365cd1f42b48861f275',
+    repo: 'gitalk',
+    owner: 'WangZhangyu',
+    admin: ['WangZhangyu'],
+    id: md5(location.pathname), 
+    proxy: 'https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token',
+
+    distractionFreeMode: true,
+    language: 'zh-CN',
+    enableHotKey: 'true'
+
+  })
+  gitalk.render('comments')
+  </script>
+
+
+<!-- id: 1234567, -->
+<!-- id: md5(location.pathname), -->      
 
 
 
