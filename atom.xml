@@ -6,7 +6,7 @@
   <link href="https://wangzhangyu.github.io/atom.xml" rel="self"/>
   
   <link href="https://wangzhangyu.github.io/"/>
-  <updated>2024-03-15T13:59:15.315Z</updated>
+  <updated>2024-03-15T14:10:13.050Z</updated>
   <id>https://wangzhangyu.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://wangzhangyu.github.io/2024/03/15/%E8%B0%B7%E6%AD%8C%E4%B8%A4%E6%AD%A5%E9%AA%8C%E8%AF%81/"/>
     <id>https://wangzhangyu.github.io/2024/03/15/%E8%B0%B7%E6%AD%8C%E4%B8%A4%E6%AD%A5%E9%AA%8C%E8%AF%81/</id>
     <published>2024-03-15T13:57:15.000Z</published>
-    <updated>2024-03-15T13:59:15.315Z</updated>
+    <updated>2024-03-15T14:10:13.050Z</updated>
     
     <content type="html"><![CDATA[<h1><span id="谷歌二次登录验证-安全防护">谷歌二次登录验证 – 安全防护</span></h1><p>Ubuntu<br>安装google-authenticator<br><code>sudo apt install libpam-google-authenticator</code><br>修改配置文件<br><code>echo &quot;auth required pam_google_authenticator.so&quot; &gt;&gt; /etc/pam.d/sshd</code><br><code>sed -i &#39;s/^ChallengeResponseAuthentication no/ChallengeResponseAuthentication yes/g&#39; /etc/ssh/sshd_config</code><br>重启sshd，完成配置<br><code>systemctl restart sshd</code><br>对个人用户，进入主目录下<br>执行<code> google-authenticator</code>,生成验证二维码</p><p>下载谷歌authrnticator绑定二维码</p>]]></content>
     
@@ -33,7 +33,7 @@
     
     
     
-    <category term="博客搭建" scheme="https://wangzhangyu.github.io/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+    <category term="Linux" scheme="https://wangzhangyu.github.io/categories/Linux/"/>
     
     
   </entry>
