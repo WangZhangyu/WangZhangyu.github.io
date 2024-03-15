@@ -6,7 +6,7 @@
   <link href="https://wangzhangyu.github.io/atom.xml" rel="self"/>
   
   <link href="https://wangzhangyu.github.io/"/>
-  <updated>2024-03-14T10:33:09.026Z</updated>
+  <updated>2024-03-15T03:11:03.103Z</updated>
   <id>https://wangzhangyu.github.io/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>linux病毒检查</title>
+    <link href="https://wangzhangyu.github.io/2024/03/15/linux%E7%97%85%E6%AF%92%E6%A3%80%E6%9F%A5/"/>
+    <id>https://wangzhangyu.github.io/2024/03/15/linux%E7%97%85%E6%AF%92%E6%A3%80%E6%9F%A5/</id>
+    <published>2024-03-15T02:55:35.000Z</published>
+    <updated>2024-03-15T03:11:03.103Z</updated>
+    
+    <content type="html"><![CDATA[<ol><li>chkrootkit 轻量级软件<br>特点：检测系统命令是否正常<br>这是一个轻量级程序，这意味着它不会影响系统性能。<br>它还可以检测各种其他恶意软件和木马，如后门、TinyNDS 等。</li></ol><ul><li>安装 <code>sudo apt install chkrootkit</code></li><li>使用 <code>sudo chkrootkit</code><ul><li>not infected 表示未感染</li><li>infected 为感染</li></ul></li></ul><ol start="2"><li>clamav<br>简介：<br>ClamAV 是一款开源防病毒软件，可检测病毒、恶意软件、特洛伊木马和其他威胁，它也免费提供，这使其成为 Linux 上最好的防病毒软件之一。<br>特点：<br>ClamAV 具有命令行扫描程序，这意味着它可以扫描主要文件类型中的蠕虫、病毒和特洛伊木马。<br>为确保安全并保持最新状态，病毒库一天会更新多次。<br>它具有对不同存档格式的内置支持，包括 Zip、OLE2、SIS、Dmg、RAR、BinHex、Gzip、Tar、Bzip2、、Cabinet、CHM 等</li></ol><ul><li>安装 <code>sudo apt-get install clamav</code></li><li>使用  <ul><li>更新病毒库<code>freshclam </code></li><li>启动服务 <code>sudo systemctl start clamd@scan </code><br>    <code>sudo systemctl enable clamd@scan</code></li></ul></li></ul><p>参考：<br><a href="https://zhuanlan.zhihu.com/p/586992717">https://zhuanlan.zhihu.com/p/586992717</a><br><a href="https://zhuanlan.zhihu.com/p/514221945">https://zhuanlan.zhihu.com/p/514221945</a><br><a href="https://zhuanlan.zhihu.com/p/266731354">https://zhuanlan.zhihu.com/p/266731354</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;ol&gt;
+&lt;li&gt;chkrootkit 轻量级软件&lt;br&gt;特点：检测系统命令是否正常&lt;br&gt;这是一个轻量级程序，这意味着它不会影响系统性能。&lt;br&gt;它还可以检测各种其他恶意软件和木马，如后门、TinyNDS 等。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;安装 &lt;code&gt;sudo</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>/etc/passwd文件误删除</title>
