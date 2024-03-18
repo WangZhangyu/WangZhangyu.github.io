@@ -369,7 +369,7 @@
         <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2023/07/19/Linux%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%BF%90%E7%BB%B4/#comments" class="article-comment-link">评论</a></span>
         
 	
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 1.9k(字)</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 2k(字)</span>
 	
 	
 		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 9(分)</span>
@@ -508,14 +508,7 @@
 </ul>
 <h2><span id="更改文件夹所有者-更改组">更改文件夹所有者、更改组</span></h2><p>更改文件夹所有者 chown wangzy –R wangzy&#x2F;<br>更改文件夹所有组 chgrp users –R wangzy</p>
 <h2><span id="ssh问题">ssh问题</span></h2><p>查看一下home目录下有没有 .ssh 文件夹， 用 ls -al查看    (注：linux系统中以“.”开头的是隐藏文件)<br>如果没有，就自己建立一个 ： mkdir  .ssh<br>cd然后进入 .ssh，依次运行：<br>1   ssh-keygen  （命令后一直敲空格就行, 会生成几个文件）<br>2   cat id_dsa.pub &gt;&gt; authorized_keys<br>3   退出.ssh 至你的home， 运行  chmod -R 755 .ssh<br>4   进入.ssh， chmod 600 *</p>
-<pre><code>-rw------- (600)   只有拥有者有读写权限。
--rw-r--r-- (644)   只有拥有者有读写权限；而属组用户和其他用户只有读权限。
--rwx------ (700)   只有拥有者有读、写、执行权限。
--rwxr-xr-x (755)   拥有者有读、写、执行权限；而属组用户和其他用户只有读、执行权限。
--rwx--x--x (711)   拥有者有读、写、执行权限；而属组用户和其他用户只有执行权限。
--rw-rw-rw- (666)   所有用户都有文件读、写权限。
--rwxrwxrwx (777)   所有用户都有读、写、执行权限。
-</code></pre>
+<p>常见的权限表示形式:<br>    -rw——- (600)   只有拥有者有读写权限。<br>    -rw-r–r– (644)   只有拥有者有读写权限；而属组用户和其他用户只有读权限。<br>    -rwx—— (700)   只有拥有者有读、写、执行权限。<br>    -rwxr-xr-x (755)   拥有者有读、写、执行权限；而属组用户和其他用户只有读、执行权限。<br>    -rwx–x–x (711)   拥有者有读、写、执行权限；而属组用户和其他用户只有执行权限。<br>    -rw-rw-rw- (666)   所有用户都有文件读、写权限。<br>    -rwxrwxrwx (777)   所有用户都有读、写、执行权限。</p>
 <p>service sshd restart</p>
 <h2><span id="gpu-服务器显存占用但是找不到pid">GPU: 服务器显存占用但是找不到pid</span></h2><p>fuser -v &#x2F;dev&#x2F;nvidia*<br>fuser -k &#x2F;dev&#x2F;nvidia*</p>
 <p>Sudo 账户下操作</p>
