@@ -6,7 +6,7 @@
   <link href="https://wangzhangyu.github.io/atom.xml" rel="self"/>
   
   <link href="https://wangzhangyu.github.io/"/>
-  <updated>2024-03-15T14:10:13.050Z</updated>
+  <updated>2024-03-18T05:40:51.017Z</updated>
   <id>https://wangzhangyu.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>nfs</title>
+    <link href="https://wangzhangyu.github.io/2024/03/18/nfs/"/>
+    <id>https://wangzhangyu.github.io/2024/03/18/nfs/</id>
+    <published>2024-03-18T05:38:04.000Z</published>
+    <updated>2024-03-18T05:40:51.017Z</updated>
+    
+    <content type="html"><![CDATA[<p>NFS服务器的启动与停止</p><p>启动NFS服务器</p><p>需要启动portmap和nfs两个服务，并且portmap一定要先于nfs启动;</p><p>$service portmap start 或者 $&#x2F;etc&#x2F;init.d&#x2F;portmap start<br>$service nfs start 或者 $&#x2F;etc&#x2F;init.d&#x2F;nfs start</p><p>如果需要重新启动NFS服务，执行命令：<br>$service nfs restart<br>查看NFS服务当前的状态，执行命令:<br>$service nfs status</p><p>NFS的资源共享<br>配置&#x2F;etc&#x2F;exports文件</p><p>参考：<a href="https://blog.csdn.net/weixin_42400980/article/details/80596204">https://blog.csdn.net/weixin_42400980/article/details/80596204</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;NFS服务器的启动与停止&lt;/p&gt;
+&lt;p&gt;启动NFS服务器&lt;/p&gt;
+&lt;p&gt;需要启动portmap和nfs两个服务，并且portmap一定要先于nfs启动;&lt;/p&gt;
+&lt;p&gt;$service portmap start 或者 $&amp;#x2F;etc&amp;#x2F;init.d&amp;#x2F</summary>
+      
+    
+    
+    
+    <category term="Linux" scheme="https://wangzhangyu.github.io/categories/Linux/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>谷歌两步验证</title>
