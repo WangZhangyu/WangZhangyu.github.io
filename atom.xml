@@ -6,7 +6,7 @@
   <link href="https://wangzhangyu.github.io/atom.xml" rel="self"/>
   
   <link href="https://wangzhangyu.github.io/"/>
-  <updated>2024-03-18T05:40:51.017Z</updated>
+  <updated>2024-03-20T11:32:47.570Z</updated>
   <id>https://wangzhangyu.github.io/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>文件不存在</title>
+    <link href="https://wangzhangyu.github.io/2024/03/20/%E6%96%87%E4%BB%B6%E4%B8%8D%E5%AD%98%E5%9C%A8/"/>
+    <id>https://wangzhangyu.github.io/2024/03/20/%E6%96%87%E4%BB%B6%E4%B8%8D%E5%AD%98%E5%9C%A8/</id>
+    <published>2024-03-20T11:24:41.000Z</published>
+    <updated>2024-03-20T11:32:47.570Z</updated>
+    
+    <content type="html"><![CDATA[<p>问题描述：linux系统被入侵后，之前的一个可执行文件，现在无法运行了。很奇怪<br>输入命令报错</p><figure class="highlight plaintext"><figcaption><span>such file or directory</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">```</span><br><span class="line"></span><br><span class="line">重装一些依赖文件</span><br></pre></td></tr></table></figure><p>apt-get install lsb-core</p><pre><code>参考： https://www.jianshu.com/p/61f4d7385762</code></pre>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;问题描述：linux系统被入侵后，之前的一个可执行文件，现在无法运行了。很奇怪&lt;br&gt;输入命令报错&lt;/p&gt;
+&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;figcaption&gt;&lt;span&gt;such file or directory&lt;/span&gt;</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>nfs</title>
