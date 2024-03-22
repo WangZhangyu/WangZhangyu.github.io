@@ -1,3 +1,4 @@
+https://wangzhangyu.github.io/2024/03/22/linux%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/
 https://wangzhangyu.github.io/2024/03/20/%E6%96%87%E4%BB%B6%E4%B8%8D%E5%AD%98%E5%9C%A8/
 https://wangzhangyu.github.io/2023/07/18/hello-world/
 https://wangzhangyu.github.io/2024/03/18/nfs/

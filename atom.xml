@@ -6,7 +6,7 @@
   <link href="https://wangzhangyu.github.io/atom.xml" rel="self"/>
   
   <link href="https://wangzhangyu.github.io/"/>
-  <updated>2024-03-20T11:36:49.763Z</updated>
+  <updated>2024-03-22T16:51:28.655Z</updated>
   <id>https://wangzhangyu.github.io/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>linux基本命令</title>
+    <link href="https://wangzhangyu.github.io/2024/03/22/linux%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/"/>
+    <id>https://wangzhangyu.github.io/2024/03/22/linux%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/</id>
+    <published>2024-03-22T15:45:39.000Z</published>
+    <updated>2024-03-22T16:51:28.655Z</updated>
+    
+    <content type="html"><![CDATA[<ul><li><p>系统相关</p><table><thead><tr><th>命令</th><th>说明</th></tr></thead><tbody><tr><td><code>lsb_release -a</code></td><td>查看Ubuntu版本</td></tr><tr><td><code>uname -a</code></td><td>查看操作系统详细信息</td></tr><tr><td><code>top</code> 或 <code>htop</code></td><td>查看CPU使用情况</td></tr><tr><td><code>nvidia-smi</code> 或 <code>nvtop</code></td><td>查看GPU使用情况</td></tr><tr><td><code>nvcc -V</code></td><td>查看CUDA版本</td></tr><tr><td><code>yum install xxx</code>(centos)或 <code>apt install xxx</code>(ubuntu)</td><td>安装软件</td></tr><tr><td><code>shutdown -h now</code> 或 <code>poweroff</code></td><td>关机</td></tr><tr><td><code>shutdown -r now</code> 或 <code>reboot</code></td><td>重启</td></tr><tr><td><code>whoami</code></td><td>显示当前用户名</td></tr><tr><td><code>which</code></td><td>在PATH变量指定的路径中搜索可执行文件的位置</td></tr><tr><td><code>whereis</code></td><td>在标准位置中搜索可执行文件、源码文件和帮助文件的位置</td></tr><tr><td><code>date</code></td><td>显示当前日期和时间</td></tr><tr><td><code>cal</code></td><td>显示当前月份的日历</td></tr><tr><td><code>uptime</code></td><td>显示系统的运行时间和平均负载</td></tr><tr><td><code>history</code></td><td>显示历史命令记录</td></tr><tr><td><code>man</code></td><td>显示命令的使用手册</td></tr><tr><td><code>info</code></td><td>显示命令的更详细的使用信息</td></tr><tr><td><code>ping</code></td><td>测试与另一台计算机的连接情况</td></tr><tr><td><code>traceroute</code></td><td>显示到目标主机的路径</td></tr><tr><td><code>ifconfig</code></td><td>显示和配置网络接口信息</td></tr><tr><td><code>netstat</code></td><td>显示网络连接、路由表和网络接口状态</td></tr><tr><td><code>route</code></td><td>显示和配置路由表信息</td></tr><tr><td><code>ln</code></td><td>创建链接</td></tr><tr><td><code>find</code></td><td>在文件系统中搜索文件</td></tr><tr><td><code>locate</code></td><td>使用数据库快速搜索文件</td></tr><tr><td><code>ssh</code></td><td>远程登录另一台计算机</td></tr><tr><td><code>echo</code></td><td>输出文本内容</td></tr><tr><td><code>hostname</code></td><td>显示或设置系统主机名</td></tr></tbody></table></li><li><p>进程相关</p><table><thead><tr><th>命令</th><th>说明</th></tr></thead><tbody><tr><td><code>ps -ef | grep xxxx</code></td><td>查看某个进程状态</td></tr><tr><td><code>kill -9 xxxx</code></td><td>杀掉进程</td></tr></tbody></table></li><li><p>文件相关</p><table><thead><tr><th>命令</th><th>说明</th></tr></thead><tbody><tr><td><code>touch file</code></td><td>创建名为file的空文件</td></tr><tr><td><code>cat file</code></td><td>显示文件的全部内容</td></tr><tr><td><code>tail file</code></td><td>显示文件的末尾几行</td></tr><tr><td><code>head file</code></td><td>显示文件的前几行</td></tr><tr><td><code>more file</code></td><td>逐页显示文件内容，空格键向下翻页</td></tr><tr><td><code>less file</code></td><td>逐页显示文件内容，可以上下翻页、搜索等交互式操作</td></tr></tbody></table></li><li><p>传输操作</p><table><thead><tr><th>传输操作</th><th>命令</th><th>说明</th></tr></thead><tbody><tr><td>复制文件</td><td><code>cp</code></td><td>将文件或目录复制到另一个位置</td></tr><tr><td>移动文件</td><td><code>mv</code></td><td>将文件或目录从一个位置移动到另一个位置，也可用于重命名文件或目录</td></tr><tr><td>远程复制</td><td><code>scp</code></td><td>安全地将文件从本地系统复制到远程系统，或者从远程系统复制到本地系统</td></tr><tr><td>同步文件</td><td><code>rsync</code></td><td>在本地系统和远程系统之间同步文件和目录，可以进行增量复制并保持文件权限</td></tr></tbody></table></li><li><p>权限与扩展属性</p><table><thead><tr><th>权限操作</th><th>命令</th><th>说明</th></tr></thead><tbody><tr><td>更改所有者</td><td><code>chown</code></td><td>将文件或目录的所有者更改为指定用户或用户组</td></tr><tr><td>更改组</td><td><code>chgrp</code></td><td>将文件或目录的所属组更改为指定的用户组</td></tr><tr><td>更改权限</td><td><code>chmod</code></td><td>更改文件或目录的权限，控制文件的读、写、执行权限以及特殊权限位的设置</td></tr><tr><td>修改扩展属性</td><td><code>chattr +iau</code></td><td>修改文件或目录的扩展属性，添加、删除或修改指定的扩展属性</td></tr><tr><td>显示扩展属性</td><td><code>lsattr</code></td><td>显示文件或目录的扩展属性</td></tr></tbody></table></li><li><p>磁盘挂载和空间查看</p><table><thead><tr><th>挂载操作</th><th>命令</th><th>说明</th></tr></thead><tbody><tr><td>挂载文件系统</td><td><code>mount /dev/sdb1 /mnt</code></td><td>将文件系统挂载到指定的挂载点</td></tr><tr><td>卸载文件系统</td><td><code>umount /dev/sdb1</code> 或 <code>umount /mnt</code></td><td>卸载已经挂载的文件系统，通常用 <code>umount 挂载点</code> 命令，例如 <code>umount /mnt</code></td></tr><tr><td>查看磁盘空间</td><td><code>df -h</code></td><td>查看文件系统的磁盘空间使用情况</td></tr><tr><td>查看目录空间</td><td><code>du -h</code> 或 <code>du -h --max-depth=1</code></td><td>查看指定目录或文件的磁盘空间使用情况</td></tr><tr><td>查看内存使用</td><td><code>free -h</code></td><td>查看系统内存使用情况</td></tr><tr><td>查看磁盘分区</td><td><code>fdisk -l</code></td><td>查看系统的磁盘分区信息</td></tr></tbody></table></li><li><p>打包与解压</p><table><thead><tr><th>操作</th><th>命令</th><th>说明</th></tr></thead><tbody><tr><td>打包</td><td><code>tar -zcvf</code></td><td>使用gzip压缩将文件或目录打包为.tar.gz文件</td></tr><tr><td>解压</td><td><code>tar -zxvf</code></td><td>解压缩.tar.gz文件，同时调用gzip解压缩命令</td></tr><tr><td>解压</td><td><code>unzip</code></td><td>解压缩.zip文件</td></tr><tr><td>压缩</td><td><code>gzip</code></td><td>压缩和解压文件（使用gzip格式）</td></tr><tr><td>压缩</td><td><code>zip</code></td><td>压缩和解压文件（使用zip格式）</td></tr><tr><td>解压</td><td><code>unzip</code></td><td>解压zip格式的文件</td></tr></tbody></table></li><li><p>三剑客</p><table><thead><tr><th>工具名称</th><th>说明</th></tr></thead><tbody><tr><td><code>awk</code></td><td>用于文本处理和数据提取的强大工具</td></tr><tr><td><code>grep</code></td><td>用于搜索文本中的指定模式，并输出匹配行</td></tr><tr><td><code>sed</code></td><td>用于对文本进行流式文本编辑和转换的工具</td></tr></tbody></table></li><li><p>启动服务</p><table><thead><tr><th>启动服务操作</th><th>命令</th><th>说明</th></tr></thead><tbody><tr><td>systemd</td><td><code>systemctl start</code></td><td>启动指定服务，例如 <code>systemctl start service_name</code></td></tr><tr><td>service</td><td><code>service</code></td><td>启动指定服务，例如 <code>service service_name start</code></td></tr></tbody></table></li><li><p>linux系统的文件结构</p><table><thead><tr><th>Linux根目录下各目录</th><th>说明</th></tr></thead><tbody><tr><td>&#x2F;bin</td><td>二进制文件，系统常规命令</td></tr><tr><td>&#x2F;boot</td><td>系统启动分区，系统启动时读取的文件</td></tr><tr><td>&#x2F;dev</td><td>设备文件</td></tr><tr><td>&#x2F;etc</td><td>大多数配置文件</td></tr><tr><td>&#x2F;home</td><td>普通用户的家目录</td></tr><tr><td>&#x2F;lib</td><td>32位函数库</td></tr><tr><td>&#x2F;lib64</td><td>64位库</td></tr><tr><td>&#x2F;media</td><td>手动临时挂载点</td></tr><tr><td>&#x2F;mnt</td><td>手动临时挂载点</td></tr><tr><td>&#x2F;opt</td><td>第三方软件安装位置</td></tr><tr><td>&#x2F;proc</td><td>进程信息及硬件信息</td></tr><tr><td>&#x2F;root</td><td>临时设备的默认挂载点</td></tr><tr><td>&#x2F;run</td><td>系统运行时数据</td></tr><tr><td>&#x2F;sbin</td><td>系统管理命令</td></tr><tr><td>&#x2F;srv</td><td>数据</td></tr><tr><td>&#x2F;var</td><td>可变数据（例如日志、邮件等）</td></tr><tr><td>&#x2F;sys</td><td>内核相关信息</td></tr><tr><td>&#x2F;tmp</td><td>临时文件</td></tr><tr><td>&#x2F;usr</td><td>用户相关设定</td></tr></tbody></table></li><li><p>一些常见的文件位置</p><table><thead><tr><th>文件&#x2F;目录</th><th>位置</th></tr></thead><tbody><tr><td>&#x2F;etc&#x2F;passwd</td><td>包含系统上所有用户的基本信息</td></tr><tr><td>&#x2F;etc&#x2F;shadow</td><td>包含系统上所有用户的加密密码</td></tr><tr><td>&#x2F;etc&#x2F;group</td><td>包含系统上所有用户组的信息</td></tr><tr><td>&#x2F;etc&#x2F;hostname</td><td>包含主机名</td></tr><tr><td>&#x2F;etc&#x2F;hosts</td><td>包含IP地址和主机名的映射</td></tr><tr><td>&#x2F;etc&#x2F;resolv.conf</td><td>包含DNS解析器的配置信息</td></tr><tr><td>&#x2F;etc&#x2F;fstab</td><td>包含文件系统挂载信息</td></tr><tr><td>&#x2F;etc&#x2F;ssh&#x2F;sshd_config</td><td>SSH服务器的配置文件</td></tr><tr><td>&#x2F;etc&#x2F;profile</td><td>用户的全局Shell配置文件</td></tr><tr><td>&#x2F;var&#x2F;log</td><td>包含系统日志文件的目录</td></tr><tr><td>&#x2F;var&#x2F;spool&#x2F;mail</td><td>包含用户邮件的目录</td></tr><tr><td>&#x2F;var&#x2F;run</td><td>包含系统运行时的临时文件</td></tr><tr><td>&#x2F;var&#x2F;www&#x2F;html</td><td>Web服务器的根目录（通常是Apache或Nginx）</td></tr><tr><td>&#x2F;usr&#x2F;bin</td><td>包含大多数用户可执行文件的目录</td></tr><tr><td>&#x2F;usr&#x2F;sbin</td><td>包含系统管理员可执行文件的目录</td></tr><tr><td>&#x2F;usr&#x2F;lib</td><td>包含大多数系统库的目录</td></tr><tr><td>&#x2F;usr&#x2F;local&#x2F;bin</td><td>包含用户安装的软件可执行文件的目录</td></tr><tr><td>&#x2F;usr&#x2F;local&#x2F;lib</td><td>包含用户安装的软件库的目录</td></tr></tbody></table></li></ul><p>参考： <a href="https://blog.csdn.net/m0_46422300/article/details/104645072">https://blog.csdn.net/m0_46422300/article/details/104645072</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;系统相关&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;命令&lt;/th&gt;
+&lt;th&gt;说明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;lsb_release -a&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;查看Ubun</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>可执行文件报错：“No such file or directory”</title>
@@ -486,28 +517,6 @@
     
     
     <category term="blog" scheme="https://wangzhangyu.github.io/tags/blog/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="https://wangzhangyu.github.io/2023/07/18/hello-world/"/>
-    <id>https://wangzhangyu.github.io/2023/07/18/hello-world/</id>
-    <published>2023-07-18T09:44:32.957Z</published>
-    <updated>2024-03-19T08:21:38.063Z</updated>
-    
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2><span id="quick-start">Quick Start</span></h2><h3><span id="create-a-new-post">Create a new post</span></h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3><span id="run-server">Run server</span></h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3><span id="generate-static-files">Generate static files</span></h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3><span id="deploy-to-remote-sites">Deploy to remote sites</span></h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p><hr><p>常规操作：</p><ol><li>新建草稿draft<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new draft hello</span><br></pre></td></tr></table></figure>此时创建了一份草稿，可以直接编辑，不会被发表。文件存储在source&#x2F;_drafts文件夹下。</li></ol><p>2.预览草稿</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo s </span><br></pre></td></tr></table></figure><p>在本地浏览器打开：<a href="http://localhost:4000/">http://localhost:4000/</a></p><ol start="3"><li>发表草稿<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo publish hello</span><br></pre></td></tr></table></figure>参考：<a href="https://hexo.io/zh-cn/docs/writing.html">https://hexo.io/zh-cn/docs/writing.html</a></li></ol><p>hexo在多台电脑上的更新<br>参考：<a href="https://blog.csdn.net/K1052176873/article/details/122879462">https://blog.csdn.net/K1052176873/article/details/122879462</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt; for</summary>
-      
-    
-    
-    
-    <category term="博客搭建" scheme="https://wangzhangyu.github.io/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
-    
     
   </entry>
   
