@@ -399,7 +399,7 @@
     <link href="https://wangzhangyu.github.io/2023/07/19/hexo%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A2%98/"/>
     <id>https://wangzhangyu.github.io/2023/07/19/hexo%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A2%98/</id>
     <published>2023-07-19T05:19:19.691Z</published>
-    <updated>2024-03-15T14:07:02.616Z</updated>
+    <updated>2024-03-23T05:30:34.404Z</updated>
     
     <content type="html"><![CDATA[<h1><span id="博客主题-hexo-theme-pure">博客主题 hexo-theme-pure</span></h1><p>下载链接 <a href="https://github.com/cofess/hexo-theme-pure">https://github.com/cofess/hexo-theme-pure</a></p><h1><span id="hexo个人博客部署到github">Hexo个人博客部署到Github</span></h1><p><a href="https://mizeri.github.io/2021/04/18/Hexo-blog-deploy/">参考</a></p><p>git, hexo and Node.js</p><p>写作搭档</p><blockquote><p>hexo+hexon+typora</p></blockquote><p><a href="https://github.com/gethexon/hexon/">hexon</a>管理博客的开源代码</p>]]></content>
     
@@ -411,7 +411,7 @@
     
     
     
-    <category term="Linux" scheme="https://wangzhangyu.github.io/categories/Linux/"/>
+    <category term="博客搭建" scheme="https://wangzhangyu.github.io/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
     
     
     <category term="blog" scheme="https://wangzhangyu.github.io/tags/blog/"/>
