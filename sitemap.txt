@@ -28,6 +28,7 @@ https://wangzhangyu.github.io/2023/07/18/linux%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%
 https://wangzhangyu.github.io/
 https://wangzhangyu.github.io/tags/blog/
 https://wangzhangyu.github.io/tags/markdown/
+https://wangzhangyu.github.io/tags/Linux/
 https://wangzhangyu.github.io/categories/Linux/
 https://wangzhangyu.github.io/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/
 https://wangzhangyu.github.io/categories/python/
