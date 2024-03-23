@@ -26,7 +26,7 @@
 <meta property="og:description" content="系统相关    命令 说明    lsb_release -a 查看Ubuntu版本   uname -a 查看操作系统详细信息   top 或 htop 查看CPU使用情况   nvidia-smi 或 nvtop 查看GPU使用情况   nvcc -V 查看CUDA版本   yum install xxx(centos)或 apt install xxx(ubuntu) 安装软件   shu">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-03-22T15:45:39.000Z">
-<meta property="article:modified_time" content="2024-03-23T05:08:24.990Z">
+<meta property="article:modified_time" content="2024-03-23T05:26:58.107Z">
 <meta property="article:author" content="Wang Zhangyu">
 <meta property="article:tag" content="Linux">
 <meta name="twitter:card" content="summary">
@@ -375,10 +375,10 @@
         <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2024/03/22/linux%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/#comments" class="article-comment-link">评论</a></span>
         
 	
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 1.6k(字)</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 1.8k(字)</span>
 	
 	
-		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 6(分)</span>
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 7(分)</span>
 	
 
       </div>
@@ -463,26 +463,6 @@
 <td>显示命令的更详细的使用信息</td>
 </tr>
 <tr>
-<td><code>ping</code></td>
-<td>测试与另一台计算机的连接情况</td>
-</tr>
-<tr>
-<td><code>traceroute</code></td>
-<td>显示到目标主机的路径</td>
-</tr>
-<tr>
-<td><code>ifconfig</code></td>
-<td>显示和配置网络接口信息</td>
-</tr>
-<tr>
-<td><code>netstat</code></td>
-<td>显示网络连接、路由表和网络接口状态</td>
-</tr>
-<tr>
-<td><code>route</code></td>
-<td>显示和配置路由表信息</td>
-</tr>
-<tr>
 <td><code>ln</code></td>
 <td>创建链接</td>
 </tr>
@@ -523,6 +503,84 @@
 <tr>
 <td><code>kill -9 xxxx</code></td>
 <td>杀掉进程</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>网络</p>
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>ping</code></td>
+<td>测试与另一台计算机的连接情况</td>
+</tr>
+<tr>
+<td><code>traceroute</code></td>
+<td>显示到目标主机的路径</td>
+</tr>
+<tr>
+<td><code>ifconfig</code></td>
+<td>显示和配置网络接口信息</td>
+</tr>
+<tr>
+<td><code>netstat</code></td>
+<td>显示网络连接、路由表和网络接口状态</td>
+</tr>
+<tr>
+<td><code>route</code></td>
+<td>显示和配置路由表信息</td>
+</tr>
+<tr>
+<td><code>iptables -S</code></td>
+<td>显示当前的iptables规则</td>
+</tr>
+<tr>
+<td><code>ufw</code></td>
+<td>用于管理Uncomplicated Firewall (UFW)的命令</td>
+</tr>
+<tr>
+<td><code>curl</code></td>
+<td>用于向服务器发送HTTP请求并显示返回的数据</td>
+</tr>
+<tr>
+<td><code>wget</code></td>
+<td>用于从指定URL下载文件</td>
+</tr>
+<tr>
+<td><code>sudo ufw enable</code></td>
+<td>启用防火墙</td>
+</tr>
+<tr>
+<td><code>sudo ufw disable</code></td>
+<td>禁用防火墙</td>
+</tr>
+<tr>
+<td><code>sudo ufw allow &lt;port&gt;</code></td>
+<td>开放指定端口（允许特定端口的传入连接）</td>
+</tr>
+<tr>
+<td><code>sudo ufw deny &lt;port&gt;</code></td>
+<td>关闭指定端口（禁止特定端口的传入连接）</td>
+</tr>
+<tr>
+<td><code>sudo ufw allow from &lt;IP_address&gt;</code></td>
+<td>允许特定IP地址的访问</td>
+</tr>
+<tr>
+<td><code>sudo ufw deny from &lt;IP_address&gt;</code></td>
+<td>拒绝特定IP地址的访问</td>
+</tr>
+<tr>
+<td><code>sudo ufw allow ssh</code></td>
+<td>允许SSH服务的访问</td>
+</tr>
+<tr>
+<td><code>sudo ufw status</code></td>
+<td>查看当前防火墙规则状态</td>
 </tr>
 </tbody></table>
 </li>
@@ -921,7 +979,7 @@
 </tbody></table>
 </li>
 </ul>
-<p>参考： <a target="_blank" rel="noopener" href="https://blog.csdn.net/m0_46422300/article/details/104645072">https://blog.csdn.net/m0_46422300/article/details/104645072</a></p>
+<p>参考：<br><a target="_blank" rel="noopener" href="https://blog.csdn.net/m0_46422300/article/details/104645072">https://blog.csdn.net/m0_46422300/article/details/104645072</a><br><a target="_blank" rel="noopener" href="https://www.ruanyifeng.com/blog/developer/">https://www.ruanyifeng.com/blog/developer/</a></p>
 
       
     </div>
