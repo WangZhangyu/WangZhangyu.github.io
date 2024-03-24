@@ -6,7 +6,7 @@
   <link href="https://wangzhangyu.github.io/atom.xml" rel="self"/>
   
   <link href="https://wangzhangyu.github.io/"/>
-  <updated>2024-03-24T14:22:22.222Z</updated>
+  <updated>2024-03-24T14:24:38.992Z</updated>
   <id>https://wangzhangyu.github.io/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="https://wangzhangyu.github.io/2024/03/24/%E7%AB%AF%E5%8F%A3%E6%98%A0%E5%B0%84/"/>
     <id>https://wangzhangyu.github.io/2024/03/24/%E7%AB%AF%E5%8F%A3%E6%98%A0%E5%B0%84/</id>
     <published>2024-03-24T14:20:40.000Z</published>
-    <updated>2024-03-24T14:22:22.222Z</updated>
+    <updated>2024-03-24T14:24:38.992Z</updated>
     
-    <content type="html"><![CDATA[<p>通过路由器端口映射，对局域网内服务器进行ssh登录</p><ol><li>进行IP与MAC绑定</li><li>配置端口映射 【转发规则】-&gt;【虚拟服务器】</li></ol><blockquote><p>参考：<a href="https://blog.csdn.net/qq_40156289/article/details/109540064">https://blog.csdn.net/qq_40156289/article/details/109540064</a></p></blockquote>]]></content>
+    <content type="html"><![CDATA[<p>通过路由器端口映射，对局域网内服务器进行ssh登录</p><ol><li>进行IP与MAC绑定</li><li>配置端口映射 【转发规则】-&gt;【虚拟服务器】</li></ol><blockquote><p>参考：<a href="https://blog.csdn.net/qq_40156289/article/details/109540064">https://blog.csdn.net/qq_40156289/article/details/109540064</a><br><a href="https://blog.csdn.net/wangweiwells/article/details/99004658">https://blog.csdn.net/wangweiwells/article/details/99004658</a></p></blockquote>]]></content>
     
     
       
