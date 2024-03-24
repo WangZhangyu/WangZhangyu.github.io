@@ -1,12 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://wangzhangyu.github.io/2024/03/24/macbook%E7%BD%91%E7%BB%9C%E9%97%B4%E6%AD%87%E6%80%A7%E6%96%AD%E6%B5%81/</loc>
+    <loc>https://wangzhangyu.github.io/2024/03/24/%E7%AB%AF%E5%8F%A3%E6%98%A0%E5%B0%84/</loc>
     <lastmod>2024-03-24</lastmod>
   </url>
   <url>
     <loc>https://wangzhangyu.github.io/2024/03/23/ssh%E9%85%8D%E7%BD%AE/</loc>
-    <lastmod>2024-03-23</lastmod>
+    <lastmod>2024-03-24</lastmod>
+  </url>
+  <url>
+    <loc>https://wangzhangyu.github.io/2023/07/28/macbook-plug/</loc>
+    <lastmod>2024-03-24</lastmod>
+  </url>
+  <url>
+    <loc>https://wangzhangyu.github.io/2023/07/18/hello-world/</loc>
+    <lastmod>2024-03-24</lastmod>
+  </url>
+  <url>
+    <loc>https://wangzhangyu.github.io/2024/03/24/macbook%E7%BD%91%E7%BB%9C%E9%97%B4%E6%AD%87%E6%80%A7%E6%96%AD%E6%B5%81/</loc>
+    <lastmod>2024-03-24</lastmod>
   </url>
   <url>
     <loc>https://wangzhangyu.github.io/2024/03/22/linux%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/</loc>
@@ -19,10 +31,6 @@
   <url>
     <loc>https://wangzhangyu.github.io/2024/03/20/%E6%96%87%E4%BB%B6%E4%B8%8D%E5%AD%98%E5%9C%A8/</loc>
     <lastmod>2024-03-20</lastmod>
-  </url>
-  <url>
-    <loc>https://wangzhangyu.github.io/2023/07/18/hello-world/</loc>
-    <lastmod>2024-03-19</lastmod>
   </url>
   <url>
     <loc>https://wangzhangyu.github.io/2024/03/18/nfs/</loc>
@@ -43,10 +51,6 @@
   <url>
     <loc>https://wangzhangyu.github.io/2024/03/14/%E6%9C%8D%E5%8A%A1%E5%99%A8/</loc>
     <lastmod>2024-03-15</lastmod>
-  </url>
-  <url>
-    <loc>https://wangzhangyu.github.io/2023/07/28/macbook-plug/</loc>
-    <lastmod>2023-11-09</lastmod>
   </url>
   <url>
     <loc>https://wangzhangyu.github.io/2023/08/01/download-web/</loc>
