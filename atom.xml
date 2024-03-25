@@ -6,7 +6,7 @@
   <link href="https://wangzhangyu.github.io/atom.xml" rel="self"/>
   
   <link href="https://wangzhangyu.github.io/"/>
-  <updated>2024-03-24T14:24:38.992Z</updated>
+  <updated>2024-03-25T05:47:23.758Z</updated>
   <id>https://wangzhangyu.github.io/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>写一个alist守护程序</title>
+    <link href="https://wangzhangyu.github.io/2024/03/25/%E5%86%99%E4%B8%80%E4%B8%AAalist%E5%AE%88%E6%8A%A4%E7%A8%8B%E5%BA%8F/"/>
+    <id>https://wangzhangyu.github.io/2024/03/25/%E5%86%99%E4%B8%80%E4%B8%AAalist%E5%AE%88%E6%8A%A4%E7%A8%8B%E5%BA%8F/</id>
+    <published>2024-03-25T05:42:08.000Z</published>
+    <updated>2024-03-25T05:47:23.758Z</updated>
+    
+    <content type="html"><![CDATA[<ul><li><p>alist守护程序，包括alist的启动，停止，重启和状态服务</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">#!/bin/bash</span><br><span class="line"></span><br><span class="line">alist_process=&quot;/Applications/alist/alist server&quot;</span><br><span class="line"></span><br><span class="line">start_alist() &#123;</span><br><span class="line">    nohup $alist_process &gt; /dev/null &amp;</span><br><span class="line">    echo &quot;Alist started.&quot;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">stop_alist() &#123;</span><br><span class="line">    echo &quot;Stopping alist...&quot;</span><br><span class="line">    pkill -x &quot;alist&quot;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">check_alist_status() &#123;</span><br><span class="line">    if pgrep -x &quot;alist&quot; &gt; /dev/null; then</span><br><span class="line">        echo &quot;Alist is running.&quot;</span><br><span class="line">    else</span><br><span class="line">        echo &quot;Alist is not running.&quot;</span><br><span class="line">    fi</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">if [ &quot;$1&quot; == &quot;start&quot; ]; then</span><br><span class="line">    start_alist</span><br><span class="line">elif [ &quot;$1&quot; == &quot;stop&quot; ]; then</span><br><span class="line">    stop_alist</span><br><span class="line">elif [ &quot;$1&quot; == &quot;restart&quot; ]; then</span><br><span class="line">    stop_alist</span><br><span class="line">    sleep 2  # 等待一段时间以确保 &quot;alist&quot; 进程已经终止</span><br><span class="line">    start_alist</span><br><span class="line">elif [ &quot;$1&quot; == &quot;status&quot; ]; then</span><br><span class="line">    check_alist_status</span><br><span class="line">else</span><br><span class="line">    echo &quot;Usage: $0 &#123;start|stop|restart|status&#125;&quot;</span><br><span class="line">    exit 1</span><br><span class="line">fi</span><br></pre></td></tr></table></figure><p>  脚本保存为alist_daemon.sh</p></li><li><p>配置别名</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># alias</span><br><span class="line">alias alist=&quot;/Applications/alist/alist_daemon.sh&quot;</span><br></pre></td></tr></table></figure></li><li><p>实际运行</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">(base) wangzy@macbook alist % alist                    </span><br><span class="line">Usage: /Applications/alist/alist_daemon.sh &#123;start|stop|restart|status&#125;</span><br><span class="line">(base) wangzy@macbook alist % alist status</span><br><span class="line">Alist is not running.</span><br><span class="line">(base) wangzy@macbook alist % alist start </span><br><span class="line">Alist started.</span><br><span class="line">(base) wangzy@macbook alist % alist status</span><br><span class="line">Alist is running.</span><br><span class="line"></span><br></pre></td></tr></table></figure></li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;alist守护程序，包括alist的启动，停止，重启和状态服务&lt;/p&gt;
+&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;</summary>
+      
+    
+    
+    
+    <category term="Linux" scheme="https://wangzhangyu.github.io/categories/Linux/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>端口映射</title>
@@ -486,34 +510,6 @@
     
     
     <category term="blog" scheme="https://wangzhangyu.github.io/tags/blog/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Markdown语法</title>
-    <link href="https://wangzhangyu.github.io/2023/07/19/Markdown%E8%AF%AD%E6%B3%95/"/>
-    <id>https://wangzhangyu.github.io/2023/07/19/Markdown%E8%AF%AD%E6%B3%95/</id>
-    <published>2023-07-18T17:41:30.743Z</published>
-    <updated>2023-07-28T11:11:41.656Z</updated>
-    
-    <content type="html"><![CDATA[<!-- toc --><ul><li><a href="#%E8%87%AA%E5%8A%A8%E7%94%9F%E6%88%90%E7%9B%AE%E5%BD%95">自动生成目录</a></li><li><a href="#%E7%94%98%E7%89%B9%E5%9B%BE">甘特图</a></li></ul><!-- tocstop --><h1><span id="自动生成目录">自动生成目录</span></h1><ul><li>CSDN中<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@[TOC](linux网络配置 )</span><br></pre></td></tr></table></figure></li><li>hexo 中<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- toc --&gt;</span><br></pre></td></tr></table></figure></li></ul><h1><span id="甘特图">甘特图</span></h1>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;!-- toc --&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#%E8%87%AA%E5%8A%A8%E7%94%9F%E6%88%90%E7%9B%AE%E5%BD%95&quot;&gt;自动生成目录&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#%E7%94%98%E7%89%B9%E5</summary>
-      
-    
-    
-    
-    <category term="博客搭建" scheme="https://wangzhangyu.github.io/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
-    
-    
-    <category term="markdown" scheme="https://wangzhangyu.github.io/tags/markdown/"/>
     
   </entry>
   
