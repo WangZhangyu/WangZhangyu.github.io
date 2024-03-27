@@ -75,9 +75,9 @@
     <link href="https://wangzhangyu.github.io/2024/03/24/macbook%E7%BD%91%E7%BB%9C%E9%97%B4%E6%AD%87%E6%80%A7%E6%96%AD%E6%B5%81/"/>
     <id>https://wangzhangyu.github.io/2024/03/24/macbook%E7%BD%91%E7%BB%9C%E9%97%B4%E6%AD%87%E6%80%A7%E6%96%AD%E6%B5%81/</id>
     <published>2024-03-24T07:35:29.000Z</published>
-    <updated>2024-03-24T07:40:51.836Z</updated>
+    <updated>2024-03-27T07:26:54.298Z</updated>
     
-    <content type="html"><![CDATA[<p>Terminal中直接开启关闭AWDL，</p><p>DISABLE</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo ifconfig awdl0 down</span><br></pre></td></tr></table></figure><p>ENABLE:</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo ifconfig awdl0 up</span><br></pre></td></tr></table></figure><p>或者<br>下载 WiFriedX 小工具，运行后勾选“Disable AWDL&#x2F;AirDrop”，禁用 AWDL 服务</p><p>参考：<a href="https://zhuanlan.zhihu.com/p/441284532">https://zhuanlan.zhihu.com/p/441284532</a></p>]]></content>
+    <content type="html"><![CDATA[<p>Terminal中直接开启关闭AWDL，</p><p>DISABLE</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo ifconfig awdl0 down</span><br></pre></td></tr></table></figure><p>ENABLE:</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo ifconfig awdl0 up</span><br></pre></td></tr></table></figure><p>或者<br>下载 WiFriedX 小工具，运行后勾选“Disable AWDL&#x2F;AirDrop”，禁用 AWDL 服务</p><hr><p>试了很多方法都不行，最后发现不是电脑的问题，是网络通登录验证的问题。<br>网络通密码太弱了，换密码问题解决。</p><p>参考：<a href="https://zhuanlan.zhihu.com/p/441284532">https://zhuanlan.zhihu.com/p/441284532</a></p>]]></content>
     
     
       
