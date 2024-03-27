@@ -18,15 +18,15 @@
   
   
   <title>端口映射 | Hexo</title>
-  <meta name="description" content="通过路由器端口映射，对局域网内服务器进行ssh登录  进行IP与MAC绑定 配置端口映射 【转发规则】-&gt;【虚拟服务器】   参考：https:&#x2F;&#x2F;blog.csdn.net&#x2F;qq_40156289&#x2F;article&#x2F;details&#x2F;109540064https:&#x2F;&#x2F;blog.csdn.net&#x2F;wangweiwells&#x2F;article&#x2F;details&#x2F;99004658">
+  <meta name="description" content="通过路由器端口映射，对局域网内服务器进行ssh登录  进行IP与MAC绑定 配置端口映射 【转发规则】-&gt;【虚拟服务器】  华为路由器-网络设置-安全防护-NAT配置-端口映射  内网端口映射为路由器端口，相当于内网穿透   内网的一台电脑要上因特网对外开放服务或接收数据，就需要端口映射。 端口映射分为动态和静态。 动态端口映射 内网中的一台电脑要访问新浪网，会向nat网关发送数据包，包头中">
 <meta property="og:type" content="article">
 <meta property="og:title" content="端口映射">
 <meta property="og:url" content="https://wangzhangyu.github.io/2024/03/24/%E7%AB%AF%E5%8F%A3%E6%98%A0%E5%B0%84/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="通过路由器端口映射，对局域网内服务器进行ssh登录  进行IP与MAC绑定 配置端口映射 【转发规则】-&gt;【虚拟服务器】   参考：https:&#x2F;&#x2F;blog.csdn.net&#x2F;qq_40156289&#x2F;article&#x2F;details&#x2F;109540064https:&#x2F;&#x2F;blog.csdn.net&#x2F;wangweiwells&#x2F;article&#x2F;details&#x2F;99004658">
+<meta property="og:description" content="通过路由器端口映射，对局域网内服务器进行ssh登录  进行IP与MAC绑定 配置端口映射 【转发规则】-&gt;【虚拟服务器】  华为路由器-网络设置-安全防护-NAT配置-端口映射  内网端口映射为路由器端口，相当于内网穿透   内网的一台电脑要上因特网对外开放服务或接收数据，就需要端口映射。 端口映射分为动态和静态。 动态端口映射 内网中的一台电脑要访问新浪网，会向nat网关发送数据包，包头中">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-03-24T14:20:40.000Z">
-<meta property="article:modified_time" content="2024-03-24T14:24:38.992Z">
+<meta property="article:modified_time" content="2024-03-27T07:39:06.918Z">
 <meta property="article:author" content="Wang Zhangyu">
 <meta name="twitter:card" content="summary">
   <!-- Canonical links -->
@@ -369,10 +369,10 @@
         <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2024/03/24/%E7%AB%AF%E5%8F%A3%E6%98%A0%E5%B0%84/#comments" class="article-comment-link">评论</a></span>
         
 	
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 61(字)</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 822(字)</span>
 	
 	
-		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 1(分)</span>
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 2(分)</span>
 	
 
       </div>
@@ -384,8 +384,19 @@
 <li>进行IP与MAC绑定</li>
 <li>配置端口映射 【转发规则】-&gt;【虚拟服务器】</li>
 </ol>
+<p>华为路由器-网络设置-安全防护-NAT配置-端口映射</p>
+<ul>
+<li>内网端口映射为路由器端口，相当于内网穿透</li>
+</ul>
+<hr>
+<p><strong>内网的一台电脑要上因特网对外开放服务或接收数据，就需要端口映射。</strong></p>
+<p><strong>端口映射分为动态和静态。</strong></p>
+<p><strong>动态端口映射</strong> 内网中的一台电脑要访问新浪网，会向nat网关发送数据包，包头中包括对方(就是新浪网)IP、端口和本机IP、端口，nat网关会把本机IP、端口替换成自己的公网IP、一个未使用的端口，并且会记下这个映射关系，为以后转发数据包使用。然后再把数据发给新浪网，新浪网收到数据后做出反应，发送数据到nat网关的那个未使用的端口，然后nat网关将数据转发给内网中的那台电脑，实现内网和公网的通讯.当连接关闭时，nat网关会释放分配给这条连接的端口，以便以后的连接可以继续使用。动态端口映射其实也就是nat网关的工作方式。</p>
+<p><strong>静态端口映射</strong> 就是在nat网关上开放一个固定的端口，然后设定此端口收到的数据要转发给内网哪个IP和端口，不管有没有连接，这个映射关系都会一直存在。就可以让公网主动访问内网的一个电脑。</p>
+<p><strong>什么是nat</strong> 简单地说，nat就是在局域网内部网络中使用内部地址，而当内部节点要与外部网络进行通讯时，就在网关（可以理解为出口，打个比方就像院子的门一样）处，将内部地址替换成公用地址，从而在外部公网（internet）上正常使用，nat可以使多台计算机共享Internet连接，这一功能很好地解决了公共 IP地址紧缺的问题。通过这种方法，你可以只申请一个合法IP地址，就把整个局域网中的计算机接入Internet中。这时，nat屏蔽了内部网络，所有内部网计算机对于公共网络来说是不可见的，而内部网计算机用户通常不会意识到nat的存在。</p>
+<p><strong>nat内网穿透是什么?</strong> 常说的端口映射是NAT的一种，其功能就是把在公网的地址转翻译成私有地址， 采用路由方式的ADSL宽带路由器拥有一个动态或固定的公网IP，ADSL直接接在HUB或交换机上，所有的电脑共享上网。在局域网内部的任一PC或服务器上运行到内网穿透客户端，此时域名解析到的IP地址是局域网网关出口处的公网IP地址，再在网关处做端口映射指向监控设备即可。</p>
 <blockquote>
-<p>参考：<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_40156289/article/details/109540064">https://blog.csdn.net/qq_40156289/article/details/109540064</a><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/wangweiwells/article/details/99004658">https://blog.csdn.net/wangweiwells/article/details/99004658</a></p>
+<p>参考：<br><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_40156289/article/details/109540064">https://blog.csdn.net/qq_40156289/article/details/109540064</a><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/wangweiwells/article/details/99004658">https://blog.csdn.net/wangweiwells/article/details/99004658</a><br>花生壳内网穿透 <a target="_blank" rel="noopener" href="https://www.zhihu.com/question/419146871/answer/1462241036">https://www.zhihu.com/question/419146871/answer/1462241036</a></p>
 </blockquote>
 
       
