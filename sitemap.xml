@@ -4,7 +4,7 @@
   <url>
     <loc>https://wangzhangyu.github.io/2024/03/25/%E5%86%99%E4%B8%80%E4%B8%AAalist%E5%AE%88%E6%8A%A4%E7%A8%8B%E5%BA%8F/</loc>
     
-    <lastmod>2024-03-25</lastmod>
+    <lastmod>2024-03-27</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -13,16 +13,7 @@
   <url>
     <loc>https://wangzhangyu.github.io/2024/03/22/linux%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/</loc>
     
-    <lastmod>2024-03-25</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://wangzhangyu.github.io/2024/03/24/%E7%AB%AF%E5%8F%A3%E6%98%A0%E5%B0%84/</loc>
-    
-    <lastmod>2024-03-24</lastmod>
+    <lastmod>2024-03-27</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -30,6 +21,15 @@
   
   <url>
     <loc>https://wangzhangyu.github.io/2024/03/23/ssh%E9%85%8D%E7%BD%AE/</loc>
+    
+    <lastmod>2024-03-26</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://wangzhangyu.github.io/2024/03/24/%E7%AB%AF%E5%8F%A3%E6%98%A0%E5%B0%84/</loc>
     
     <lastmod>2024-03-24</lastmod>
     
@@ -283,7 +283,7 @@
 
   <url>
     <loc>https://wangzhangyu.github.io/</loc>
-    <lastmod>2024-03-25</lastmod>
+    <lastmod>2024-03-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -291,21 +291,28 @@
   
   <url>
     <loc>https://wangzhangyu.github.io/tags/blog/</loc>
-    <lastmod>2024-03-25</lastmod>
+    <lastmod>2024-03-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://wangzhangyu.github.io/tags/markdown/</loc>
-    <lastmod>2024-03-25</lastmod>
+    <lastmod>2024-03-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://wangzhangyu.github.io/tags/Linux/</loc>
-    <lastmod>2024-03-25</lastmod>
+    <lastmod>2024-03-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://wangzhangyu.github.io/tags/alist/</loc>
+    <lastmod>2024-03-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -314,28 +321,28 @@
   
   <url>
     <loc>https://wangzhangyu.github.io/categories/Linux/</loc>
-    <lastmod>2024-03-25</lastmod>
+    <lastmod>2024-03-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://wangzhangyu.github.io/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</loc>
-    <lastmod>2024-03-25</lastmod>
+    <lastmod>2024-03-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://wangzhangyu.github.io/categories/python/</loc>
-    <lastmod>2024-03-25</lastmod>
+    <lastmod>2024-03-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://wangzhangyu.github.io/categories/macbook/</loc>
-    <lastmod>2024-03-25</lastmod>
+    <lastmod>2024-03-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>

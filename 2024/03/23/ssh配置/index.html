@@ -18,15 +18,15 @@
   
   
   <title>ssh配置 | Hexo</title>
-  <meta name="description" content="ssh安装 ssh配置文件 sshd_config ssh免密登录 在目标服务器中 在本地服务器   ssh跳板 直接跳转 ProxyJump跳转 ProxyCommand跳转   常见问题    ssh安装 ssh安装sudo apt install openssh-server 查看ssh服务状态sudo systemctl status ssh 确保防火墙打开了 SSH 端口sudo">
+  <meta name="description" content="ssh安装 ssh配置文件 sshd_config ssh免密登录 在目标服务器中 在本地服务器   ssh跳板 直接跳转 ProxyJump跳转 ProxyCommand跳转   常见问题 ssh的用法    ssh安装 ssh安装sudo apt install openssh-server 查看ssh服务状态sudo systemctl status ssh 确保防火墙打开了 SSH">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ssh配置">
 <meta property="og:url" content="https://wangzhangyu.github.io/2024/03/23/ssh%E9%85%8D%E7%BD%AE/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="ssh安装 ssh配置文件 sshd_config ssh免密登录 在目标服务器中 在本地服务器   ssh跳板 直接跳转 ProxyJump跳转 ProxyCommand跳转   常见问题    ssh安装 ssh安装sudo apt install openssh-server 查看ssh服务状态sudo systemctl status ssh 确保防火墙打开了 SSH 端口sudo">
+<meta property="og:description" content="ssh安装 ssh配置文件 sshd_config ssh免密登录 在目标服务器中 在本地服务器   ssh跳板 直接跳转 ProxyJump跳转 ProxyCommand跳转   常见问题 ssh的用法    ssh安装 ssh安装sudo apt install openssh-server 查看ssh服务状态sudo systemctl status ssh 确保防火墙打开了 SSH">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-03-23T06:16:38.000Z">
-<meta property="article:modified_time" content="2024-03-24T14:13:43.205Z">
+<meta property="article:modified_time" content="2024-03-26T13:25:25.980Z">
 <meta property="article:author" content="Wang Zhangyu">
 <meta name="twitter:card" content="summary">
   <!-- Canonical links -->
@@ -211,7 +211,7 @@
   <div class="widget">
     <h3 class="widget-title">标签</h3>
     <div class="widget-body">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/" rel="tag">Linux</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/blog/" rel="tag">blog</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/markdown/" rel="tag">markdown</a><span class="tag-list-count">1</span></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/" rel="tag">Linux</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/alist/" rel="tag">alist</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/blog/" rel="tag">blog</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/markdown/" rel="tag">markdown</a><span class="tag-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -221,7 +221,7 @@
   <div class="widget">
     <h3 class="widget-title">标签云</h3>
     <div class="widget-body tagcloud">
-      <a href="/tags/Linux/" style="font-size: 13px;">Linux</a> <a href="/tags/blog/" style="font-size: 14px;">blog</a> <a href="/tags/markdown/" style="font-size: 13px;">markdown</a>
+      <a href="/tags/Linux/" style="font-size: 13px;">Linux</a> <a href="/tags/alist/" style="font-size: 13px;">alist</a> <a href="/tags/blog/" style="font-size: 14px;">blog</a> <a href="/tags/markdown/" style="font-size: 13px;">markdown</a>
     </div>
   </div>
 
@@ -369,7 +369,7 @@
         <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2024/03/23/ssh%E9%85%8D%E7%BD%AE/#comments" class="article-comment-link">评论</a></span>
         
 	
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 903(字)</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 923(字)</span>
 	
 	
 		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 3(分)</span>
@@ -396,6 +396,7 @@
 </ul>
 </li>
 <li><a href="#%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98">常见问题</a></li>
+<li><a href="#ssh%E7%9A%84%E7%94%A8%E6%B3%95">ssh的用法</a></li>
 </ul>
 <!-- tocstop -->
 
@@ -440,6 +441,7 @@
 <li>如果发现root权限无法修改sshd_config文件，考虑服务器可能已经被入侵</li>
 </ul>
 </blockquote>
+<h2><span id="ssh的用法">ssh的用法</span></h2><p>ssh -p<br>ssh user@ip -L localhost:8888:localhost:8080 端口转发 </p>
 <p>参考：</p>
 <blockquote>
 <p><a target="_blank" rel="noopener" href="https://blog.csdn.net/antony1776/article/details/130180372">https://blog.csdn.net/antony1776/article/details/130180372</a><br><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/74193910">https://zhuanlan.zhihu.com/p/74193910</a></p>
