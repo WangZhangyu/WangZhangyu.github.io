@@ -6,7 +6,7 @@
   <link href="https://wangzhangyu.github.io/atom.xml" rel="self"/>
   
   <link href="https://wangzhangyu.github.io/"/>
-  <updated>2024-03-27T03:46:41.078Z</updated>
+  <updated>2024-03-27T17:14:06.965Z</updated>
   <id>https://wangzhangyu.github.io/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>搭建影音存储</title>
+    <link href="https://wangzhangyu.github.io/2024/03/28/%E6%90%AD%E5%BB%BA%E5%BD%B1%E9%9F%B3%E5%AD%98%E5%82%A8/"/>
+    <id>https://wangzhangyu.github.io/2024/03/28/%E6%90%AD%E5%BB%BA%E5%BD%B1%E9%9F%B3%E5%AD%98%E5%82%A8/</id>
+    <published>2024-03-27T16:45:59.000Z</published>
+    <updated>2024-03-27T17:14:06.965Z</updated>
+    
+    <content type="html"><![CDATA[<ul><li><p>在旧电脑上安装centos7.9</p></li><li><p>更新系统</p></li><li><p>安装qbit</p></li><li><p>端口映射</p></li><li><p>安装docker</p>  <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">安装工具包</span></span><br><span class="line">sudo yum install -y yum-utils device-mapper-persistent-data lvm2</span><br></pre></td></tr></table></figure>  <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">设置yum仓库</span></span><br><span class="line">sudo yum-config-manager --add-repo http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo</span><br></pre></td></tr></table></figure>  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#通过yum安装Docker</span></span><br><span class="line">sudo yum install docker-ce docker-ce-cli containerd.io</span><br><span class="line"><span class="comment">#启动Docker</span></span><br><span class="line">sudo systemctl start docker</span><br><span class="line"><span class="comment">#设置Docker开机自启</span></span><br><span class="line">sudo systemctl <span class="built_in">enable</span> docker</span><br><span class="line"><span class="comment">#查看Docker版本</span></span><br><span class="line">sudo docker version</span><br><span class="line"></span><br></pre></td></tr></table></figure><blockquote><p><a href="https://blog.csdn.net/qq_43721032/article/details/119134118">https://blog.csdn.net/qq_43721032/article/details/119134118</a></p></blockquote></li><li><p>用docker安装alist</p>  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 安装alist容器</span></span><br><span class="line">docker run -d --restart=always -v /home/alist:/opt/alist/data -p 5244:5244 --name=<span class="string">&quot;alist&quot;</span> xhofe/alist:latest</span><br></pre></td></tr></table></figure>  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 进入容器</span></span><br><span class="line">docker <span class="built_in">exec</span> -it alist sh <span class="comment">#/bin/sh</span></span><br></pre></td></tr></table></figure>  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">docker ps -a <span class="comment">#命令列出所有容器</span></span><br><span class="line">docker stop &lt;CONTAINER ID|NAME&gt; <span class="comment">#停止容器</span></span><br><span class="line">docker <span class="built_in">rm</span> &lt;CONTAINER ID|NAME&gt; &lt;CONTAINER ID|NAME&gt; <span class="comment">#删除单个或多个容器。</span></span><br><span class="line">docker <span class="built_in">rm</span> $(docker ps -a -q) <span class="comment">#一次删除所有停止的容器</span></span><br></pre></td></tr></table></figure><blockquote><p><a href="https://blog.csdn.net/u010190198/article/details/134056996">https://blog.csdn.net/u010190198/article/details/134056996</a><br><a href="https://www.cnblogs.com/law148/p/16800764.html">https://www.cnblogs.com/law148/p/16800764.html</a></p></blockquote></li><li><p>用alist挂载阿里云盘<br>  选择阿里云盘open<br>  挂载后局域网内可以访问，<a href="http://192.168.3.7:5244/ali">http://192.168.3.7:5244/ali</a></p><blockquote><p><a href="https://alist.nn.ci/zh/guide/drivers/aliyundrive_open.html">https://alist.nn.ci/zh/guide/drivers/aliyundrive_open.html</a></p></blockquote></li><li><p>使用davfs2把alist挂载到服务器上</p>  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 安装davfs2</span></span><br><span class="line">sudo yum update</span><br><span class="line">sudo yum install davfs2 -y</span><br></pre></td></tr></table></figure><p>  安装完成后，我们需要对davfs2进行适配Alist的配置。通过以下命令编辑davfs2的配置文件：</p>  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo nano /etc/davfs2/davfs2.conf</span><br></pre></td></tr></table></figure><p>  在配置文件中找到 ignore_dav_header 这一项。如果前面有注释符号，请删除它，并把该项的值设置为 1：</p>  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ignore_dav_header 1</span><br></pre></td></tr></table></figure><p>  挂载</p>  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">sudo mount -t davfs http://ip或者域名:端口号/dav /mnt/webdav</span><br><span class="line"></span><br><span class="line">[wangzy@localhost a]$ sudo mount -t davfs localhost:5244/dav /mnt/webdav</span><br><span class="line">Please enter the username to authenticate with server</span><br><span class="line">localhost:5244/dav or hit enter for none.</span><br><span class="line">Username: admin</span><br><span class="line">Please enter the password to authenticate user admin with server</span><br><span class="line">localhost:5244/dav or hit enter for none.</span><br><span class="line">Password:</span><br><span class="line">/sbin/mount.davfs: Warning: can&#x27;t write entry into mtab, but will mount the file system anyway</span><br></pre></td></tr></table></figure><blockquote><p><a href="https://dashen.wang/5684.html">https://dashen.wang/5684.html</a></p></blockquote></li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;在旧电脑上安装centos7.9&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;更新系统&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;安装qbit&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;端口映射&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;安装docker&lt;/p&gt;
+  &lt;figure cla</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>写一个alist守护程序</title>
@@ -76,9 +106,9 @@
     <link href="https://wangzhangyu.github.io/2024/03/24/macbook%E7%BD%91%E7%BB%9C%E9%97%B4%E6%AD%87%E6%80%A7%E6%96%AD%E6%B5%81/"/>
     <id>https://wangzhangyu.github.io/2024/03/24/macbook%E7%BD%91%E7%BB%9C%E9%97%B4%E6%AD%87%E6%80%A7%E6%96%AD%E6%B5%81/</id>
     <published>2024-03-24T07:35:29.000Z</published>
-    <updated>2024-03-27T07:26:54.298Z</updated>
+    <updated>2024-03-27T07:42:42.942Z</updated>
     
-    <content type="html"><![CDATA[<p>Terminal中直接开启关闭AWDL，</p><p>DISABLE</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo ifconfig awdl0 down</span><br></pre></td></tr></table></figure><p>ENABLE:</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo ifconfig awdl0 up</span><br></pre></td></tr></table></figure><p>或者<br>下载 WiFriedX 小工具，运行后勾选“Disable AWDL&#x2F;AirDrop”，禁用 AWDL 服务</p><hr><p>试了很多方法都不行，最后发现不是电脑的问题，是网络通登录验证的问题。<br>网络通密码太弱了，换密码问题解决。</p><p>参考：<a href="https://zhuanlan.zhihu.com/p/441284532">https://zhuanlan.zhihu.com/p/441284532</a></p>]]></content>
+    <content type="html"><![CDATA[<p>Terminal中直接开启关闭AWDL，</p><p>DISABLE</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo ifconfig awdl0 down</span><br></pre></td></tr></table></figure><p>ENABLE:</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo ifconfig awdl0 up</span><br></pre></td></tr></table></figure><p>或者<br>下载 WiFriedX 小工具，运行后勾选“Disable AWDL&#x2F;AirDrop”，禁用 AWDL 服务</p><hr><blockquote><p>试了很多方法都不行，最后发现不是电脑的问题，是网络通登录验证的问题。<br>网络通密码太弱了，换密码问题解决。</p></blockquote><p>参考：<a href="https://zhuanlan.zhihu.com/p/441284532">https://zhuanlan.zhihu.com/p/441284532</a></p>]]></content>
     
     
       
@@ -481,30 +511,6 @@
     <summary type="html">&lt;ul&gt;
 &lt;li&gt;&lt;input checked disabled type=&quot;checkbox&quot;&gt; 添加评论&lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://wangzhangyu.github.io/2023/07/20/gitalk/&quot;&gt;https://wangzhangy</summary>
-      
-    
-    
-    
-    <category term="博客搭建" scheme="https://wangzhangyu.github.io/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
-    
-    
-    <category term="blog" scheme="https://wangzhangyu.github.io/tags/blog/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hexo博客主题</title>
-    <link href="https://wangzhangyu.github.io/2023/07/19/hexo%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A2%98/"/>
-    <id>https://wangzhangyu.github.io/2023/07/19/hexo%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A2%98/</id>
-    <published>2023-07-19T05:19:19.691Z</published>
-    <updated>2024-03-23T05:30:34.404Z</updated>
-    
-    <content type="html"><![CDATA[<h1><span id="博客主题-hexo-theme-pure">博客主题 hexo-theme-pure</span></h1><p>下载链接 <a href="https://github.com/cofess/hexo-theme-pure">https://github.com/cofess/hexo-theme-pure</a></p><h1><span id="hexo个人博客部署到github">Hexo个人博客部署到Github</span></h1><p><a href="https://mizeri.github.io/2021/04/18/Hexo-blog-deploy/">参考</a></p><p>git, hexo and Node.js</p><p>写作搭档</p><blockquote><p>hexo+hexon+typora</p></blockquote><p><a href="https://github.com/gethexon/hexon/">hexon</a>管理博客的开源代码</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1&gt;&lt;span id=&quot;博客主题-hexo-theme-pure&quot;&gt;博客主题 hexo-theme-pure&lt;/span&gt;&lt;/h1&gt;&lt;p&gt;下载链接 &lt;a href=&quot;https://github.com/cofess/hexo-theme-pure&quot;&gt;https://gith</summary>
       
     
     

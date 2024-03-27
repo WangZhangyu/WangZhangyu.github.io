@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://wangzhangyu.github.io/2024/03/24/%E7%AB%AF%E5%8F%A3%E6%98%A0%E5%B0%84/</loc>
+    <loc>https://wangzhangyu.github.io/2024/03/28/%E6%90%AD%E5%BB%BA%E5%BD%B1%E9%9F%B3%E5%AD%98%E5%82%A8/</loc>
     
     <lastmod>2024-03-27</lastmod>
     
@@ -12,6 +12,15 @@
   
   <url>
     <loc>https://wangzhangyu.github.io/2024/03/24/macbook%E7%BD%91%E7%BB%9C%E9%97%B4%E6%AD%87%E6%80%A7%E6%96%AD%E6%B5%81/</loc>
+    
+    <lastmod>2024-03-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://wangzhangyu.github.io/2024/03/24/%E7%AB%AF%E5%8F%A3%E6%98%A0%E5%B0%84/</loc>
     
     <lastmod>2024-03-27</lastmod>
     
