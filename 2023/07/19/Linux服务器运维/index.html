@@ -230,7 +230,7 @@
   <div class="widget">
     <h3 class="widget-title">归档</h3>
     <div class="widget-body">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/03/">三月 2024</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/08/">八月 2023</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/07/">七月 2023</a><span class="archive-list-count">12</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/03/">三月 2024</a><span class="archive-list-count">13</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/08/">八月 2023</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/07/">七月 2023</a><span class="archive-list-count">12</span></li></ul>
     </div>
   </div>
 
@@ -242,6 +242,21 @@
     <div class="widget-body">
       <ul class="recent-post-list list-unstyled no-thumbnail">
         
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                
+              </p>
+              <p class="item-title">
+                <a href="/2024/03/28/linuxa%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8/" class="title">linuxa包管理器rpm，yum，apt，dpkg，brew</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2024-03-28T13:30:27.000Z" itemprop="datePublished">2024-03-28</time>
+              </p>
+            </div>
+          </li>
+          
           <li>
             
             <div class="item-inner">
@@ -298,21 +313,6 @@
               </p>
               <p class="item-date">
                 <time datetime="2024-03-24T07:35:29.000Z" itemprop="datePublished">2024-03-24</time>
-              </p>
-            </div>
-          </li>
-          
-          <li>
-            
-            <div class="item-inner">
-              <p class="item-category">
-                <a class="category-link" href="/categories/Linux/">Linux</a>
-              </p>
-              <p class="item-title">
-                <a href="/2024/03/23/ssh%E9%85%8D%E7%BD%AE/" class="title">ssh配置</a>
-              </p>
-              <p class="item-date">
-                <time datetime="2024-03-23T06:16:38.000Z" itemprop="datePublished">2024-03-23</time>
               </p>
             </div>
           </li>
@@ -402,8 +402,13 @@
 <li><a href="#gpu-nvidia-smi">GPU nvidia-smi</a></li>
 <li><a href="#tmp-%E7%A9%BA%E9%97%B4%E4%B8%8D%E8%B6%B3">tmp 空间不足</a></li>
 <li><a href="#ubuntu-%E7%94%A8%E6%88%B7%E6%97%A0%E6%B3%95%E8%87%AA%E5%8A%A8%E5%8A%A0%E8%BD%BD-bashrc%E7%9A%84%E9%97%AE%E9%A2%98">Ubuntu: 用户无法自动加载 .bashrc的问题</a></li>
+</ul>
+<ul>
+<li><a href="#%E8%AE%BE%E7%BD%AE%E7%BD%91%E7%BB%9C%E4%BB%A3%E7%90%86">设置网络代理</a><ul>
 <li><a href="#%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%8D%A2ip">服务器换ip</a></li>
 <li><a href="#a-id%E5%AD%A6%E4%B9%A0%E9%93%BE%E6%8E%A5%E5%AD%A6%E4%B9%A0%E9%93%BE%E6%8E%A5a"><a id="学习链接">学习链接</a></a></li>
+</ul>
+</li>
 </ul>
 <!-- tocstop -->
 
@@ -524,6 +529,14 @@
 </li>
 </ul>
 <h2><span id="ubuntu-用户无法自动加载-bashrc的问题">Ubuntu: 用户无法自动加载 .bashrc的问题</span></h2><p>解决办法：在~&#x2F;.bash_profile里添加上：<br>if [ -f ~&#x2F;.bashrc ] ; then<br>    source ~&#x2F;.bashrc<br>fi</p>
+<h1><span id="设置网络代理">设置网络代理</span></h1><p>如何在“终端”设置网络代理？<br>设置代理</p>
+<blockquote>
+<p>export http_proxy&#x3D;<a target="_blank" rel="noopener" href="http://localhost:7890/">http://localhost:7890</a><br>export https_proxy&#x3D;<a target="_blank" rel="noopener" href="http://localhost:7890/">http://localhost:7890</a></p>
+</blockquote>
+<p>取消代理</p>
+<blockquote>
+<p>unset http_proxy<br>unset https_proxy</p>
+</blockquote>
 <h2><span id="服务器换ip">服务器换ip</span></h2><p>科大的DNS:<br>202.38.64.1<br>202.38.64.7<br>用笔记本电脑连接网线测试 网口是否有问题，连接网络通，获取ip</p>
 <h2><span id="学习链接"></span></h2><p>常用命令链接： <a target="_blank" rel="noopener" href="https://www.runoob.com/linux/linux-command-manual.html">https://www.runoob.com/linux/linux-command-manual.html</a><br>科大BBS Linux系统： <a target="_blank" rel="noopener" href="http://bbs.ustc.edu.cn/cgi/bbsdoc?board=Linux">http://bbs.ustc.edu.cn/cgi/bbsdoc?board=Linux</a><br>清华水木社区Linux系统与应用： <a target="_blank" rel="noopener" href="http://www.newsmth.net/bbsdoc.php?board=LinuxApp">http://www.newsmth.net/bbsdoc.php?board=LinuxApp</a><br>清华水木社区Linux开发与高级讨论： <a target="_blank" rel="noopener" href="http://www.newsmth.net/bbsdoc.php?board=LinuxDev">http://www.newsmth.net/bbsdoc.php?board=LinuxDev</a><br>ChinaUnix：<a target="_blank" rel="noopener" href="http://www.chinaunix.net/">http://www.chinaunix.net/</a> CSDN：<a target="_blank" rel="noopener" href="https://bbs.csdn.net/forums/Linux">https://bbs.csdn.net/forums/Linux</a><br>鸟哥的Linux私房菜：<a target="_blank" rel="noopener" href="http://www.runoob.com/linux/linux-command-manual.html">http://www.runoob.com/linux/linux-command-manual.html</a> Linux<br>常用软件推荐集合汇总： <a target="_blank" rel="noopener" href="http://www.it610.com/article/1929114.htm">http://www.it610.com/article/1929114.htm</a><br>Linux指令大全： <a target="_blank" rel="noopener" href="http://www.runoob.com/linux/linux-command-manual.html">http://www.runoob.com/linux/linux-command-manual.html</a><br>李会民 (中国科大超算中心) Linux操作系统使用基础: <a target="_blank" rel="noopener" href="http://hmli.ustc.edu.cn/">http://hmli.ustc.edu.cn/</a></p>
 <p>关于Linux运维常见故障排查和处理的33个技巧汇总 <a target="_blank" rel="noopener" href="https://blog.csdn.net/u011001084/article/details/79419721">https://blog.csdn.net/u011001084/article/details/79419721</a></p>
