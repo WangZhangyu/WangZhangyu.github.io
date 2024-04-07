@@ -6,7 +6,7 @@
   <link href="https://wangzhangyu.github.io/atom.xml" rel="self"/>
   
   <link href="https://wangzhangyu.github.io/"/>
-  <updated>2024-03-28T13:35:59.865Z</updated>
+  <updated>2024-04-07T09:11:53.830Z</updated>
   <id>https://wangzhangyu.github.io/</id>
   
   <author>
@@ -15,6 +15,53 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Visual Studio Code 配置</title>
+    <link href="https://wangzhangyu.github.io/2024/04/07/vscode%E9%85%8D%E7%BD%AE/"/>
+    <id>https://wangzhangyu.github.io/2024/04/07/vscode%E9%85%8D%E7%BD%AE/</id>
+    <published>2024-04-07T08:16:29.000Z</published>
+    <updated>2024-04-07T09:11:53.830Z</updated>
+    
+    <content type="html"><![CDATA[<p>vs code自动更新后无法正常使用remote ssh插件，连接一直卡在“正在下载vs code 服务器”<br>vs code当前版本: 1.88.0 (Universal)</p><p>观察remote ssh输出日志： 打开调试-输出-remote ssh，发现确实卡在下载的过程</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[16:19:20.211] [server] Installing and setting up Visual Studio Code Server...</span><br></pre></td></tr></table></figure><blockquote><p>解决方案： </p><ul><li>降低vs code版本，使用1.85版本  </li><li>同时删除.ssh文件夹中的known_hosts，重新安装remote ssh插件<br>下载地址：<a href="https://code.visualstudio.com/updates/v1_85">https://code.visualstudio.com/updates/v1_85</a><br><a href="https://github.com/microsoft/vscode/issues/203967">https://github.com/microsoft/vscode/issues/203967</a></li></ul></blockquote><p>记录下vs code安装的插件</p><hr><p>macos中安装code<br>打开Visual Studio通过（⇧⌘P）打开命令面板，然后键入以找到Shell命令：shell command<br>install code</p><h3><span id="下载已安装的extension名称">下载已安装的extension名称</span></h3><p>导出到extensions文本</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">code --list-extensions &gt; extensions.txt</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;vs code自动更新后无法正常使用remote ssh插件，连接一直卡在“正在下载vs code 服务器”&lt;br&gt;vs code当前版本: 1.88.0 (Universal)&lt;/p&gt;
+&lt;p&gt;观察remote ssh输出日志： 打开调试-输出-remote ssh，发现确</summary>
+      
+    
+    
+    
+    <category term="macbook" scheme="https://wangzhangyu.github.io/categories/macbook/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>git使用</title>
+    <link href="https://wangzhangyu.github.io/2024/04/04/git%E4%BD%BF%E7%94%A8/"/>
+    <id>https://wangzhangyu.github.io/2024/04/04/git%E4%BD%BF%E7%94%A8/</id>
+    <published>2024-04-04T10:58:44.000Z</published>
+    <updated>2024-04-04T11:05:32.405Z</updated>
+    
+    <content type="html"><![CDATA[<p>Github上创建一个新仓库</p><p>create a new repository on the command line</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">&quot;# test&quot;</span> &gt;&gt; README.md</span><br><span class="line">git init</span><br><span class="line">git add README.md</span><br><span class="line">git commit -m <span class="string">&quot;first commit&quot;</span></span><br><span class="line">git branch -M main</span><br><span class="line">git remote add origin git@github.com:WangZhangyu/test.git</span><br><span class="line">git push -u origin main</span><br></pre></td></tr></table></figure><p>push an existing repository from the command line</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git remote add origin git@github.com:WangZhangyu/test.git</span><br><span class="line">git branch -M main</span><br><span class="line">git push -u origin main</span><br></pre></td></tr></table></figure><p>import code from another repository</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">You can initialize this repository with code from a Subversion, Mercurial, or TFS project.</span><br></pre></td></tr></table></figure><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">git init //把这个目录变成Git可以管理的仓库</span><br><span class="line">git add README.md //文件添加到仓库</span><br><span class="line">git add . //不但可以跟单一文件，还可以跟通配符，更可以跟目录。一个点就把当前目录下所有未追踪的文件全部add了 </span><br><span class="line">git commit -m <span class="string">&quot;first commit&quot;</span> //把文件提交到仓库</span><br><span class="line">git remote add origin git@github.com:WangZhangyu/test.git //关联远程仓库</span><br><span class="line">git push -u origin master //把本地库的所有内容推送到远程库上</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;Github上创建一个新仓库&lt;/p&gt;
+&lt;p&gt;create a new repository on the command line&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;</summary>
+      
+    
+    
+    
+    <category term="Git" scheme="https://wangzhangyu.github.io/categories/Git/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>linuxa包管理器rpm，yum，apt，dpkg，brew</title>
@@ -455,63 +502,6 @@
     
     
     <category term="macbook" scheme="https://wangzhangyu.github.io/categories/macbook/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>云服务器搭建个人网站</title>
-    <link href="https://wangzhangyu.github.io/2023/07/25/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99/"/>
-    <id>https://wangzhangyu.github.io/2023/07/25/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99/</id>
-    <published>2023-07-25T08:29:10.000Z</published>
-    <updated>2023-08-01T08:03:50.480Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote><p>个人服务器建网站流程<br>一时兴起搭建个人网页，记录一下整个流程…</p></blockquote><ol><li>购买云服务器：</li></ol><ul><li>腾讯云 CPU: 2核 内存: 2GB</li><li>价格：首年有优惠<br><img src="/2023/07/25/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99/iShot_2023-07-25_16.38.02.png"></li></ul><ol start="2"><li>安装wordpress</li></ol><ul><li>系统：Linux Ubuntu 20.04 LTS</li><li>网站架构：Apache2 + Php + MySQL + WordPress (6.0.2)</li><li>腾讯云服务器提供极速建站，可选–“应用镜像”-&gt;“Wordpress”,非常方便<br>但我还是选择从零开始安装，可以参考<a href="https://zhuanlan.zhihu.com/p/270230445">https://zhuanlan.zhihu.com/p/270230445</a><br><img src="/2023/07/25/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99/iShot_2023-07-25_17.12.37.png"></li></ul><ol start="3"><li>购买域名</li></ol><ul><li>腾讯云域名申请</li></ul><ol start="4"><li><p>域名备案</p></li><li><p>域名解析</p></li><li><p>绑定域名和云服务器公网IP</p></li></ol><blockquote><p>使用了快一年，续费云主机挺贵的，一年要500多。</p></blockquote><p><img src="/2023/07/25/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99/iShot_2023-07-28_18.31.20.png"></p><hr>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;个人服务器建网站流程&lt;br&gt;一时兴起搭建个人网页，记录一下整个流程…&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;ol&gt;
-&lt;li&gt;购买云服务器：&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ul&gt;
-&lt;li&gt;腾讯云 CPU: 2核 内存: 2GB&lt;/li&gt;
-&lt;li&gt;价格：首年</summary>
-      
-    
-    
-    
-    <category term="博客搭建" scheme="https://wangzhangyu.github.io/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
-    
-    
-    <category term="blog" scheme="https://wangzhangyu.github.io/tags/blog/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>gitalk 第三方评论</title>
-    <link href="https://wangzhangyu.github.io/2023/07/20/gitalk/"/>
-    <id>https://wangzhangyu.github.io/2023/07/20/gitalk/</id>
-    <published>2023-07-20T11:42:20.000Z</published>
-    <updated>2023-07-28T11:29:42.168Z</updated>
-    
-    <content type="html"><![CDATA[<h2><span id="使用gitalk的常见问题">使用Gitalk的常见问题</span></h2><ul><li><p>问题： 未找到相关的 Issues 进行评论，请联系@作者初始化创建</p><blockquote><p>打开文章页面登录作者github账号</p></blockquote></li><li><p>问题： 403错误或network错误</p><blockquote><p>代理失效</p></blockquote></li></ul><p>原因是：主题模版中的cors-anywhere反向代理已不支持直接使用，Gitalk的默认proxy为</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Default: https://cors-anywhere.herokuapp.com/https://github.com/login/oauth/access_token.</span><br></pre></td></tr></table></figure><p><a href="https://dash.cloudflare.com/">cloudflare</a></p><p>参考文章： <a href="https://blog.csdn.net/nocodeis/article/details/117826704">https://blog.csdn.net/nocodeis/article/details/117826704</a></p><h2><span id="借用某位博客的代理">借用某位博客的代理</span></h2><p>使用<a href="https://blog.csdn.net/nocodeis/article/details/117826704">文章中的方法</a>构建的代理仍然报错<code>network error</code>, 应该还是代理没有设置好。</p><p>没有办法只能借用别的代理设置了，方法不是很可取，但可以临时用用。参考下边的方式</p><p><img src="/2023/07/20/gitalk/iShot_2023-07-21_13.55.30.png"></p><ul><li>找到一个集成了Gitalk的博客</li><li>打开浏览器的开发者模式</li><li>选择network项，在filter中输入access</li><li>此时在博客的评论区中登录自己的Github账号<ul><li>在Request URL栏中，选择带有<code>https://github.com/login/oauth/access_token</code>的地址，这串拼接出来的地址就是代理地址，可以直接加入到proxy中</li></ul></li></ul><p>现在评论功能就正常了。</p><p>ref：<br><a href="https://github.com/ppoffice/hexo-theme-icarus/issues/478">https://github.com/ppoffice/hexo-theme-icarus/issues/478</a><br><a href="https://juejin.cn/post/6956892118363144229">https://juejin.cn/post/6956892118363144229</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h2&gt;&lt;span id=&quot;使用gitalk的常见问题&quot;&gt;使用Gitalk的常见问题&lt;/span&gt;&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;问题： 未找到相关的 Issues 进行评论，请联系@作者初始化创建&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;打开文章页面登录作者github账号&lt;</summary>
-      
-    
-    
-    
-    <category term="博客搭建" scheme="https://wangzhangyu.github.io/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
     
     
   </entry>
