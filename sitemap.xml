@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://wangzhangyu.github.io/2024/04/07/vscode%E9%85%8D%E7%BD%AE/</loc>
+    
+    <lastmod>2024-04-08</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://wangzhangyu.github.io/2024/04/04/git%E4%BD%BF%E7%94%A8/</loc>
     
     <lastmod>2024-04-08</lastmod>
@@ -11,16 +20,7 @@
   </url>
   
   <url>
-    <loc>https://wangzhangyu.github.io/2024/04/07/vscode%E9%85%8D%E7%BD%AE/</loc>
-    
-    <lastmod>2024-04-07</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://wangzhangyu.github.io/2024/03/28/linuxa%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8/</loc>
+    <loc>https://wangzhangyu.github.io/2024/03/28/linux%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8/</loc>
     
     <lastmod>2024-03-28</lastmod>
     
