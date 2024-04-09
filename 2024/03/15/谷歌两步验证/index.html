@@ -18,12 +18,12 @@
   
   
   <title>谷歌两步验证 | Hexo</title>
-  <meta name="description" content="谷歌二次登录验证 – 安全防护Ubuntu安装google-authenticatorsudo apt install libpam-google-authenticator修改配置文件echo &quot;auth required pam_google_authenticator.so&quot; &gt;&gt; &#x2F;etc&#x2F;pam.d&#x2F;sshdsed -i &#39;s&#x2F;^Challenge">
+  <meta name="description" content="谷歌二次登录验证 – 安全防护 Ubuntu 安装google-authenticator sudo apt install libpam-google-authenticator 修改配置文件echo &quot;auth required pam_google_authenticator.so&quot; &gt;&gt; &#x2F;etc&#x2F;pam.d&#x2F;sshd sed -i &#39;s&#x2F;^Challeng">
 <meta property="og:type" content="article">
 <meta property="og:title" content="谷歌两步验证">
 <meta property="og:url" content="https://wangzhangyu.github.io/2024/03/15/%E8%B0%B7%E6%AD%8C%E4%B8%A4%E6%AD%A5%E9%AA%8C%E8%AF%81/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="谷歌二次登录验证 – 安全防护Ubuntu安装google-authenticatorsudo apt install libpam-google-authenticator修改配置文件echo &quot;auth required pam_google_authenticator.so&quot; &gt;&gt; &#x2F;etc&#x2F;pam.d&#x2F;sshdsed -i &#39;s&#x2F;^Challenge">
+<meta property="og:description" content="谷歌二次登录验证 – 安全防护 Ubuntu 安装google-authenticator sudo apt install libpam-google-authenticator 修改配置文件echo &quot;auth required pam_google_authenticator.so&quot; &gt;&gt; &#x2F;etc&#x2F;pam.d&#x2F;sshd sed -i &#39;s&#x2F;^Challeng">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-03-15T13:57:15.000Z">
 <meta property="article:modified_time" content="2024-03-15T14:10:13.050Z">
@@ -369,7 +369,7 @@
         <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2024/03/15/%E8%B0%B7%E6%AD%8C%E4%B8%A4%E6%AD%A5%E9%AA%8C%E8%AF%81/#comments" class="article-comment-link">评论</a></span>
         
 	
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 92(字)</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 95(字)</span>
 	
 	
 		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 1(分)</span>
@@ -379,7 +379,14 @@
     </div>
     <div class="article-entry marked-body" itemprop="articleBody">
       
-        <h1><span id="谷歌二次登录验证-安全防护">谷歌二次登录验证 – 安全防护</span></h1><p>Ubuntu<br>安装google-authenticator<br><code>sudo apt install libpam-google-authenticator</code><br>修改配置文件<br><code>echo &quot;auth required pam_google_authenticator.so&quot; &gt;&gt; /etc/pam.d/sshd</code><br><code>sed -i &#39;s/^ChallengeResponseAuthentication no/ChallengeResponseAuthentication yes/g&#39; /etc/ssh/sshd_config</code><br>重启sshd，完成配置<br><code>systemctl restart sshd</code><br>对个人用户，进入主目录下<br>执行<code> google-authenticator</code>,生成验证二维码</p>
+        <h1><span id="谷歌二次登录验证-安全防护">谷歌二次登录验证 – 安全防护</span></h1>
+<p>Ubuntu<br>
+安装google-authenticator<br>
+<code>sudo apt install libpam-google-authenticator</code><br>
+修改配置文件<code>echo &quot;auth required pam_google_authenticator.so&quot; &gt;&gt; /etc/pam.d/sshd</code><br>
+<code>sed -i 's/^ChallengeResponseAuthentication no/ChallengeResponseAuthentication yes/g' /etc/ssh/sshd_config</code><br>
+重启sshd，完成配置<code>systemctl restart sshd</code><br>
+对个人用户，进入主目录下执行<code> google-authenticator</code>,生成验证二维码</p>
 <p>下载谷歌authrnticator绑定二维码</p>
 
       

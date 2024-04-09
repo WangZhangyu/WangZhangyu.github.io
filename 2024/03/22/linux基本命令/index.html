@@ -18,12 +18,12 @@
   
   
   <title>linux基本命令 | Hexo</title>
-  <meta name="description" content="系统相关 进程相关 网络 文件相关 传输操作 权限与扩展属性 磁盘挂载和空间查看 打包与解压 三剑客 启动服务 linux系统的文件结构 一些常见的文件位置    系统相关   命令 说明    lsb_release -a 查看Ubuntu版本   uname -a 查看操作系统详细信息   top 或 htop 查看CPU使用情况   nvidia-smi 或 nvtop 查看GPU使用">
+  <meta name="description" content="系统相关 进程相关 网络 文件相关 传输操作 权限与扩展属性 磁盘挂载和空间查看 打包与解压 三剑客 启动服务 linux系统的文件结构 一些常见的文件位置   系统相关    命令 说明     lsb_release -a 查看Ubuntu版本   uname -a 查看操作系统详细信息   top 或 htop 查看CPU使用情况   nvidia-smi 或 nvtop 查看GPU使用">
 <meta property="og:type" content="article">
 <meta property="og:title" content="linux基本命令">
 <meta property="og:url" content="https://wangzhangyu.github.io/2024/03/22/linux%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="系统相关 进程相关 网络 文件相关 传输操作 权限与扩展属性 磁盘挂载和空间查看 打包与解压 三剑客 启动服务 linux系统的文件结构 一些常见的文件位置    系统相关   命令 说明    lsb_release -a 查看Ubuntu版本   uname -a 查看操作系统详细信息   top 或 htop 查看CPU使用情况   nvidia-smi 或 nvtop 查看GPU使用">
+<meta property="og:description" content="系统相关 进程相关 网络 文件相关 传输操作 权限与扩展属性 磁盘挂载和空间查看 打包与解压 三剑客 启动服务 linux系统的文件结构 一些常见的文件位置   系统相关    命令 说明     lsb_release -a 查看Ubuntu版本   uname -a 查看操作系统详细信息   top 或 htop 查看CPU使用情况   nvidia-smi 或 nvtop 查看GPU使用">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-03-22T15:45:39.000Z">
 <meta property="article:modified_time" content="2024-03-28T11:36:36.153Z">
@@ -386,31 +386,31 @@
     <div class="article-entry marked-body" itemprop="articleBody">
       
         <!-- toc -->
-
-<ul>
-<li><a href="#%E7%B3%BB%E7%BB%9F%E7%9B%B8%E5%85%B3">系统相关</a></li>
-<li><a href="#%E8%BF%9B%E7%A8%8B%E7%9B%B8%E5%85%B3">进程相关</a></li>
-<li><a href="#%E7%BD%91%E7%BB%9C">网络</a></li>
-<li><a href="#%E6%96%87%E4%BB%B6%E7%9B%B8%E5%85%B3">文件相关</a></li>
-<li><a href="#%E4%BC%A0%E8%BE%93%E6%93%8D%E4%BD%9C">传输操作</a></li>
-<li><a href="#%E6%9D%83%E9%99%90%E4%B8%8E%E6%89%A9%E5%B1%95%E5%B1%9E%E6%80%A7">权限与扩展属性</a></li>
-<li><a href="#%E7%A3%81%E7%9B%98%E6%8C%82%E8%BD%BD%E5%92%8C%E7%A9%BA%E9%97%B4%E6%9F%A5%E7%9C%8B">磁盘挂载和空间查看</a></li>
-<li><a href="#%E6%89%93%E5%8C%85%E4%B8%8E%E8%A7%A3%E5%8E%8B">打包与解压</a></li>
-<li><a href="#%E4%B8%89%E5%89%91%E5%AE%A2">三剑客</a></li>
-<li><a href="#%E5%90%AF%E5%8A%A8%E6%9C%8D%E5%8A%A1">启动服务</a></li>
-<li><a href="#linux%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84">linux系统的文件结构</a></li>
-<li><a href="#%E4%B8%80%E4%BA%9B%E5%B8%B8%E8%A7%81%E7%9A%84%E6%96%87%E4%BB%B6%E4%BD%8D%E7%BD%AE">一些常见的文件位置</a></li>
+<ul class="lvl-0">
+<li class="lvl-2"><a href="#%E7%B3%BB%E7%BB%9F%E7%9B%B8%E5%85%B3">系统相关</a></li>
+<li class="lvl-2"><a href="#%E8%BF%9B%E7%A8%8B%E7%9B%B8%E5%85%B3">进程相关</a></li>
+<li class="lvl-2"><a href="#%E7%BD%91%E7%BB%9C">网络</a></li>
+<li class="lvl-2"><a href="#%E6%96%87%E4%BB%B6%E7%9B%B8%E5%85%B3">文件相关</a></li>
+<li class="lvl-2"><a href="#%E4%BC%A0%E8%BE%93%E6%93%8D%E4%BD%9C">传输操作</a></li>
+<li class="lvl-2"><a href="#%E6%9D%83%E9%99%90%E4%B8%8E%E6%89%A9%E5%B1%95%E5%B1%9E%E6%80%A7">权限与扩展属性</a></li>
+<li class="lvl-2"><a href="#%E7%A3%81%E7%9B%98%E6%8C%82%E8%BD%BD%E5%92%8C%E7%A9%BA%E9%97%B4%E6%9F%A5%E7%9C%8B">磁盘挂载和空间查看</a></li>
+<li class="lvl-2"><a href="#%E6%89%93%E5%8C%85%E4%B8%8E%E8%A7%A3%E5%8E%8B">打包与解压</a></li>
+<li class="lvl-2"><a href="#%E4%B8%89%E5%89%91%E5%AE%A2">三剑客</a></li>
+<li class="lvl-2"><a href="#%E5%90%AF%E5%8A%A8%E6%9C%8D%E5%8A%A1">启动服务</a></li>
+<li class="lvl-2"><a href="#linux%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84">linux系统的文件结构</a></li>
+<li class="lvl-2"><a href="#%E4%B8%80%E4%BA%9B%E5%B8%B8%E8%A7%81%E7%9A%84%E6%96%87%E4%BB%B6%E4%BD%8D%E7%BD%AE">一些常见的文件位置</a></li>
 </ul>
 <!-- tocstop -->
-
-<h1><span id="系统相关">系统相关</span></h1><table>
+<h1><span id="系统相关">系统相关</span></h1>
+<table>
 <thead>
 <tr>
 <th>命令</th>
 <th>说明</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td><code>lsb_release -a</code></td>
 <td>查看Ubuntu版本</td>
 </tr>
@@ -522,15 +522,18 @@
 <td><code>man man</code></td>
 <td>获取关于特定命令或主题的详细信息</td>
 </tr>
-</tbody></table>
-<h1><span id="进程相关">进程相关</span></h1><table>
+</tbody>
+</table>
+<h1><span id="进程相关">进程相关</span></h1>
+<table>
 <thead>
 <tr>
 <th>命令</th>
 <th>说明</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td><code>ps -ef | grep xxxx</code></td>
 <td>查看某个进程状态</td>
 </tr>
@@ -574,15 +577,18 @@
 <td><code>pkill -n &lt;进程名&gt;</code></td>
 <td>终止最新的一个匹配进程</td>
 </tr>
-</tbody></table>
-<h1><span id="网络">网络</span></h1><table>
+</tbody>
+</table>
+<h1><span id="网络">网络</span></h1>
+<table>
 <thead>
 <tr>
 <th>命令</th>
 <th>说明</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td><code>ping</code></td>
 <td>测试与另一台计算机的连接情况</td>
 </tr>
@@ -626,10 +632,10 @@
 <td><code>netcat</code></td>
 <td>用于网络通信的工具，可以用作端口扫描、端口监听等功能</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
 <details>
   <summary><u>ufw</u></summary>  
-
 <table>
 <thead>
 <tr>
@@ -637,7 +643,8 @@
 <th>说明</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td><code>sudo ufw enable</code></td>
 <td>启用防火墙</td>
 </tr>
@@ -669,21 +676,19 @@
 <td><code>sudo ufw status</code></td>
 <td>查看当前防火墙规则状态</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
 </details>
-
-
-
-
-
-<h1><span id="文件相关">文件相关</span></h1><table>
+<h1><span id="文件相关">文件相关</span></h1>
+<table>
 <thead>
 <tr>
 <th>命令</th>
 <th>说明</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td><code>touch file</code></td>
 <td>创建名为file的空文件</td>
 </tr>
@@ -707,8 +712,10 @@
 <td><code>less file</code></td>
 <td>逐页显示文件内容，可以上下翻页、搜索等交互式操作</td>
 </tr>
-</tbody></table>
-<h1><span id="传输操作">传输操作</span></h1><table>
+</tbody>
+</table>
+<h1><span id="传输操作">传输操作</span></h1>
+<table>
 <thead>
 <tr>
 <th>传输操作</th>
@@ -716,7 +723,8 @@
 <th>说明</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>复制文件</td>
 <td><code>cp</code></td>
 <td>将文件或目录复制到另一个位置</td>
@@ -736,8 +744,10 @@
 <td><code>rsync</code></td>
 <td>在本地系统和远程系统之间同步文件和目录，可以进行增量复制并保持文件权限</td>
 </tr>
-</tbody></table>
-<h1><span id="权限与扩展属性">权限与扩展属性</span></h1><table>
+</tbody>
+</table>
+<h1><span id="权限与扩展属性">权限与扩展属性</span></h1>
+<table>
 <thead>
 <tr>
 <th>权限操作</th>
@@ -745,7 +755,8 @@
 <th>说明</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>更改所有者</td>
 <td><code>chown</code></td>
 <td>将文件或目录的所有者更改为指定用户或用户组</td>
@@ -770,8 +781,10 @@
 <td><code>lsattr</code></td>
 <td>显示文件或目录的扩展属性</td>
 </tr>
-</tbody></table>
-<h1><span id="磁盘挂载和空间查看">磁盘挂载和空间查看</span></h1><table>
+</tbody>
+</table>
+<h1><span id="磁盘挂载和空间查看">磁盘挂载和空间查看</span></h1>
+<table>
 <thead>
 <tr>
 <th>挂载操作</th>
@@ -779,7 +792,8 @@
 <th>说明</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>挂载文件系统</td>
 <td><code>mount /dev/sdb1 /mnt</code></td>
 <td>将文件系统挂载到指定的挂载点</td>
@@ -809,8 +823,10 @@
 <td><code>fdisk -l</code></td>
 <td>查看系统的磁盘分区信息</td>
 </tr>
-</tbody></table>
-<h1><span id="打包与解压">打包与解压</span></h1><table>
+</tbody>
+</table>
+<h1><span id="打包与解压">打包与解压</span></h1>
+<table>
 <thead>
 <tr>
 <th>操作</th>
@@ -818,7 +834,8 @@
 <th>说明</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>打包</td>
 <td><code>tar -zcvf</code></td>
 <td>使用gzip压缩将文件或目录打包为.tar.gz文件</td>
@@ -848,15 +865,18 @@
 <td><code>unzip</code></td>
 <td>解压zip格式的文件</td>
 </tr>
-</tbody></table>
-<h1><span id="三剑客">三剑客</span></h1><table>
+</tbody>
+</table>
+<h1><span id="三剑客">三剑客</span></h1>
+<table>
 <thead>
 <tr>
 <th>工具名称</th>
 <th>说明</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td><code>awk</code></td>
 <td>用于文本处理和数据提取的强大工具</td>
 </tr>
@@ -868,8 +888,10 @@
 <td><code>sed</code></td>
 <td>用于对文本进行流式文本编辑和转换的工具</td>
 </tr>
-</tbody></table>
-<h1><span id="启动服务">启动服务</span></h1><table>
+</tbody>
+</table>
+<h1><span id="启动服务">启动服务</span></h1>
+<table>
 <thead>
 <tr>
 <th>启动服务操作</th>
@@ -877,7 +899,8 @@
 <th>说明</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>systemd</td>
 <td><code>systemctl start</code></td>
 <td>启动指定服务，例如 <code>systemctl start service_name</code></td>
@@ -887,174 +910,182 @@
 <td><code>service</code></td>
 <td>启动指定服务，例如 <code>service service_name start</code></td>
 </tr>
-</tbody></table>
-<h1><span id="linux系统的文件结构">linux系统的文件结构</span></h1><table>
+</tbody>
+</table>
+<h1><span id="linux系统的文件结构">linux系统的文件结构</span></h1>
+<table>
 <thead>
 <tr>
 <th>Linux根目录下各目录</th>
 <th>说明</th>
 </tr>
 </thead>
-<tbody><tr>
-<td>&#x2F;bin</td>
+<tbody>
+<tr>
+<td>/bin</td>
 <td>二进制文件，系统常规命令</td>
 </tr>
 <tr>
-<td>&#x2F;boot</td>
+<td>/boot</td>
 <td>系统启动分区，系统启动时读取的文件</td>
 </tr>
 <tr>
-<td>&#x2F;dev</td>
+<td>/dev</td>
 <td>设备文件</td>
 </tr>
 <tr>
-<td>&#x2F;etc</td>
+<td>/etc</td>
 <td>大多数配置文件</td>
 </tr>
 <tr>
-<td>&#x2F;home</td>
+<td>/home</td>
 <td>普通用户的家目录</td>
 </tr>
 <tr>
-<td>&#x2F;lib</td>
+<td>/lib</td>
 <td>32位函数库</td>
 </tr>
 <tr>
-<td>&#x2F;lib64</td>
+<td>/lib64</td>
 <td>64位库</td>
 </tr>
 <tr>
-<td>&#x2F;media</td>
+<td>/media</td>
 <td>手动临时挂载点</td>
 </tr>
 <tr>
-<td>&#x2F;mnt</td>
+<td>/mnt</td>
 <td>手动临时挂载点</td>
 </tr>
 <tr>
-<td>&#x2F;opt</td>
+<td>/opt</td>
 <td>第三方软件安装位置</td>
 </tr>
 <tr>
-<td>&#x2F;proc</td>
+<td>/proc</td>
 <td>进程信息及硬件信息</td>
 </tr>
 <tr>
-<td>&#x2F;root</td>
+<td>/root</td>
 <td>临时设备的默认挂载点</td>
 </tr>
 <tr>
-<td>&#x2F;run</td>
+<td>/run</td>
 <td>系统运行时数据</td>
 </tr>
 <tr>
-<td>&#x2F;sbin</td>
+<td>/sbin</td>
 <td>系统管理命令</td>
 </tr>
 <tr>
-<td>&#x2F;srv</td>
+<td>/srv</td>
 <td>数据</td>
 </tr>
 <tr>
-<td>&#x2F;var</td>
+<td>/var</td>
 <td>可变数据（例如日志、邮件等）</td>
 </tr>
 <tr>
-<td>&#x2F;sys</td>
+<td>/sys</td>
 <td>内核相关信息</td>
 </tr>
 <tr>
-<td>&#x2F;tmp</td>
+<td>/tmp</td>
 <td>临时文件</td>
 </tr>
 <tr>
-<td>&#x2F;usr</td>
+<td>/usr</td>
 <td>用户相关设定</td>
 </tr>
-</tbody></table>
-<h1><span id="一些常见的文件位置">一些常见的文件位置</span></h1><table>
+</tbody>
+</table>
+<h1><span id="一些常见的文件位置">一些常见的文件位置</span></h1>
+<table>
 <thead>
 <tr>
-<th>文件&#x2F;目录</th>
+<th>文件/目录</th>
 <th>位置</th>
 </tr>
 </thead>
-<tbody><tr>
-<td>&#x2F;etc&#x2F;passwd</td>
+<tbody>
+<tr>
+<td>/etc/passwd</td>
 <td>包含系统上所有用户的基本信息</td>
 </tr>
 <tr>
-<td>&#x2F;etc&#x2F;shadow</td>
+<td>/etc/shadow</td>
 <td>包含系统上所有用户的加密密码</td>
 </tr>
 <tr>
-<td>&#x2F;etc&#x2F;group</td>
+<td>/etc/group</td>
 <td>包含系统上所有用户组的信息</td>
 </tr>
 <tr>
-<td>&#x2F;etc&#x2F;hostname</td>
+<td>/etc/hostname</td>
 <td>包含主机名</td>
 </tr>
 <tr>
-<td>&#x2F;etc&#x2F;hosts</td>
+<td>/etc/hosts</td>
 <td>包含IP地址和主机名的映射</td>
 </tr>
 <tr>
-<td>&#x2F;etc&#x2F;resolv.conf</td>
+<td>/etc/resolv.conf</td>
 <td>包含DNS解析器的配置信息</td>
 </tr>
 <tr>
-<td>&#x2F;etc&#x2F;fstab</td>
+<td>/etc/fstab</td>
 <td>包含文件系统挂载信息</td>
 </tr>
 <tr>
-<td>&#x2F;etc&#x2F;ssh&#x2F;sshd_config</td>
+<td>/etc/ssh/sshd_config</td>
 <td>SSH服务器的配置文件</td>
 </tr>
 <tr>
-<td>&#x2F;etc&#x2F;profile</td>
+<td>/etc/profile</td>
 <td>用户的全局Shell配置文件</td>
 </tr>
 <tr>
-<td>&#x2F;var&#x2F;log</td>
+<td>/var/log</td>
 <td>包含系统日志文件的目录</td>
 </tr>
 <tr>
-<td>&#x2F;var&#x2F;spool&#x2F;mail</td>
+<td>/var/spool/mail</td>
 <td>包含用户邮件的目录</td>
 </tr>
 <tr>
-<td>&#x2F;var&#x2F;run</td>
+<td>/var/run</td>
 <td>包含系统运行时的临时文件</td>
 </tr>
 <tr>
-<td>&#x2F;var&#x2F;www&#x2F;html</td>
+<td>/var/www/html</td>
 <td>Web服务器的根目录（通常是Apache或Nginx）</td>
 </tr>
 <tr>
-<td>&#x2F;usr&#x2F;bin</td>
+<td>/usr/bin</td>
 <td>包含大多数用户可执行文件的目录</td>
 </tr>
 <tr>
-<td>&#x2F;usr&#x2F;sbin</td>
+<td>/usr/sbin</td>
 <td>包含系统管理员可执行文件的目录</td>
 </tr>
 <tr>
-<td>&#x2F;usr&#x2F;lib</td>
+<td>/usr/lib</td>
 <td>包含大多数系统库的目录</td>
 </tr>
 <tr>
-<td>&#x2F;usr&#x2F;local&#x2F;bin</td>
+<td>/usr/local/bin</td>
 <td>包含用户安装的软件可执行文件的目录</td>
 </tr>
 <tr>
-<td>&#x2F;usr&#x2F;local&#x2F;lib</td>
+<td>/usr/local/lib</td>
 <td>包含用户安装的软件库的目录</td>
 </tr>
-</tbody></table>
-<p>参考： </p>
+</tbody>
+</table>
+<p>参考：</p>
 <blockquote>
-<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/m0_46422300/article/details/104645072">https://blog.csdn.net/m0_46422300/article/details/104645072</a><br><a target="_blank" rel="noopener" href="https://www.ruanyifeng.com/blog/developer/">https://www.ruanyifeng.com/blog/developer/</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/m0_46422300/article/details/104645072">https://blog.csdn.net/m0_46422300/article/details/104645072</a><br>
+<a target="_blank" rel="noopener" href="https://www.ruanyifeng.com/blog/developer/">https://www.ruanyifeng.com/blog/developer/</a></p>
 </blockquote>
 
       

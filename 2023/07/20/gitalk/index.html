@@ -18,12 +18,12 @@
   
   
   <title>gitalk 第三方评论 | Hexo</title>
-  <meta name="description" content="使用Gitalk的常见问题 问题： 未找到相关的 Issues 进行评论，请联系@作者初始化创建  打开文章页面登录作者github账号   问题： 403错误或network错误  代理失效    原因是：主题模版中的cors-anywhere反向代理已不支持直接使用，Gitalk的默认proxy为 1Default: https:&#x2F;&#x2F;cors-anywhere.herokuapp.com&#x2F;ht">
+  <meta name="description" content="使用Gitalk的常见问题   问题： 未找到相关的 Issues 进行评论，请联系@作者初始化创建  打开文章页面登录作者github账号    问题： 403错误或network错误  代理失效    原因是：主题模版中的cors-anywhere反向代理已不支持直接使用，Gitalk的默认proxy为 1Default: https:&#x2F;&#x2F;cors-anywhere.herokuapp.com">
 <meta property="og:type" content="article">
 <meta property="og:title" content="gitalk 第三方评论">
 <meta property="og:url" content="https://wangzhangyu.github.io/2023/07/20/gitalk/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="使用Gitalk的常见问题 问题： 未找到相关的 Issues 进行评论，请联系@作者初始化创建  打开文章页面登录作者github账号   问题： 403错误或network错误  代理失效    原因是：主题模版中的cors-anywhere反向代理已不支持直接使用，Gitalk的默认proxy为 1Default: https:&#x2F;&#x2F;cors-anywhere.herokuapp.com&#x2F;ht">
+<meta property="og:description" content="使用Gitalk的常见问题   问题： 未找到相关的 Issues 进行评论，请联系@作者初始化创建  打开文章页面登录作者github账号    问题： 403错误或network错误  代理失效    原因是：主题模版中的cors-anywhere反向代理已不支持直接使用，Gitalk的默认proxy为 1Default: https:&#x2F;&#x2F;cors-anywhere.herokuapp.com">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://wangzhangyu.github.io/2023/07/20/gitalk/iShot_2023-07-21_13.55.30.png">
 <meta property="article:published_time" content="2023-07-20T11:42:20.000Z">
@@ -371,7 +371,7 @@
         <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2023/07/20/gitalk/#comments" class="article-comment-link">评论</a></span>
         
 	
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 299(字)</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 300(字)</span>
 	
 	
 		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 1(分)</span>
@@ -381,13 +381,16 @@
     </div>
     <div class="article-entry marked-body" itemprop="articleBody">
       
-        <h2><span id="使用gitalk的常见问题">使用Gitalk的常见问题</span></h2><ul>
-<li><p>问题： 未找到相关的 Issues 进行评论，请联系@作者初始化创建</p>
+        <h2><span id="使用gitalk的常见问题">使用Gitalk的常见问题</span></h2>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>问题： 未找到相关的 Issues 进行评论，请联系@作者初始化创建</p>
 <blockquote>
 <p>打开文章页面登录作者github账号</p>
 </blockquote>
 </li>
-<li><p>问题： 403错误或network错误</p>
+<li class="lvl-2">
+<p>问题： 403错误或network错误</p>
 <blockquote>
 <p>代理失效</p>
 </blockquote>
@@ -397,20 +400,31 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Default: https://cors-anywhere.herokuapp.com/https://github.com/login/oauth/access_token.</span><br></pre></td></tr></table></figure>
 <p><a target="_blank" rel="noopener" href="https://dash.cloudflare.com/">cloudflare</a></p>
 <p>参考文章： <a target="_blank" rel="noopener" href="https://blog.csdn.net/nocodeis/article/details/117826704">https://blog.csdn.net/nocodeis/article/details/117826704</a></p>
-<h2><span id="借用某位博客的代理">借用某位博客的代理</span></h2><p>使用<a target="_blank" rel="noopener" href="https://blog.csdn.net/nocodeis/article/details/117826704">文章中的方法</a>构建的代理仍然报错<code>network error</code>, 应该还是代理没有设置好。</p>
+<h2><span id="借用某位博客的代理">借用某位博客的代理</span></h2>
+<p>使用<a target="_blank" rel="noopener" href="https://blog.csdn.net/nocodeis/article/details/117826704">文章中的方法</a>构建的代理仍然报错<code>network error</code>, 应该还是代理没有设置好。</p>
 <p>没有办法只能借用别的代理设置了，方法不是很可取，但可以临时用用。参考下边的方式</p>
-<p><img src="/2023/07/20/gitalk/iShot_2023-07-21_13.55.30.png"></p>
-<ul>
-<li>找到一个集成了Gitalk的博客</li>
-<li>打开浏览器的开发者模式</li>
-<li>选择network项，在filter中输入access</li>
-<li>此时在博客的评论区中登录自己的Github账号<ul>
-<li>在Request URL栏中，选择带有<code>https://github.com/login/oauth/access_token</code>的地址，这串拼接出来的地址就是代理地址，可以直接加入到proxy中</li>
+<p><img src="./iShot_2023-07-21_13.55.30.png" alt></p>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>找到一个集成了Gitalk的博客</p>
+</li>
+<li class="lvl-2">
+<p>打开浏览器的开发者模式</p>
+</li>
+<li class="lvl-2">
+<p>选择network项，在filter中输入access</p>
+</li>
+<li class="lvl-2">
+<p>此时在博客的评论区中登录自己的Github账号</p>
+<ul class="lvl-2">
+<li class="lvl-4">在Request URL栏中，选择带有<code>https://github.com/login/oauth/access_token</code>的地址，这串拼接出来的地址就是代理地址，可以直接加入到proxy中</li>
 </ul>
 </li>
 </ul>
 <p>现在评论功能就正常了。</p>
-<p>ref：<br><a target="_blank" rel="noopener" href="https://github.com/ppoffice/hexo-theme-icarus/issues/478">https://github.com/ppoffice/hexo-theme-icarus/issues/478</a><br><a target="_blank" rel="noopener" href="https://juejin.cn/post/6956892118363144229">https://juejin.cn/post/6956892118363144229</a></p>
+<p>ref：<br>
+<a target="_blank" rel="noopener" href="https://github.com/ppoffice/hexo-theme-icarus/issues/478">https://github.com/ppoffice/hexo-theme-icarus/issues/478</a><br>
+<a target="_blank" rel="noopener" href="https://juejin.cn/post/6956892118363144229">https://juejin.cn/post/6956892118363144229</a></p>
 
       
     </div>

@@ -1,3 +1,4 @@
+https://wangzhangyu.github.io/2023/07/20/comment/
 https://wangzhangyu.github.io/2024/04/09/anaconda/
 https://wangzhangyu.github.io/2024/04/08/nohup%E7%94%A8%E6%B3%95/
 https://wangzhangyu.github.io/2024/03/28/%E6%90%AD%E5%BB%BA%E5%BD%B1%E9%9F%B3%E5%AD%98%E5%82%A8/
@@ -23,7 +24,6 @@ https://wangzhangyu.github.io/2023/08/01/tensorboard/
 https://wangzhangyu.github.io/2023/07/25/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99/
 https://wangzhangyu.github.io/2023/07/30/test/
 https://wangzhangyu.github.io/2023/07/29/scp/
-https://wangzhangyu.github.io/2023/07/20/comment/
 https://wangzhangyu.github.io/2023/07/20/gitalk/
 https://wangzhangyu.github.io/2023/07/19/Markdown%E8%AF%AD%E6%B3%95/
 https://wangzhangyu.github.io/2023/07/19/Linux%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%BF%90%E7%BB%B4/
@@ -37,12 +37,12 @@ https://wangzhangyu.github.io/2023/07/18/Python%20Folium/
 https://wangzhangyu.github.io/2023/07/18/linux%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE/
 https://wangzhangyu.github.io/
 https://wangzhangyu.github.io/tags/blog/
+https://wangzhangyu.github.io/tags/conda/
 https://wangzhangyu.github.io/tags/markdown/
 https://wangzhangyu.github.io/tags/Linux/
 https://wangzhangyu.github.io/tags/alist/
-https://wangzhangyu.github.io/tags/conda/
 https://wangzhangyu.github.io/categories/Linux/
-https://wangzhangyu.github.io/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/
 https://wangzhangyu.github.io/categories/python/
-https://wangzhangyu.github.io/categories/macbook/
+https://wangzhangyu.github.io/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/
 https://wangzhangyu.github.io/categories/Git/
+https://wangzhangyu.github.io/categories/macbook/

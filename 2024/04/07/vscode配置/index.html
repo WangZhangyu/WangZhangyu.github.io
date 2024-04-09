@@ -18,12 +18,12 @@
   
   
   <title>Visual Studio Code 配置 | Hexo</title>
-  <meta name="description" content="vs code自动更新后无法正常使用remote ssh插件，连接一直卡在“正在下载vs code 服务器”vs code当前版本: 1.88.0 (Universal) 观察remote ssh输出日志： 打开调试-输出-remote ssh，发现确实卡在下载的过程 1[16:19:20.211] [server] Installing and setting up Visual Studio">
+  <meta name="description" content="vs code自动更新后无法正常使用remote ssh插件，连接一直卡在“正在下载vs code 服务器&quot; vs code当前版本: 1.88.0 (Universal) 观察remote ssh输出日志： 打开调试-输出-remote ssh，发现确实卡在下载的过程 1[16:19:20.211] [server] Installing and setting up Visual S">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Visual Studio Code 配置">
 <meta property="og:url" content="https://wangzhangyu.github.io/2024/04/07/vscode%E9%85%8D%E7%BD%AE/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="vs code自动更新后无法正常使用remote ssh插件，连接一直卡在“正在下载vs code 服务器”vs code当前版本: 1.88.0 (Universal) 观察remote ssh输出日志： 打开调试-输出-remote ssh，发现确实卡在下载的过程 1[16:19:20.211] [server] Installing and setting up Visual Studio">
+<meta property="og:description" content="vs code自动更新后无法正常使用remote ssh插件，连接一直卡在“正在下载vs code 服务器&quot; vs code当前版本: 1.88.0 (Universal) 观察remote ssh输出日志： 打开调试-输出-remote ssh，发现确实卡在下载的过程 1[16:19:20.211] [server] Installing and setting up Visual S">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-04-07T08:16:29.000Z">
 <meta property="article:modified_time" content="2024-04-08T06:39:37.748Z">
@@ -369,7 +369,7 @@
         <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2024/04/07/vscode%E9%85%8D%E7%BD%AE/#comments" class="article-comment-link">评论</a></span>
         
 	
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 251(字)</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 256(字)</span>
 	
 	
 		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 1(分)</span>
@@ -379,22 +379,27 @@
     </div>
     <div class="article-entry marked-body" itemprop="articleBody">
       
-        <p>vs code自动更新后无法正常使用remote ssh插件，连接一直卡在“正在下载vs code 服务器”<br>vs code当前版本: 1.88.0 (Universal)</p>
+        <p>vs code自动更新后无法正常使用remote ssh插件，连接一直卡在“正在下载vs code 服务器&quot;<br>
+vs code当前版本: 1.88.0 (Universal)</p>
 <p>观察remote ssh输出日志： 打开调试-输出-remote ssh，发现确实卡在下载的过程</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[16:19:20.211] [server] Installing and setting up Visual Studio Code Server...</span><br></pre></td></tr></table></figure>
 <blockquote>
-<p>解决方案： </p>
-<ul>
-<li>降低vs code版本，使用1.85版本  </li>
-<li>同时删除.ssh文件夹中的known_hosts，重新安装remote ssh插件<br>下载地址：<a target="_blank" rel="noopener" href="https://code.visualstudio.com/updates/v1_85">https://code.visualstudio.com/updates/v1_85</a><br><a target="_blank" rel="noopener" href="https://github.com/microsoft/vscode/issues/203967">https://github.com/microsoft/vscode/issues/203967</a></li>
+<p>解决方案：</p>
+<ul class="lvl-1">
+<li class="lvl-2">降低vs code版本，使用1.85版本</li>
+<li class="lvl-2">同时删除.ssh文件夹中的known_hosts，重新安装remote ssh插件<br>
+下载地址：<a target="_blank" rel="noopener" href="https://code.visualstudio.com/updates/v1_85">https://code.visualstudio.com/updates/v1_85</a><br>
+<a target="_blank" rel="noopener" href="https://github.com/microsoft/vscode/issues/203967">https://github.com/microsoft/vscode/issues/203967</a></li>
 </ul>
 </blockquote>
 <p>记录下vs code安装的插件</p>
 <hr>
-<p>macos中安装code<br>打开Visual Studio通过（⇧⌘P）打开命令面板，然后键入以找到Shell命令：shell command<br>install code</p>
-<h3><span id="下载已安装的extension名称">下载已安装的extension名称</span></h3><p>导出到extensions文本</p>
+<p>macos中安装code<br>
+打开Visual Studio通过（⇧⌘P）打开命令面板，然后键入以找到Shell命令：shell command<br>
+install code</p>
+<h3><span id="下载已安装的extension名称">下载已安装的extension名称</span></h3>
+<p>导出到extensions文本</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">code --list-extensions &gt; extensions.txt</span><br></pre></td></tr></table></figure>
-
 <figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">antonreshetov.masscode-assistant</span><br><span class="line">ecmel.vscode-html-css</span><br><span class="line">github.copilot</span><br><span class="line">github.copilot-chat</span><br><span class="line">james-yu.latex-workshop</span><br><span class="line">lextudio.restructuredtext</span><br><span class="line">ms-ceintl.vscode-language-pack-zh-hans</span><br><span class="line">ms-python.debugpy</span><br><span class="line">ms-python.python</span><br><span class="line">ms-python.vscode-pylance</span><br><span class="line">ms-toolsai.jupyter</span><br><span class="line">ms-toolsai.jupyter-keymap</span><br><span class="line">ms-toolsai.jupyter-renderers</span><br><span class="line">ms-toolsai.vscode-jupyter-cell-tags</span><br><span class="line">ms-toolsai.vscode-jupyter-slideshow</span><br><span class="line">ms-vscode-remote.remote-ssh</span><br><span class="line">ms-vscode-remote.remote-ssh-edit</span><br><span class="line">ms-vscode.remote-explorer</span><br><span class="line">trond-snekvik.simple-rst</span><br><span class="line">vue.volar</span><br><span class="line">zainchen.json</span><br></pre></td></tr></table></figure>
       
     </div>

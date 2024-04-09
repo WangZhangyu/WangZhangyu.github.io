@@ -18,12 +18,12 @@
   
   
   <title>写一个alist守护程序 | Hexo</title>
-  <meta name="description" content="alist守护程序，包括alist的启动，停止，重启和状态服务 123456789101112131415161718192021222324252627282930313233343536#!&#x2F;bin&#x2F;bashalist_process&#x3D;&quot;&#x2F;Applications&#x2F;alist&#x2F;alist server&quot;start_alist() &amp;#123;    nohup $alis">
+  <meta name="description" content="alist守护程序，包括alist的启动，停止，重启和状态服务   123456789101112131415161718192021222324252627282930313233343536#!&#x2F;bin&#x2F;bashalist_process&#x3D;&quot;&#x2F;Applications&#x2F;alist&#x2F;alist server&quot;start_alist() &amp;#123;    nohup $a">
 <meta property="og:type" content="article">
 <meta property="og:title" content="写一个alist守护程序">
 <meta property="og:url" content="https://wangzhangyu.github.io/2024/03/25/%E5%86%99%E4%B8%80%E4%B8%AAalist%E5%AE%88%E6%8A%A4%E7%A8%8B%E5%BA%8F/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="alist守护程序，包括alist的启动，停止，重启和状态服务 123456789101112131415161718192021222324252627282930313233343536#!&#x2F;bin&#x2F;bashalist_process&#x3D;&quot;&#x2F;Applications&#x2F;alist&#x2F;alist server&quot;start_alist() &amp;#123;    nohup $alis">
+<meta property="og:description" content="alist守护程序，包括alist的启动，停止，重启和状态服务   123456789101112131415161718192021222324252627282930313233343536#!&#x2F;bin&#x2F;bashalist_process&#x3D;&quot;&#x2F;Applications&#x2F;alist&#x2F;alist server&quot;start_alist() &amp;#123;    nohup $a">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-03-25T05:42:08.000Z">
 <meta property="article:modified_time" content="2024-03-27T03:46:41.078Z">
@@ -375,7 +375,7 @@
         <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2024/03/25/%E5%86%99%E4%B8%80%E4%B8%AAalist%E5%AE%88%E6%8A%A4%E7%A8%8B%E5%BA%8F/#comments" class="article-comment-link">评论</a></span>
         
 	
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 368(字)</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 355(字)</span>
 	
 	
 		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 1(分)</span>
@@ -385,24 +385,34 @@
     </div>
     <div class="article-entry marked-body" itemprop="articleBody">
       
-        <ul>
-<li><p>alist守护程序，包括alist的启动，停止，重启和状态服务</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">#!/bin/bash</span><br><span class="line"></span><br><span class="line">alist_process=&quot;/Applications/alist/alist server&quot;</span><br><span class="line"></span><br><span class="line">start_alist() &#123;</span><br><span class="line">    nohup $alist_process &gt; /dev/null &amp;</span><br><span class="line">    echo &quot;Alist started.&quot;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">stop_alist() &#123;</span><br><span class="line">    echo &quot;Stopping alist...&quot;</span><br><span class="line">    pkill -x &quot;alist&quot;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">check_alist_status() &#123;</span><br><span class="line">    if pgrep -x &quot;alist&quot; &gt; /dev/null; then</span><br><span class="line">        echo &quot;Alist is running.&quot;</span><br><span class="line">    else</span><br><span class="line">        echo &quot;Alist is not running.&quot;</span><br><span class="line">    fi</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">if [ &quot;$1&quot; == &quot;start&quot; ]; then</span><br><span class="line">    start_alist</span><br><span class="line">elif [ &quot;$1&quot; == &quot;stop&quot; ]; then</span><br><span class="line">    stop_alist</span><br><span class="line">elif [ &quot;$1&quot; == &quot;restart&quot; ]; then</span><br><span class="line">    stop_alist</span><br><span class="line">    sleep 2  # 等待一段时间以确保 &quot;alist&quot; 进程已经终止</span><br><span class="line">    start_alist</span><br><span class="line">elif [ &quot;$1&quot; == &quot;status&quot; ]; then</span><br><span class="line">    check_alist_status</span><br><span class="line">else</span><br><span class="line">    echo &quot;Usage: $0 &#123;start|stop|restart|status&#125;&quot;</span><br><span class="line">    exit 1</span><br><span class="line">fi</span><br></pre></td></tr></table></figure>
-<p>  脚本保存为alist_daemon.sh</p>
+        <ul class="lvl-0">
+<li class="lvl-2">
+<p>alist守护程序，包括alist的启动，停止，重启和状态服务</p>
 </li>
-<li><p>配置别名</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># alias</span><br><span class="line">alias alist=&quot;/Applications/alist/alist_daemon.sh&quot;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>实际运行</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">(base) wangzy@macbook alist % alist                    </span><br><span class="line">Usage: /Applications/alist/alist_daemon.sh &#123;start|stop|restart|status&#125;</span><br><span class="line">(base) wangzy@macbook alist % alist status</span><br><span class="line">Alist is not running.</span><br><span class="line">(base) wangzy@macbook alist % alist start </span><br><span class="line">Alist started.</span><br><span class="line">(base) wangzy@macbook alist % alist status</span><br><span class="line">Alist is running.</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
 </ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">#!/bin/bash</span><br><span class="line"></span><br><span class="line">alist_process=&quot;/Applications/alist/alist server&quot;</span><br><span class="line"></span><br><span class="line">start_alist() &#123;</span><br><span class="line">    nohup $alist_process &gt; /dev/null &amp;</span><br><span class="line">    echo &quot;Alist started.&quot;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">stop_alist() &#123;</span><br><span class="line">    echo &quot;Stopping alist...&quot;</span><br><span class="line">    pkill -x &quot;alist&quot;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">check_alist_status() &#123;</span><br><span class="line">    if pgrep -x &quot;alist&quot; &gt; /dev/null; then</span><br><span class="line">        echo &quot;Alist is running.&quot;</span><br><span class="line">    else</span><br><span class="line">        echo &quot;Alist is not running.&quot;</span><br><span class="line">    fi</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">if [ &quot;$1&quot; == &quot;start&quot; ]; then</span><br><span class="line">    start_alist</span><br><span class="line">elif [ &quot;$1&quot; == &quot;stop&quot; ]; then</span><br><span class="line">    stop_alist</span><br><span class="line">elif [ &quot;$1&quot; == &quot;restart&quot; ]; then</span><br><span class="line">    stop_alist</span><br><span class="line">    sleep 2  # 等待一段时间以确保 &quot;alist&quot; 进程已经终止</span><br><span class="line">    start_alist</span><br><span class="line">elif [ &quot;$1&quot; == &quot;status&quot; ]; then</span><br><span class="line">    check_alist_status</span><br><span class="line">else</span><br><span class="line">    echo &quot;Usage: $0 &#123;start|stop|restart|status&#125;&quot;</span><br><span class="line">    exit 1</span><br><span class="line">fi</span><br></pre></td></tr></table></figure>
+<pre><code>脚本保存为alist_daemon.sh
+</code></pre>
+<ul class="lvl-0">
+<li class="lvl-2">配置别名</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># alias</span><br><span class="line">alias alist=&quot;/Applications/alist/alist_daemon.sh&quot;</span><br></pre></td></tr></table></figure>
+<ul class="lvl-0">
+<li class="lvl-2">实际运行</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">(base) wangzy@macbook alist % alist                    </span><br><span class="line">Usage: /Applications/alist/alist_daemon.sh &#123;start|stop|restart|status&#125;</span><br><span class="line">(base) wangzy@macbook alist % alist status</span><br><span class="line">Alist is not running.</span><br><span class="line">(base) wangzy@macbook alist % alist start </span><br><span class="line">Alist started.</span><br><span class="line">(base) wangzy@macbook alist % alist status</span><br><span class="line">Alist is running.</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <hr>
 <p>Alist有官方的守护程序代码</p>
-<p>Linux下, 编辑 &#x2F;usr&#x2F;lib&#x2F;systemd&#x2F;system&#x2F;alist.service 并添加如下内容，其中 path_alist 为 AList 所在的路径</p>
+<p>Linux下, 编辑 /usr/lib/systemd/system/alist.service 并添加如下内容，其中 path_alist 为 AList 所在的路径</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">[Unit]</span><br><span class="line">Description=alist</span><br><span class="line">After=network.target</span><br><span class="line"> </span><br><span class="line">[Service]</span><br><span class="line">Type=simple</span><br><span class="line">WorkingDirectory=path_alist</span><br><span class="line">ExecStart=path_alist/alist server</span><br><span class="line">Restart=on-failure</span><br><span class="line"> </span><br><span class="line">[Install]</span><br><span class="line">WantedBy=multi-user.target</span><br></pre></td></tr></table></figure>
 <p>然后，执行 <code>systemctl daemon-reload</code> 重载配置，现在你可以使用这些命令来管理程序：</p>
-<p>启动: <code>systemctl start alist</code><br>关闭: <code>systemctl stop alist</code><br>配置开机自启: <code>systemctl enable alist</code><br>取消开机自启: <code>systemctl disable alist</code><br>状态: <code>systemctl status alist</code><br>重启: <code>systemctl restart alist</code></p>
-<p>参考：<a target="_blank" rel="noopener" href="https://alist.nn.ci/zh/guide/install/manual.html#%E5%AE%88%E6%8A%A4%E8%BF%9B%E7%A8%8B">https://alist.nn.ci/zh/guide/install/manual.html#%E5%AE%88%E6%8A%A4%E8%BF%9B%E7%A8%8B</a></p>
+<p>启动: <code>systemctl start alist</code><br>
+关闭: <code>systemctl stop alist</code><br>
+配置开机自启: <code>systemctl enable alist</code><br>
+取消开机自启: <code>systemctl disable alist</code><br>
+状态: <code>systemctl status alist</code><br>
+重启: <code>systemctl restart alist</code></p>
+<p>参考：<a target="_blank" rel="noopener" href="https://alist.nn.ci/zh/guide/install/manual.html#%E5%AE%88%E6%8A%A4%E8%BF%9B%E7%A8%8B">https://alist.nn.ci/zh/guide/install/manual.html#守护进程</a></p>
 
       
     </div>

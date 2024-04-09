@@ -18,12 +18,12 @@
   
   
   <title>scp传输文件如何设置nohup后台运行？ | Hexo</title>
-  <meta name="description" content="已经配置了ssh免密登录ssh免密登录，scp也是免密的用scp传输文件时可以直接在命令前加nohup，命令后加&amp;nohup scp -r *** host:ip &amp; 未配置免密登录 Linux后台任务管理 ：jobs、fg、bg、kill、ps、nohup、disown、&amp; CTRL + C ：终止程序运行 CTRL + Z ：程序暂停运行   正常运行命令：   可以是">
+  <meta name="description" content="已经配置了ssh免密登录 ssh免密登录，scp也是免密的用scp传输文件时可以直接在命令前加nohup，命令后加&amp; nohup scp -r *** host:ip &amp; 未配置免密登录  Linux后台任务管理 ：jobs、fg、bg、kill、ps、nohup、disown、&amp; CTRL + C ：终止程序运行 CTRL + Z ：程序暂停运行    正常运行命令：">
 <meta property="og:type" content="article">
 <meta property="og:title" content="scp传输文件如何设置nohup后台运行？">
 <meta property="og:url" content="https://wangzhangyu.github.io/2023/07/29/scp/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="已经配置了ssh免密登录ssh免密登录，scp也是免密的用scp传输文件时可以直接在命令前加nohup，命令后加&amp;nohup scp -r *** host:ip &amp; 未配置免密登录 Linux后台任务管理 ：jobs、fg、bg、kill、ps、nohup、disown、&amp; CTRL + C ：终止程序运行 CTRL + Z ：程序暂停运行   正常运行命令：   可以是">
+<meta property="og:description" content="已经配置了ssh免密登录 ssh免密登录，scp也是免密的用scp传输文件时可以直接在命令前加nohup，命令后加&amp; nohup scp -r *** host:ip &amp; 未配置免密登录  Linux后台任务管理 ：jobs、fg、bg、kill、ps、nohup、disown、&amp; CTRL + C ：终止程序运行 CTRL + Z ：程序暂停运行    正常运行命令：">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-07-29T05:51:36.000Z">
 <meta property="article:modified_time" content="2023-07-29T06:10:07.312Z">
@@ -369,7 +369,7 @@
         <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2023/07/29/scp/#comments" class="article-comment-link">评论</a></span>
         
 	
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 183(字)</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 184(字)</span>
 	
 	
 		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 1(分)</span>
@@ -379,43 +379,54 @@
     </div>
     <div class="article-entry marked-body" itemprop="articleBody">
       
-        <h1><span id="已经配置了ssh免密登录">已经配置了ssh免密登录</span></h1><p>ssh免密登录，scp也是免密的<br>用scp传输文件时可以直接在命令前加<code>nohup</code>，命令后加<code>&amp;</code><br><code>nohup scp -r *** host:ip &amp;</code></p>
-<h1><span id="未配置免密登录">未配置免密登录</span></h1><blockquote>
-<p>Linux后台任务管理 ：jobs、fg、bg、kill、ps、nohup、disown、&amp;<br> CTRL + C ：终止程序运行<br> CTRL + Z ：程序暂停运行</p>
+        <h1><span id="已经配置了ssh免密登录">已经配置了ssh免密登录</span></h1>
+<p>ssh免密登录，scp也是免密的用scp传输文件时可以直接在命令前加<code>nohup</code>，命令后加<code>&amp;</code><br>
+<code>nohup scp -r *** host:ip &amp;</code></p>
+<h1><span id="未配置免密登录">未配置免密登录</span></h1>
+<blockquote>
+<p>Linux后台任务管理 ：jobs、fg、bg、kill、ps、nohup、disown、&amp;<br>
+CTRL + C ：终止程序运行<br>
+CTRL + Z ：程序暂停运行</p>
 </blockquote>
 <ol>
-<li><p>正常运行命令： </p>
-<ul>
-<li>可以是scp，也可以是其他任何需要执行的命令</li>
-<li><code>scp -r *** host:ip</code></li>
-<li>此时程序的执行状态是在台前</li>
+<li class="lvl-3">
+<p>正常运行命令：</p>
+<ul class="lvl-2">
+<li class="lvl-6">可以是scp，也可以是其他任何需要执行的命令</li>
+<li class="lvl-6"><code>scp -r *** host:ip</code></li>
+<li class="lvl-6">此时程序的执行状态是在台前</li>
 </ul>
 </li>
-<li><p>暂停任务</p>
-<ul>
-<li>键盘输入CTRL + Z，暂停任务</li>
+<li class="lvl-3">
+<p>暂停任务</p>
+<ul class="lvl-2">
+<li class="lvl-6">键盘输入CTRL + Z，暂停任务</li>
 </ul>
 </li>
-<li><p>查看jobs</p>
-<ul>
-<li>jobs</li>
+<li class="lvl-3">
+<p>查看jobs</p>
+<ul class="lvl-2">
+<li class="lvl-6">jobs</li>
 </ul>
 </li>
-<li><p>bg将其放入后台</p>
-<ul>
-<li><code>bg %1</code></li>
+<li class="lvl-3">
+<p>bg将其放入后台</p>
+<ul class="lvl-2">
+<li class="lvl-6"><code>bg %1</code></li>
 </ul>
 </li>
-<li><p>disown -h </p>
-<ul>
-<li>忽略任务的HUP信号</li>
-<li><code>disown -h %1</code></li>
+<li class="lvl-3">
+<p>disown -h</p>
+<ul class="lvl-2">
+<li class="lvl-6">忽略任务的HUP信号</li>
+<li class="lvl-6"><code>disown -h %1</code></li>
 </ul>
 </li>
-<li><p>检查</p>
-<ul>
-<li>关闭session，新建会话</li>
-<li>ps -ef|grep scp</li>
+<li class="lvl-3">
+<p>检查</p>
+<ul class="lvl-2">
+<li class="lvl-6">关闭session，新建会话</li>
+<li class="lvl-6">ps -ef|grep scp</li>
 </ul>
 </li>
 </ol>

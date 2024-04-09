@@ -18,12 +18,12 @@
   
   
   <title>Tensorboard | Hexo</title>
-  <meta name="description" content="ref: https:&#x2F;&#x2F;zhuanlan.zhihu.com&#x2F;p&#x2F;471198169 功能TensorBoard 是一组用于数据可视化的工具。它包含在流行的开源机器学习库 Tensorflow 中。TensorBoard 的主要功能包括：  可视化模型的网络架构 跟踪模型指标，如损失和准确性等 检查机器学习工作流程中权重、偏差和其他组件的直方图 显示非表格数据，包括图像、文本和音频 将高维嵌入投">
+  <meta name="description" content="ref: https:&#x2F;&#x2F;zhuanlan.zhihu.com&#x2F;p&#x2F;471198169 功能 TensorBoard 是一组用于数据可视化的工具。它包含在流行的开源机器学习库 Tensorflow 中。TensorBoard 的主要功能包括：  可视化模型的网络架构 跟踪模型指标，如损失和准确性等 检查机器学习工作流程中权重、偏差和其他组件的直方图 显示非表格数据，包括图像、文本和音频 将高维嵌入">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Tensorboard">
 <meta property="og:url" content="https://wangzhangyu.github.io/2023/08/01/tensorboard/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="ref: https:&#x2F;&#x2F;zhuanlan.zhihu.com&#x2F;p&#x2F;471198169 功能TensorBoard 是一组用于数据可视化的工具。它包含在流行的开源机器学习库 Tensorflow 中。TensorBoard 的主要功能包括：  可视化模型的网络架构 跟踪模型指标，如损失和准确性等 检查机器学习工作流程中权重、偏差和其他组件的直方图 显示非表格数据，包括图像、文本和音频 将高维嵌入投">
+<meta property="og:description" content="ref: https:&#x2F;&#x2F;zhuanlan.zhihu.com&#x2F;p&#x2F;471198169 功能 TensorBoard 是一组用于数据可视化的工具。它包含在流行的开源机器学习库 Tensorflow 中。TensorBoard 的主要功能包括：  可视化模型的网络架构 跟踪模型指标，如损失和准确性等 检查机器学习工作流程中权重、偏差和其他组件的直方图 显示非表格数据，包括图像、文本和音频 将高维嵌入">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-08-01T08:08:12.000Z">
 <meta property="article:modified_time" content="2023-08-01T08:10:43.749Z">
@@ -380,25 +380,34 @@
     <div class="article-entry marked-body" itemprop="articleBody">
       
         <p>ref: <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/471198169">https://zhuanlan.zhihu.com/p/471198169</a></p>
-<h2><span id="功能">功能</span></h2><p>TensorBoard 是一组用于数据可视化的工具。它包含在流行的开源机器学习库 Tensorflow 中。TensorBoard 的主要功能包括：</p>
-<ul>
-<li>可视化模型的网络架构</li>
-<li>跟踪模型指标，如损失和准确性等</li>
-<li>检查机器学习工作流程中权重、偏差和其他组件的直方图</li>
-<li>显示非表格数据，包括图像、文本和音频</li>
-<li>将高维嵌入投影到低维空间</li>
+<h2><span id="功能">功能</span></h2>
+<p>TensorBoard 是一组用于数据可视化的工具。它包含在流行的开源机器学习库 Tensorflow 中。TensorBoard 的主要功能包括：</p>
+<ul class="lvl-0">
+<li class="lvl-2">可视化模型的网络架构</li>
+<li class="lvl-2">跟踪模型指标，如损失和准确性等</li>
+<li class="lvl-2">检查机器学习工作流程中权重、偏差和其他组件的直方图</li>
+<li class="lvl-2">显示非表格数据，包括图像、文本和音频</li>
+<li class="lvl-2">将高维嵌入投影到低维空间</li>
 </ul>
-<h2><span id="安装">安装</span></h2><p>使用conda进行Python包管理。安装指令</p>
+<h2><span id="安装">安装</span></h2>
+<p>使用conda进行Python包管理。安装指令</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda install tensorboard</span><br></pre></td></tr></table></figure>
 <p>对于pytorch用户来说，还需安装TensorBoardX</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda install tensorboardx</span><br></pre></td></tr></table></figure>
 <p>需要注意的是，TensorBoardX只是TensorBoard的一个前端，只支持记录功能，要进行可视化必须安装TensorBoard。</p>
-<h2><span id="本地使用">本地使用</span></h2><ul>
-<li><p>要启动 TensorBoard，打开终端或命令提示符并运行：</p>
+<h2><span id="本地使用">本地使用</span></h2>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>要启动 TensorBoard，打开终端或命令提示符并运行：</p>
+</li>
+</ul>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tensorboard --logdir=&lt;directory_name&gt;</span><br></pre></td></tr></table></figure>
 <p>将 directory_name 标记替换为保存数据的目录。 默认是“logs”。</p>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>在 Jupyter Notebooks 中使用 TensorBoard</p>
 </li>
-<li><p>在 Jupyter Notebooks 中使用 TensorBoard</p>
+</ul>
 <blockquote>
 <p>如果想在 Jupyter Notebooks 中使用 TensorBoard，可以使用以下命令：</p>
 </blockquote>
@@ -406,20 +415,23 @@
 <blockquote>
 <p>运行这行代码将加载 TensorBoard并允许我们将其用于可视化。 加载扩展后，我们现在可以启动 TensorBoard：</p>
 </blockquote>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">%tensorboard --logdir logs</span><br></pre></td></tr></table></figure></li>
-</ul>
-<h2><span id="远程使用">远程使用</span></h2><blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">%tensorboard --logdir logs</span><br></pre></td></tr></table></figure>
+<h2><span id="远程使用">远程使用</span></h2>
+<blockquote>
 <p>使用远程服务器，没有浏览器也没有可视化桌面，那怎么才能使用TensorBoard呢？</p>
 </blockquote>
 <p>我们可以通过SSH端口转发，将远程端口映射到本地端口，命令如：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -L 16007:127.0.0.1:6007 username@serverip</span><br></pre></td></tr></table></figure>
-<p>其中，<code>16007</code>是本地想用的端口，<code>6007</code>是远程端口（<code>TensorBoard</code>所用端口），username和serverip为用户名和服务器ip地址。<br>远程服务器中找到tensorboard所在目录并运行</p>
+<p>其中，<code>16007</code>是本地想用的端口，<code>6007</code>是远程端口（<code>TensorBoard</code>所用端口），username和serverip为用户名和服务器ip地址。远程服务器中找到tensorboard所在目录并运行</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tensorboard --logdir ./tensorboard --port 6007</span><br></pre></td></tr></table></figure>
 <p>然后，打开本地浏览器，输入<code>http://127.0.0.1:16007/</code>就可以成功访问了。</p>
-<ul>
-<li>另一种方法<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tensorboard --logdir logs --bind_all</span><br></pre></td></tr></table></figure>
-–bind_all的作用是to expose to the network</li>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>另一种方法</p>
+</li>
 </ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tensorboard --logdir logs --bind_all</span><br></pre></td></tr></table></figure>
+<p>–bind_all的作用是to expose to the network</p>
 
       
     </div>
