@@ -6,7 +6,7 @@
   <link href="https://wangzhangyu.github.io/atom.xml" rel="self"/>
   
   <link href="https://wangzhangyu.github.io/"/>
-  <updated>2024-04-08T09:13:15.132Z</updated>
+  <updated>2024-04-09T09:55:04.366Z</updated>
   <id>https://wangzhangyu.github.io/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>conda, pip</title>
+    <link href="https://wangzhangyu.github.io/2024/04/09/anaconda/"/>
+    <id>https://wangzhangyu.github.io/2024/04/09/anaconda/</id>
+    <published>2024-04-09T08:28:32.000Z</published>
+    <updated>2024-04-09T09:55:04.366Z</updated>
+    
+    <content type="html"><![CDATA[<!-- toc --><ul><li><a href="#%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4">常用命令：</a></li><li><a href="#conda-%E9%95%9C%E5%83%8F%E7%AE%A1%E7%90%86">conda 镜像管理</a><ul><li><a href="#1-%E5%91%BD%E4%BB%A4%E8%A1%8C">1. 命令行</a></li><li><a href="#2-%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6~condarc">2. 配置文件~&#x2F;.condarc</a></li></ul></li></ul><!-- tocstop --><h2><span id="常用命令">常用命令：</span></h2><p>:)</p><p>查看虚拟环境<br>conda env list<br>conda info -e<br>conda info –envs</p><p>创建<br>conda create -n name python&#x3D;3.9<br>激活<br>conda activate name<br>退出<br>conda deactivate<br>删除： 删除虚拟环境及其中所安装的包<br>conda remove -n name –all</p><p>导出<br>#获得环境中的所有配置<br>conda env export –name myenv &gt; myenv.yml<br>#重新还原环境<br>conda env create -f  myenv.yml</p><p>conda 导出安装包列表 <code>conda list -e &gt; condalist.txt</code><br>导入 <code>conda install --yes --file condalist.txt</code></p><p>用conda安装<br>conda install numpy<br>conda install numpy&#x3D;0.20.3<br>更新<br>conda update numpy<br>卸载<br>conda uninstall numpy</p><p>清除缓存<br>conda clean -p      # 删除没有用的包 –packages<br>conda clean -t      # 删除tar打包 –tarballs<br>conda clean -y -all # 删除所有的安装包及cache(索引缓存、锁定文件、未使用过的包和tar包)</p><h2><span id="conda-镜像管理">conda 镜像管理</span></h2><h3><span id="1-命令行">1. 命令行</span></h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#设置清华镜像</span></span><br><span class="line">conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/</span><br><span class="line">conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/</span><br><span class="line">conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge/</span><br><span class="line">conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/bioconda/</span><br><span class="line"><span class="comment">#设置bioconda</span></span><br><span class="line">conda config --add channels bioconda</span><br><span class="line">conda config --add channels conda-forge</span><br><span class="line"><span class="comment">#设置搜索时显示通道地址</span></span><br><span class="line">conda config --<span class="built_in">set</span> show_channel_urls <span class="built_in">yes</span></span><br></pre></td></tr></table></figure><p>追加conda-forge channel:<br>conda config –add channels conda-forge<br>移除conda-forge channel<br>conda config –remove channels conda-forge<br>查询当前配置中包含哪些channels<br>conda config –get channels</p><h3><span id="2-配置文件~x2fcondarc">2. 配置文件~&#x2F;.condarc</span></h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">channels:</span><br><span class="line">  - https://mirrors.ustc.edu.cn/anaconda/pkgs/free</span><br><span class="line">  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/pytorch/</span><br><span class="line">  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/</span><br><span class="line">  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/</span><br><span class="line">  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/peterjc123/</span><br><span class="line">  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge/</span><br><span class="line">  - https://conda.anaconda.org/esri/linux-64/</span><br><span class="line">  - defaults</span><br><span class="line">show_channel_urls: true</span><br></pre></td></tr></table></figure><p>pip导出安装包<br><code>pip freeze &gt; requirements.txt</code><br>导入<br><code>pip install -r requirements.txt</code></p><blockquote><p>参考：<a href="https://blog.csdn.net/chenxy_bwave/article/details/119996001">https://blog.csdn.net/chenxy_bwave/article/details/119996001</a></p></blockquote>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;!-- toc --&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4&quot;&gt;常用命令：&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#conda-%E9%95%9C%E5%83%8F%E7%AE%A1%E7%90%</summary>
+      
+    
+    
+    
+    <category term="Linux" scheme="https://wangzhangyu.github.io/categories/Linux/"/>
+    
+    
+    <category term="conda" scheme="https://wangzhangyu.github.io/tags/conda/"/>
+    
+  </entry>
   
   <entry>
     <title>nohup用法</title>
@@ -484,28 +512,6 @@
     
     
     <category term="blog" scheme="https://wangzhangyu.github.io/tags/blog/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>scp传输文件如何设置nohup后台运行？</title>
-    <link href="https://wangzhangyu.github.io/2023/07/29/scp/"/>
-    <id>https://wangzhangyu.github.io/2023/07/29/scp/</id>
-    <published>2023-07-29T05:51:36.000Z</published>
-    <updated>2023-07-29T06:10:07.312Z</updated>
-    
-    <content type="html"><![CDATA[<h1><span id="已经配置了ssh免密登录">已经配置了ssh免密登录</span></h1><p>ssh免密登录，scp也是免密的<br>用scp传输文件时可以直接在命令前加<code>nohup</code>，命令后加<code>&amp;</code><br><code>nohup scp -r *** host:ip &amp;</code></p><h1><span id="未配置免密登录">未配置免密登录</span></h1><blockquote><p>Linux后台任务管理 ：jobs、fg、bg、kill、ps、nohup、disown、&amp;<br> CTRL + C ：终止程序运行<br> CTRL + Z ：程序暂停运行</p></blockquote><ol><li><p>正常运行命令： </p><ul><li>可以是scp，也可以是其他任何需要执行的命令</li><li><code>scp -r *** host:ip</code></li><li>此时程序的执行状态是在台前</li></ul></li><li><p>暂停任务</p><ul><li>键盘输入CTRL + Z，暂停任务</li></ul></li><li><p>查看jobs</p><ul><li>jobs</li></ul></li><li><p>bg将其放入后台</p><ul><li><code>bg %1</code></li></ul></li><li><p>disown -h </p><ul><li>忽略任务的HUP信号</li><li><code>disown -h %1</code></li></ul></li><li><p>检查</p><ul><li>关闭session，新建会话</li><li>ps -ef|grep scp</li></ul></li></ol><p>参考<a href="https://www.cnblogs.com/jyzhao/p/6253728.html">link1</a>,<a href="https://zhuanlan.zhihu.com/p/446891442">link2</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1&gt;&lt;span id=&quot;已经配置了ssh免密登录&quot;&gt;已经配置了ssh免密登录&lt;/span&gt;&lt;/h1&gt;&lt;p&gt;ssh免密登录，scp也是免密的&lt;br&gt;用scp传输文件时可以直接在命令前加&lt;code&gt;nohup&lt;/code&gt;，命令后加&lt;code&gt;&amp;amp;&lt;/code&gt;&lt;br&gt;&lt;c</summary>
-      
-    
-    
-    
-    <category term="Linux" scheme="https://wangzhangyu.github.io/categories/Linux/"/>
-    
     
   </entry>
   
