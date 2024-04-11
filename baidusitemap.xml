@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://wangzhangyu.github.io/2024/04/04/git%E4%BD%BF%E7%94%A8/</loc>
+    <lastmod>2024-04-11</lastmod>
+  </url>
+  <url>
     <loc>https://wangzhangyu.github.io/2024/03/23/ssh%E9%85%8D%E7%BD%AE/</loc>
     <lastmod>2024-04-11</lastmod>
   </url>
@@ -26,10 +30,6 @@
   </url>
   <url>
     <loc>https://wangzhangyu.github.io/2024/04/07/vscode%E9%85%8D%E7%BD%AE/</loc>
-    <lastmod>2024-04-08</lastmod>
-  </url>
-  <url>
-    <loc>https://wangzhangyu.github.io/2024/04/04/git%E4%BD%BF%E7%94%A8/</loc>
     <lastmod>2024-04-08</lastmod>
   </url>
   <url>
