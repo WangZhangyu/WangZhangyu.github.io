@@ -26,7 +26,7 @@
 <meta property="og:description" content="ssh安装 ssh配置文件 sshd_config ssh免密登录  在目标服务器中 在本地服务器   ssh跳板  直接跳转 ProxyJump跳转 ProxyCommand跳转   常见问题 ssh的用法   ssh安装   ssh安装 sudo apt install openssh-server   查看ssh服务状态 sudo systemctl status ssh   确保防火墙">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-03-23T06:16:38.000Z">
-<meta property="article:modified_time" content="2024-03-26T13:25:25.980Z">
+<meta property="article:modified_time" content="2024-04-11T07:04:39.117Z">
 <meta property="article:author" content="Wang Zhangyu">
 <meta name="twitter:card" content="summary">
   <!-- Canonical links -->
@@ -369,10 +369,10 @@
         <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2024/03/23/ssh%E9%85%8D%E7%BD%AE/#comments" class="article-comment-link">评论</a></span>
         
 	
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 932(字)</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 962(字)</span>
 	
 	
-		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 3(分)</span>
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 4(分)</span>
 	
 
       </div>
@@ -461,8 +461,8 @@ cd然后进入 .ssh，依次运行：</p>
 <p>/etc/host.allow和/etc/hosts.deny<br>
 这两个文件时控制远程访问设置的，通过该设置可以允许或者拒绝某个ip或者ip段访问linux的某项服务。我们可以用于限制访问服务器sshd服务的源地址，host.allow文件对应白名单，hosts.deny文件对应黑名单</p>
 <h3><span id="在本地服务器">在本地服务器</span></h3>
-<p>在本地服务器配置config文件 <code>~/.ssh/config</code></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Host *</span><br><span class="line">     Port 22</span><br><span class="line"></span><br><span class="line">Host remoteserver</span><br><span class="line">     HostName remote.example.com</span><br><span class="line">     User test</span><br><span class="line">     Port 22</span><br></pre></td></tr></table></figure>
+<p>把刚刚在目标服务器上生成的私钥，拷贝到本地文件夹<code>~/.ssh</code>在本地服务器配置config文件 <code>~/.ssh/config</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">Host *</span><br><span class="line">     Port 22</span><br><span class="line"></span><br><span class="line">Host remoteserver</span><br><span class="line">     HostName remote.example.com</span><br><span class="line">     User test</span><br><span class="line">     Port 22</span><br><span class="line">     ForwardX11Trusted yes</span><br><span class="line">     ForwardX11 yes</span><br><span class="line">     IdentityFile ~/.ssh/id_rsa</span><br></pre></td></tr></table></figure>
 <p>配置完成后<code>ssh remoteserver</code>可直接跳转远程服务器</p>
 <h2><span id="ssh跳板">ssh跳板</span></h2>
 <h3><span id="直接跳转">直接跳转</span></h3>
