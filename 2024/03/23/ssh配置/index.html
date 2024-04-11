@@ -26,7 +26,7 @@
 <meta property="og:description" content="ssh安装 ssh配置文件 sshd_config ssh免密登录  在目标服务器中 在本地服务器   ssh跳板  直接跳转 ProxyJump跳转 ProxyCommand跳转   常见问题 ssh的用法   ssh安装   ssh安装 sudo apt install openssh-server   查看ssh服务状态 sudo systemctl status ssh   确保防火墙">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-03-23T06:16:38.000Z">
-<meta property="article:modified_time" content="2024-04-11T07:04:39.117Z">
+<meta property="article:modified_time" content="2024-04-11T07:19:15.388Z">
 <meta property="article:author" content="Wang Zhangyu">
 <meta name="twitter:card" content="summary">
   <!-- Canonical links -->
@@ -369,7 +369,7 @@
         <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2024/03/23/ssh%E9%85%8D%E7%BD%AE/#comments" class="article-comment-link">评论</a></span>
         
 	
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 962(字)</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 971(字)</span>
 	
 	
 		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 4(分)</span>
@@ -442,7 +442,7 @@
 cd然后进入 .ssh，依次运行：</p>
 <ul class="lvl-0">
 <li class="lvl-2">
-<p>ssh-keygen （命令后一直敲空格就行, 会生成几个文件）</p>
+<p>ssh-keygen （命令后一直敲回车键, 最后会生成一对密钥：id_rsa[私钥]和id_rsa.pub[公钥]）</p>
 </li>
 <li class="lvl-2">
 <p>cat id_dsa.pub &gt;&gt; authorized_keys</p>
